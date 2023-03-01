@@ -18,4 +18,10 @@ code {
   background-color: black;
   width: 100%;
   height: 10%;
+  padding:1.5%;
+}
+.Navbar .Links{
+  padding-left:2%;
+  color:aliceblue;
+  font-size: 100%;
 }
