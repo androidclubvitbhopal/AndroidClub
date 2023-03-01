@@ -8,7 +8,7 @@ import RegisteredEvents from "./pages/registeredEvents"
 
 function App() {
   return (
-    <>
+    <div>
       <Router>
         <Routes>
           <Route path="/home" element={<Home/>}></Route>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs/>}></Route>
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
