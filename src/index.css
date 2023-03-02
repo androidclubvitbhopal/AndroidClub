@@ -12,16 +12,131 @@ code {
     monospace;
 }
 
+/* Home css with all its components */
+.Home{
+  height: 100%;
+  width: 100%;
+  background-color:aquamarine;
+  position: fixed;
+}
 /* Navbar css code here */
 
 .Navbar{
   background-color: black;
-  width: 100%;
-  height: 10%;
+  width: 97%;
+  height: 5%;
   padding:1.5%;
+  position: fixed;
 }
 .Navbar .Links{
   padding-left:2%;
   color:aliceblue;
   font-size: 100%;
+  text-decoration: none;
+  font-size: 150%;
+  margin-right: 4%;
+  border-style:solid;
+  border-bottom-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 100%;
+  min-width:20%;
+  padding: 1.9%;
+  /* background-color: aliceblue; */
+}
+.Navbar .Links:hover{
+  color: aquamarine;
+  border-bottom-color: aquamarine;
+}
+
+/* Events css */
+
+.Events{
+  left: 5%;
+  width:90%;
+  height: 60%;
+  overflow:auto;
+  background-color: transparent;
+  width:90%;
+  display:flex;
+  top:15%; 
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.Events::-webkit-scrollbar{
+  -webkit-appearance: none;
+}
+.Events .Event{
+  color:transparent;
+  min-width: 40%;
+  border-radius: 30px;
+  padding: 2%;
+  margin-right: 5%;
+  background-size:cover;
+  background-color: rgba(0, 0, 0, 0.737);
+}
+.Events .Event:hover{
+  background-blend-mode: darken;
+  color:aliceblue;
+}
+.moreInfo{
+  transition: 0.5s ease;
+  overflow-y: scroll;
+  height: 70%;
+  width:95%;
+}
+.moreInfo::-webkit-scrollbar{
+  -webkit-appearance: none;
+}
+.moreInfo p{
+  padding: 0%;
+}
+.moreInfo .EventName{
+  font-size: 400%;
+  font-weight: 600;
+}
+.moreInfo .description{
+  font-size:175%;
+}
+
+.RegisterBtn{
+  /* padding: 1%; */
+  background-color: greenyellow;
+  position: relative;
+  font-size: 200%;
+  width:25%;
+  height:15%;
+  border: none;
+  border-radius: 25px;
+  left:37.5%;
+  margin-top:4%;
+  
+}
+/* Event PopUp Form css */
+.PopUpWindow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.66);
+}
+.PopUpWindow .PopUpForm{
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  top:23%;
+  background-color: aliceblue;
+  left:28%;
+  padding: 2%;
+  border-radius: 25px;
+}
+.PopUpWindow .PopUpForm input{
+  height: 10%;
+  margin-top: 3%;
+  border-radius: 15px;
+  text-align: center;
 }
