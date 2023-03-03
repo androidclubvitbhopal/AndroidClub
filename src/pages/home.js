@@ -28,15 +28,31 @@ function Home(){
     useEffect(()=>{
         FetchEvents()
     },[])
+
+    const HandleSubmit=(e)=>{
+        e.preventDefault()
+        console.log('Hii')
+    }
     return(
         <div className="Home">
-            <PopUpWindow style={{visibility:`${vis}`}}/>
+            {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
+            <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
+                <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='X'></input>
+                <form onSubmit={(e)=>HandleSubmit(e)} className="PopUpForm">
+                    <input type='text' placeholder="Name"></input>
+                    <input type='email' placeholder="Email"></input>
+                    <input type='number' placeholder="Phone Number"></input>
+                    <input type='text' placeholder="Registration Number"></input>
+                    <input type='file' placeholder="Name"></input>
+                    <input type='submit'></input>
+                </form>
+            </div>
+
             <Navbar/>
-            <p>Home</p>
             <div className="Events">
                 {
                     Event.map((Events)=>(
-                        <div className="Event" style={{backgroundImage:`url(${Events.bannerURL})`}}>
+                        <div className="Event" onClick={()=>{setVis("visible")}} style={{backgroundImage:`url(${Events.bannerURL})`}}>
                         {/* style={{visibility:`${vis}`}} onMouseEnter={()=>{setVis("visible")}} onMouseLeave={()=>{setVis("hidden")}} */}
                             <div className="moreInfo" >
                                 <div className="EventName">{Events.name}</div>
