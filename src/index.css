@@ -100,6 +100,13 @@ code {
 .moreInfo .description{
   font-size:175%;
 }
+.time{
+  font-size: 150%;
+
+}
+.Price{
+  font-size: 150%;
+}
 
 .RegisterBtn{
   /* padding: 1%; */
