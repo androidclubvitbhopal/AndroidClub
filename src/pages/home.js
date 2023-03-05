@@ -112,7 +112,10 @@ function Home(){
                                 <p className="time"><b>Time:  </b>{Events.time}</p>
                                 <p className="Price"><b>Price:  ₹</b>{Events.price}</p>
                             </div>
-                            <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}>Register</button>
+                            {
+                                currentUser && 
+                                <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}>Register</button>
+                            }
                         </div>
                     ))
                 }
