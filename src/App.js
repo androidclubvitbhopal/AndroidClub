@@ -28,8 +28,8 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login/>}></Route>
-          <Route path="/Register" element={<Register/>}></Route>
+          <Route exact path="/login" element={<Login/>}></Route>
+          <Route exact path="/Register" element={<Register/>}></Route>
           {/* <Route path='/' element={<Home2/>}></Route> */}
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/RegisteredEvents" element={<ProtectedRoute><RegisteredEvents/></ProtectedRoute>}></Route>
