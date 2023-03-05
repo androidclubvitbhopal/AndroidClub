@@ -6,11 +6,14 @@ import { collection, query, where } from "firebase/firestore";
 import { db } from "../firebaseconfig";
 import { getDocs,doc } from "firebase/firestore";
 import PopUpWindow from "../components/PopUpRegistration";
+import { Link } from "react-router-dom";
+import { Authcontext } from "../contextProvider";
 
 function Home(){
     const [Event,setEvent] = useState([])
     const [Ev,setEv] = useState([])
     const [vis,setVis] = useState("hidden")
+    const {currentUser} = useContext(Authcontext)
     
 
     const usersRef = collection(db, "events");
@@ -31,8 +34,8 @@ function Home(){
         FetchEvents()
     },[])
     useEffect(()=>{
-        console.log(Ev)
-    },[Ev])
+        console.log(currentUser)
+    },[currentUser])
     const HandleSubmit=(e)=>{
         e.preventDefault()
         const name = e.target[0].value
@@ -62,14 +65,9 @@ function Home(){
             {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
             <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
                 <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='X'></input>
-                <form onSubmit={(e)=>HandleSubmit(e)} className="PopUpForm">
-                    <input type='text' placeholder="Name"></input>
-                    <input type='email' placeholder="Email"></input>
-                    <input type='number' placeholder="Phone Number"></input>
-                    <input type='text' placeholder="Registration Number"></input>
-                    <input type='file' placeholder="File"></input>
-                    <input type='submit'></input>
-                </form>
+                {
+
+                }
             </div>
 
             <Navbar/>
