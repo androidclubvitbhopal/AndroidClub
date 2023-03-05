@@ -65,8 +65,12 @@ function Home(){
             {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
             <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
                 <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='X'></input>
-                {
-
+                {!currentUser && 
+                    <div className="PopUpForm">
+                        <p>Login In or Register to Access all features.</p>
+                        <Link to='login'>Login</Link>
+                        <Link to='Register'>Register</Link>
+                    </div>
                 }
             </div>
 
