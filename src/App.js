@@ -6,7 +6,6 @@ import AboutUs from "./pages/aboutUs"
 import OurProjects from "./pages/OurProjects"
 import Members from "./pages/members"
 import RegisteredEvents from "./pages/registeredEvents"
-import Home2 from './pages/home2';
 import { Register,Login } from './pages/register&Login';
 import { Navigate } from 'react-router-dom';
 import { Authcontext } from './contextProvider';

@@ -14,10 +14,12 @@ function Home(){
     const [vis,setVis] = useState("hidden")
     const {currentUser} = useContext(Authcontext)
     const [UserDetails,setDetails] = useState({})
-    
+    const [userEvents,setUserEvents]  =useState([])
 
     const eventsRef = collection(db, "events");
     const usersRef = collection(db, "users");
+
+
     const FetchEvents = async ()=> {
         const q = query(eventsRef)
         const temp = []
@@ -31,6 +33,8 @@ function Home(){
             console.log(err)
         }
     }
+
+
     const FetchUserDetails =async()=>{
         const q = query(usersRef,where('email','==',currentUser.email))
         const temp = []
@@ -40,6 +44,7 @@ function Home(){
                 temp.push(doc.data())
             })
             setDetails({email:temp[0].email,name:`${temp[0].name}`,paymentVerified:"N",phone:`${temp[0].phone}`,regNo:`${temp[0].regNo}`})
+            setUserEvents(temp[0].allRegisteredEvents)
         }catch(err){
             console.log(err)
         }
@@ -52,9 +57,9 @@ function Home(){
 
     // for testing use only 
 
-    // useEffect(()=>{
-    //     console.log(Ev)
-    // },[Ev])
+    useEffect(()=>{
+        console.log(userEvents)
+    },[userEvents])
 
 
     const HandleRegister= async (EventName)=>{
@@ -71,10 +76,12 @@ function Home(){
             RegEmails = [...RegEmails,`${currentUser.email}`]
             let RegInfo = temp[0]["Registered Users"]
             RegInfo = [...RegInfo,UserDetails]
-            
-            // await updateDoc(doc(db,"users",currentUser.uid),{
-            //     allRegisteredEvents:[...allRegisteredEvents,Ev]
-            // })
+
+            let UserEvents = userEvents
+            UserEvents = [...UserEvents,`${EventName}`]
+            await updateDoc(doc(db,"users",currentUser.uid),{
+                allRegisteredEvents:UserEvents
+            })
 
             await updateDoc(doc(db,"events",Ev[0].notificationGroup),{
                 "Registered Emails":RegEmails,

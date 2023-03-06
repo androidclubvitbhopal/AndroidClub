@@ -94,8 +94,8 @@ function Login(){
                     <input type="email" placeholder="Email-ID" required></input>
                     <input type="password" placeholder="Password" required></input>
                     <input type="submit" id="S" value="Register"></input>
-                    {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
-                    <p style={{width:'26%',color:'black'}}>Have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Daily-Companion">Login Now</Link></b></p>
+                    {err && <span style={{alignSelf:'center'}}>Email and Password combination wrong, Try Again</span>}
+                    <p style={{width:'26%',color:'black'}}>Don't have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Daily-Companion">Login Now</Link></b></p>
                 </form>
             </div>
         </div>
