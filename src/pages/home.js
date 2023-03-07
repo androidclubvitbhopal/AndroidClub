@@ -15,6 +15,7 @@ function Home(){
     const {currentUser} = useContext(Authcontext)
     const [UserDetails,setDetails] = useState({})
     const [userEvents,setUserEvents]  =useState([])
+    // const [RgSt,setSt] = useState(false)
 
     const eventsRef = collection(db, "events");
     const usersRef = collection(db, "users");
@@ -98,11 +99,11 @@ function Home(){
             {
                 !currentUser &&
                 <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
-                    <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='X'></input>
                         <div className="PopUpForm">
-                            <p>Login In or Register to Access all features.</p>
-                            <Link to='login'>Login</Link>
-                            <Link to='Register'>Register</Link>
+                            <p>Hey Learner!! <br></br>Login In or Register to Access all features.</p>
+                            <Link id='New' to='login'>Login</Link>
+                            <Link id='New' to='Register'>Register</Link>
+                            <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='Close'></input>
                         </div>
                 </div>
             }
@@ -123,7 +124,7 @@ function Home(){
                                         <p className="Price"><b>Price:  ₹</b>{Events.price}</p>
                                     </div>
                                     {
-                                        currentUser && 
+                                        currentUser &&
                                         <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}><span type='text'>Register</span></button>
                                     }
                                 </div>

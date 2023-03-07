@@ -35,7 +35,7 @@ function RegisteredEvents(){
         UserEvents()
     },[])
     return(
-        <>
+        <div className="Home">
             <Navbar/>
             <div className="RgEvents">
                 {
@@ -55,10 +55,10 @@ function RegisteredEvents(){
                         </div>
                     ))
                 }
-                <Stream YtID='qVUv8PCRHCc' vis={`${vis}`}/>
+                {/* <Stream YtID='qVUv8PCRHCc' vis={`${vis}`}/> */}
             </div>
 
-        </>
+        </div>
     )
 }
 export default RegisteredEvents

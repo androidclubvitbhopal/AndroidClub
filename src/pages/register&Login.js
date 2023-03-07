@@ -52,20 +52,22 @@ function Register(){
 
     }
     return(
-        <div className="Login">
-            <div className="FormBox">
-                <form onSubmit={(e)=>HandleSubmit(e)}>
-                    <input type="text" placeholder="Name" required></input>
-                    <input type="email" placeholder="Email-ID" required></input>
-                    <input type="text" placeholder="Registration Number" required></input>
-                    <input type='number' placeholder="Phone Number" required></input>
-                    <input type="password" placeholder="Password" required></input>
-                    <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
-                    <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
-                    <input type="submit" id="S" value="Register"></input>
-                    {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
-                    <p style={{width:'26%',color:'black'}}>Have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Daily-Companion">Login Now</Link></b></p>
-                </form>
+        <div className="Home">
+            <div className="Login">
+                <div className="FormBox">
+                    <form onSubmit={(e)=>HandleSubmit(e)}>
+                        <input type="text" placeholder="Name" required></input>
+                        <input type="email" placeholder="Email-ID" required></input>
+                        <input type="text" placeholder="Registration Number" required></input>
+                        <input type='number' placeholder="Phone Number" required></input>
+                        <input type="password" placeholder="Password" required></input>
+                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
+                        <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
+                        <input type="submit" id="S" value="Register"></input>
+                        {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
+                        <p style={{width:'26%',color:'black'}}>Have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></b></p>
+                    </form>
+                </div>
             </div>
         </div>
     )
@@ -88,15 +90,17 @@ function Login(){
 
     }
     return(
-        <div className="Login">
-            <div className="FormBox">
-                <form onSubmit={(e)=>HandleSubmit(e)}>
-                    <input type="email" placeholder="Email-ID" required></input>
-                    <input type="password" placeholder="Password" required></input>
-                    <input type="submit" id="S" value="Register"></input>
-                    {err && <span style={{alignSelf:'center'}}>Email and Password combination wrong, Try Again</span>}
-                    <p style={{width:'26%',color:'black'}}>Don't have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Daily-Companion">Login Now</Link></b></p>
-                </form>
+        <div className="Home">
+            <div className="Login">
+                <div className="FormBox">
+                    <form onSubmit={(e)=>HandleSubmit(e)}>
+                        <input type="email" placeholder="Email-ID" required></input>
+                        <input type="password" placeholder="Password" required></input>
+                        <input type="submit" id="S" value="Register"></input>
+                        {err && <span style={{alignSelf:'center'}}>Email and Password combination wrong, Try Again</span>}
+                        <p style={{width:'26%',color:'black'}}>Don't have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></b></p>
+                    </form>
+                </div>
             </div>
         </div>
     )
