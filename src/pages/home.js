@@ -58,8 +58,8 @@ function Home(){
     // for testing use only 
 
     useEffect(()=>{
-        console.log(userEvents)
-    },[userEvents])
+        console.log(Ev)
+    },[Ev])
 
 
     const HandleRegister= async (EventName)=>{
@@ -72,13 +72,14 @@ function Home(){
                 temp.push(doc.data())
             })
             setEv(temp)
+            console.log(temp)
             let RegEmails = temp[0]["Registered Emails"]
             RegEmails = [...RegEmails,`${currentUser.email}`]
             let RegInfo = temp[0]["Registered Users"]
             RegInfo = [...RegInfo,UserDetails]
 
             let UserEvents = userEvents
-            UserEvents = [...UserEvents,`${EventName}`]
+            UserEvents = [...UserEvents,temp[0]]
             await updateDoc(doc(db,"users",currentUser.uid),{
                 allRegisteredEvents:UserEvents
             })
@@ -107,24 +108,45 @@ function Home(){
             }
 
             <Navbar/>
+            <p className='Heading1'>All Upcoming Events</p>
             <div className="Events">
                 {
-                    Event.map((Events)=>(
-                        <div className="Event" onClick={()=>{setVis("visible")}} style={{backgroundImage:`url(${Events.bannerURL})`}}>
-                        {/* style={{visibility:`${vis}`}} onMouseEnter={()=>{setVis("visible")}} onMouseLeave={()=>{setVis("hidden")}} */}
-                            <div className="moreInfo">
-                                <div className="EventName">{Events.name}</div>
-                                <p className="mode" style={{fontSize:'150%'}}><b>Location:  </b>{Events.location}</p>
-                                <p className="description">{Events.description}</p>
-                                <p className="time"><b>Time:  </b>{Events.time}</p>
-                                <p className="Price"><b>Price:  ₹</b>{Events.price}</p>
-                            </div>
-                            {
-                                currentUser && 
-                                <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}>Register</button>
-                            }
-                        </div>
-                    ))
+                    Event.map((Events)=>{
+                        if(Events.completion == false){
+                            return(
+                                <div className="Event" onClick={()=>{setVis("visible")}} style={{backgroundImage:`url(${Events.bannerURL})`}}>
+                                    <div className="moreInfo">
+                                        <div className="EventName">{Events.name}</div>
+                                        <p className="mode" style={{fontSize:'150%'}}><b>Location:  </b>{Events.location}</p>
+                                        <p className="description">{Events.description}</p>
+                                        <p className="time"><b>Time:  </b>{Events.time}</p>
+                                        <p className="Price"><b>Price:  ₹</b>{Events.price}</p>
+                                    </div>
+                                    {
+                                        currentUser && 
+                                        <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}><span type='text'>Register</span></button>
+                                    }
+                                </div>
+                            )
+                        }
+                    })
+                }
+            </div>
+            <p className='Heading2'>Completed Events</p>
+            <div className="Events" style={{marginTop:'5%'}}>
+                {
+                    Event.map((Events)=>{
+                        if(Events.completion == true){
+                            return(
+                                <div className="Event" onClick={()=>{setVis("visible")}} style=         {{backgroundImage:`url(${Events.bannerURL})`}}>
+                                    <div className="moreInfo">
+                                        <div className="EventName">{Events.name}</div>
+                                        <p className="description">{Events.description}</p>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    })
                 }
             </div>
         </div>

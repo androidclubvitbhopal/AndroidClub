@@ -9,17 +9,21 @@ function Navbar(){
     const {currentUser} = useContext(Authcontext)
     return(
         <div className="Navbar">
+            <div className="ClName">Android Club</div>
             <Link className="Links" to="/home">Home</Link>
             <Link className="Links" to="/AboutUs">About Us</Link>
-            <Link className="Links" to="/Members">Members</Link>
             {
                 currentUser && 
                 <Link className="Links" to="/RegisteredEvents">Registered Events</Link>
             }
             <Link className="Links" to="/OurProjects">Our Projects</Link>
             {
+                currentUser && 
+                <img src={`${currentUser.photoURL}`}></img>
+            } 
+            {
                 currentUser &&
-                <input className="Links" type='button' onClick={(e)=>signOut()}  style={{backgroundColor:'transparent'}} value='logout'></input>
+                <div>Akshay</div>
             }
             {
                 !currentUser &&

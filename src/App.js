@@ -4,11 +4,11 @@ import React, { useContext } from "react";
 import Home from './pages/home';
 import AboutUs from "./pages/aboutUs"
 import OurProjects from "./pages/OurProjects"
-import Members from "./pages/members"
 import RegisteredEvents from "./pages/registeredEvents"
 import { Register,Login } from './pages/register&Login';
 import { Navigate } from 'react-router-dom';
 import { Authcontext } from './contextProvider';
+import Stream from './pages/EventStream';
 
 function App() {
   const currentUser = useContext(Authcontext)
@@ -32,8 +32,8 @@ function App() {
           {/* <Route path='/' element={<Home2/>}></Route> */}
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/RegisteredEvents" element={<ProtectedRoute><RegisteredEvents/></ProtectedRoute>}></Route>
-          <Route path="/Members" element={<Members/>}></Route>
           <Route path="/AboutUs" element={<AboutUs/>}></Route>
+          <Route path="/LiveStream" element={<Stream/>}></Route>
           <Route path="/OurProjects" element={<OurProjects/>}></Route>
         </Routes>
       </Router>
