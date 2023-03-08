@@ -53,14 +53,15 @@ function Home(){
     useEffect(()=>{
         FetchEvents()
         FetchUserDetails()
+        
     },[])
 
 
     // for testing use only 
 
-    useEffect(()=>{
-        console.log(Ev)
-    },[Ev])
+    // useEffect(()=>{
+    //     console.log(Ev)
+    // },[Ev])
 
 
     const HandleRegister= async (EventName)=>{
@@ -118,7 +119,7 @@ function Home(){
                                 <div className="Event" onClick={()=>{setVis("visible")}} style={{backgroundImage:`url(${Events.bannerURL})`}}>
                                     <div className="moreInfo">
                                         <div className="EventName">{Events.name}</div>
-                                        <p className="mode" style={{fontSize:'150%'}}><b>Location:  </b>{Events.location}</p>
+                                        <p className="mode"><b>Location:  </b>{Events.location}</p>
                                         <p className="description">{Events.description}</p>
                                         <p className="time"><b>Time:  </b>{Events.time}</p>
                                         <p className="Price"><b>Price:  ₹</b>{Events.price}</p>
@@ -134,7 +135,8 @@ function Home(){
                 }
             </div>
             <p className='Heading2'>Completed Events</p>
-            <div className="Events" style={{marginTop:'5%'}}>
+            <h3> Whether you're a seasoned pro or just looking to try something new, you're sure to find a community of like-minded individuals ready to welcome you with open arms. Check out our completed events section to see what our club has been up to, and join in on the fun!</h3>
+            <div className="Events" style={{marginTop:'15%'}}>
                 {
                     Event.map((Events)=>{
                         if(Events.completion == true){
