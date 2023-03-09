@@ -15,6 +15,8 @@ function Home(){
     const {currentUser} = useContext(Authcontext)
     const [UserDetails,setDetails] = useState({})
     const [userEvents,setUserEvents]  =useState([])
+    let i=0;
+    let j=0;
     // const [RgSt,setSt] = useState(false)
 
     const eventsRef = collection(db, "events");
@@ -115,6 +117,7 @@ function Home(){
                 {
                     Event.map((Events)=>{
                         if(Events.completion == false){
+                            i=i+1
                             return(
                                 <div className="Event" onClick={()=>{setVis("visible")}} style={{backgroundImage:`url(${Events.bannerURL})`}}>
                                     <div className="moreInfo">
@@ -128,6 +131,16 @@ function Home(){
                                         currentUser &&
                                         <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}><span type='text'>Register</span></button>
                                     }
+                                </div>
+                            )
+                        }
+                        else if(i==0 && j==0){
+                            j=j+1;
+                            return(
+                                <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
+                                    <div className="NoInfo">
+                                        <p className="EventName">No Events Scheduled as of Now <br></br>Come back later!!</p>
+                                    </div>
                                 </div>
                             )
                         }

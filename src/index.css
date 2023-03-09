@@ -276,6 +276,18 @@ body{
   color:aliceblue;
   box-shadow: rgba(16, 120, 35, 0.85) 5px 18px 25px;
 }
+.NoInfo{
+  height: 80%;
+  overflow: hidden;
+  width:80%;
+  color:transparent;
+  text-align: center;
+  justify-content: center;
+}
+.NoInfo p{
+  color:#000000;
+  font-size:350%;
+}
 .moreInfo{
   transition: 0.5s ease;
   overflow-y: scroll;
@@ -357,6 +369,10 @@ body{
   }
 }
 @media only screen and (max-width: 600px) {
+  .NoInfo p{
+    font-size: 150%;
+    text-align: center;
+  }
   .Events{
     top:18%;
     height: 40%;
