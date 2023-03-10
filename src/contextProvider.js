@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const Authcontext = createContext()
 export const AuthcontextProvider =({children})=>{
     const [currentUser,setCurrentUser] = useState({})
+    const [Evpayment,setEvPay] = useState([])
 
     useEffect(()=>{
         const unsub = onAuthStateChanged(auth,(user)=>{
@@ -20,7 +21,7 @@ export const AuthcontextProvider =({children})=>{
     //     {children}
     // </AuthContext.Provider>
     return(
-        <Authcontext.Provider value={{currentUser}}>
+        <Authcontext.Provider value={{currentUser,Evpayment,setEvPay}}>
             {children}
         </Authcontext.Provider>
     )

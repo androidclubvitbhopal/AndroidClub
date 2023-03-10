@@ -60,7 +60,7 @@ function RegisteredEvents(){
             <div className="RgEvents">
                 {
                     userDetails.map((Event,i)=>(
-                        <div className="Event"  onClick={()=>{HandleClick(Event)}} style={{backgroundImage:`url(${Event.bannerURL})`}}>
+                        <div className="Event" style={{backgroundImage:`url(${Event.bannerURL})`}}>
                             <div className="moreInfo">
                                 <div className="EventName">{Event.name}</div>
                                 <p className="mode" style={{fontSize:'150%'}}><b>Location:  </b>{Event.location}</p>
@@ -69,8 +69,8 @@ function RegisteredEvents(){
                                 <p className="Price"><b>Price:  ₹</b>{Event.price}</p>
                             </div>
                             {
-                                Event.YouTubeVidId && 
-                                <button className="RegisterBtn">Register</button>
+                                !Event.YouTubeVidId && 
+                                <button className="RegisterBtn" onClick={()=>{HandleClick(Event)}} style={{padding:'2%'}}>Live Now</button>
                             }
                         </div>
                     ))
