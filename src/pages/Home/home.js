@@ -7,8 +7,9 @@ import { db } from "../../firebaseconfig";
 import { getDocs, doc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../../contextProvider";
-import "./home.css";
 import homeBg from "../../images/home-bg.png"
+import { Footer } from "../../components/Footer/Footer";
+import "./home.css";
 
 function Home() {
     const [Event, setEvent] = useState([])
@@ -111,22 +112,20 @@ function Home() {
             }
 
             <Navbar />
-            <h1 className="first-heading">Welcome to <br /> Android club VIT Bhopal </h1> <br />
             <div className="club-intro">
+            <h1 className="first-heading">Android club VIT Bhopal </h1> <br />
                 <p>We at Android Club are driven to achieve excellence and solve problems while at it. Dedicated to educating and creating awareness about modern Mobile App development, we host workshops, hackathons, webinars, and all possible events under the sun, that help us build an inclusive community of like-minded people who explore and learn together. So, wear your thinking caps, put on some creativity, and let's develop some amazing apps!</p>
                 <div className="home-bg-div">
-                {/* <img src={homeBg} className="home-bg-img" alt="" /> */}
                 </div>
             </div>
             <div className="upcoming-events">
                 <p className='upcoming-events-heading'>All Upcoming Events</p>
-                {/* <p className='upcoming-events-heading'>Events</p> */}
                 <div className="upcoming-events-container">
                     {
                         Event.map((Events) => {
                             if (Events.completion === false) {
                                 return (
-                                    <div className="upcoming-event-block" onClick={() => { setVis("visible") }} style={{ backgroundImage: `url(${Events.bannerURL})` }}>
+                                    <div key={Math.random()} className="upcoming-event-block" onClick={() => { setVis("visible") }} style={{ backgroundImage: `url(${Events.bannerURL})` }}>
                                         <div className="upcoming-event-info">
                                             <div className="upcoming-event-name">{Events.name}</div> <br />
                                             <p className="upcoming-event-mode" >Mode : {Events.location}</p>
@@ -136,7 +135,6 @@ function Home() {
                                         </div>
                                         {
                                             currentUser &&
-                                            // <button className="RegisterBtn" onClick={() => { HandleRegister(Events.notificationGroup) }}><span type='text'>Register</span></button>
                                             <button className="RegisterBtn" onClick={() => { HandleRegister(Events.notificationGroup) }}>Register</button>
                                         }
                                     </div>
@@ -153,10 +151,16 @@ function Home() {
                         Event.map((Events) => {
                             if (Events.completion === true) {
                                 return (
-                                    <div className="completed-event-block" onClick={() => { setVis("visible") }} style={{ backgroundImage: `url(${Events.bannerURL})` }}>
+                                    <div key={Math.random()} className="completed-event-block" onClick={() => { setVis("visible") }}>
                                         <div className="completed-event-info">
+                                            <img src={Events.bannerURL} className="completed-event-img" alt="" /> 
+                                            <div className="completed-events-details">
                                             <div className="completed-event-name">{Events.name}</div>
-                                            <p className="description">{Events.description}</p>
+                                            <p className="completed-event-description">{Events.description}</p>
+                                            <p className="completed-event-summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque perferendis sapiente vero veniam et hic voluptatibus quis quam voluptas blanditiis nulla, sequi ipsam a, enim voluptate, incidunt reiciendis dignissimos eius veritatis officiis sint repudiandae cum possimus. Ratione praesentium debitis similique laudantium ut vel, iure explicabo id, voluptas commodi eligendi dolorem.</p>
+                                            <p className="completed-event-date">{Events.date}</p>
+                                            <p className="completed-event-location"> Venue: {Events.location}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 )
@@ -165,6 +169,7 @@ function Home() {
                     }
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

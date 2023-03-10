@@ -13,7 +13,7 @@ function Navbar() {
     const [vis, setVis] = useState("hidden")
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-success navbar-dark">
+            <nav className="navbar navbar-expand-lg bg-success navbar-dark fixed-top">
                 <div className="container-fluid">
                     <Link className="nav-link" to="#">
                         <img className="nav-logo-img" src={logo} alt="" />

@@ -1,6 +1,3 @@
-.Home{
-  margin-bottom: 10%;
-}
 .Home::-webkit-scrollbar {
   width: 8px;
 }
@@ -14,65 +11,76 @@
 }
 
 /* intro  */
-.club-intro{
-  background-image: url("../../images/home-bg.png");
+.club-intro {
   margin: 0 6%;
   font-size: 18px;
   color: rgb(73, 73, 73);
 }
-.club-intro p{
+
+.club-intro p {
   margin: 0 10%;
 }
-.home-bg-div{
+
+.home-bg-div {
   text-align: center;
 }
-.home-bg-img{
+
+.home-bg-img {
   height: 500px;
 }
-.first-heading{
+
+.first-heading {
   text-align: center;
   font-size: 55px;
-  margin-top: 3%;
+  margin-top: 7%;
 }
+
 /* upcoming events  */
-.upcoming-events-container{
+.upcoming-events-container {
   display: flex;
   gap: 5%;
   margin-top: 2%;
 }
-.upcoming-events{
+
+.upcoming-events {
   margin: 3% 6%;
 }
-.upcoming-events-heading{
+
+.upcoming-events-heading {
   font-size: 40px;
   display: inline;
   border-bottom: 4px solid black;
 }
-.upcoming-event-block{
+
+.upcoming-event-block {
   color: transparent;
   width: 50%;
   min-width: 40%;
   padding: 2%;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.737);
-  box-shadow: 2px 2px 10px 0px grey;
-  /* box-shadow: rgba(104, 16, 120, 0.85) 2px 2px 15px 0px; */
+  border: 1px solid rgba(0, 0, 0, .125);
+  box-shadow: 0 0 4px #5454552f;
   transition: 0.2s ease;
 }
+
 .upcoming-event-block:hover {
   transition: 0.2s;
   background-blend-mode: darken;
   color: aliceblue;
-  box-shadow: rgba(16, 120, 35, 0.85) 2px 2px 15px 0px;
+  box-shadow: 0px 0px 10px rgba(16, 120, 35, 0.85);
 }
-.upcoming-event-info{
+
+.upcoming-event-info {
   transition: 0.5s ease;
   overflow-y: scroll;
 }
-.upcoming-event-name{
+
+.upcoming-event-name {
   font-size: 40px;
   font-weight: bold;
 }
+
 .upcoming-event-info::-webkit-scrollbar {
   -webkit-appearance: none;
 }
@@ -84,6 +92,7 @@
 .upcoming-event-time {
   font-size: 120%;
 }
+
 .upcoming-event-mode {
   font-size: 120%;
 }
@@ -93,21 +102,21 @@
 }
 
 /* completed events  */
-.completed-events{
+.completed-events {
   margin: 0 6%;
 }
-.completed-events-heading{
+
+.completed-events-heading {
   font-size: 40px;
   display: inline;
   border-bottom: 4px solid black;
 }
 
-.completed-events-container{
+.completed-events-container {
   overflow: auto;
   display: flex;
   gap: 2%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 2%;
 }
 
 .completed-events-container::-webkit-scrollbar {
@@ -115,27 +124,40 @@
 }
 
 .completed-event-block {
-  color: transparent;
-  width: 50%;
   min-width: 30%;
-  padding: 2%;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.737);
-  box-shadow: 2px 2px 10px 0px grey;
+  border: 1px solid rgba(0, 0, 0, .125);
+  box-shadow: 0 0 4px #5454552f;
+}
+
+.completed-event-summary {
+  font-size: 12px;
 }
 
 .completed-event-block:hover {
-  transition: 0.2s;
-  background-blend-mode: darken;
-  color: aliceblue;
-  box-shadow: rgba(16, 120, 35, 0.85) 2px 2px 15px 0px;
+  box-shadow: 0 0 4px rgba(16, 120, 35, 0.85);
 }
-.completed-event-info{
+
+.completed-event-info {
   transition: 0.5s ease;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
-.completed-event-name{
-  font-size: 30px;
+
+.completed-event-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.completed-event-date {
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+
+.completed-event-description {
+  font-weight: bold;
+}
+
+.completed-event-location {
   font-weight: bold;
 }
 
@@ -143,8 +165,18 @@
   -webkit-appearance: none;
 }
 
+.completed-events-details {
+  padding: 2%;
+}
+
 .completed-event-info p {
   padding: 0%;
+}
+
+.completed-event-img {
+  height: 200px;
+  width: 410px;
+  border-bottom: 3px solid black;
 }
 
 .RegisterBtn {
@@ -201,13 +233,12 @@
 }
 
 .PopUpWindow .PopUpForm #New:hover {
-  /* color: #613587; */
   color: black;
 }
 
 .PopUpWindow .PopUpForm input {
   border-radius: 15px;
-  border:none;
+  border: none;
   text-align: center;
   font-size: 150%;
   background-color: rgba(0, 0, 0, 0.737);
