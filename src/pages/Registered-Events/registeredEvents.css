@@ -1,0 +1,17 @@
+.RgEvents {
+    left: 5%;
+    width: 90%;
+    height: 60%;
+    overflow: auto;
+    background-color: transparent;
+    width: 90%;
+    display: flex;
+    position: absolute;
+    top: 17%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.RgEvents::-webkit-scrollbar {
+    -webkit-appearance: none;
+}

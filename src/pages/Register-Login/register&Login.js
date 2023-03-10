@@ -1,13 +1,14 @@
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable } from "firebase/storage";
 import { useState } from "react";
-import { auth } from '../firebaseconfig';
-import { storage } from "../firebaseconfig";
+import { auth } from '../../firebaseconfig';
+import { storage } from "../../firebaseconfig";
 import { getDownloadURL } from "firebase/storage";
 import {Link, useNavigate } from "react-router-dom";
-import ProfilePicIcon from "../images/user.png"
-import { db } from "../firebaseconfig";
+import ProfilePicIcon from "../../images/user.png"
+import { db } from "../../firebaseconfig";
 import { doc, setDoc } from "firebase/firestore"; 
+import "./register&login.css";
 
 function Register(){
     const navigate = useNavigate()
@@ -61,7 +62,7 @@ function Register(){
                         <input type="text" placeholder="Registration Number" required></input>
                         <input type='number' placeholder="Phone Number" required></input>
                         <input type="password" placeholder="Password" required></input>
-                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
+                        <label htmlFor="Fl"><img alt="profilePic" src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
                         <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
                         <input type="submit" id="S" value="Register"></input>
                         {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
@@ -96,7 +97,7 @@ function Login(){
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="email" placeholder="Email-ID" required></input>
                         <input type="password" placeholder="Password" required></input>
-                        <input type="submit" id="S" value="Register"></input>
+                        <input type="submit" id="S" value="Login"></input>
                         {err && <span style={{alignSelf:'center'}}>Email and Password combination wrong, Try Again</span>}
                         <p style={{width:'26%',color:'black'}}>Don't have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></b></p>
                     </form>
