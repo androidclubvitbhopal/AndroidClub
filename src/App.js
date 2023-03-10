@@ -29,7 +29,6 @@ function App() {
         <Routes>
           <Route exact path="/login" element={<Login/>}></Route>
           <Route exact path="/Register" element={<Register/>}></Route>
-          {/* <Route path='/' element={<Home2/>}></Route> */}
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/RegisteredEvents" element={<ProtectedRoute><RegisteredEvents/></ProtectedRoute>}></Route>
           <Route path="/AboutUs" element={<AboutUs/>}></Route>
