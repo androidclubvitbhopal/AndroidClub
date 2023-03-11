@@ -251,3 +251,79 @@
 .PopUpWindow .PopUpForm input:hover {
   color: green;
 }
+
+@media only screen and (max-width: 600px) {
+  .club-intro {
+    font-size: 12px;
+    margin: 20% 2% 0 2%;
+  }
+
+  .club-intro p {
+    margin: 0 4%;
+  }
+
+  .first-heading {
+    font-size: 30px;
+  }
+
+  .upcoming-events-heading {
+    font-size: 20px;
+  }
+
+  .upcoming-events-container {
+    flex-direction: column;
+  }
+
+  .upcoming-event-block {
+    width: 100%;
+    margin-bottom: 8%;
+    /* background-size: contain; */
+  }
+  .upcoming-event-name{
+    font-size: 20px;
+    margin-bottom: -5%;
+  }
+  .upcoming-event-time {
+    font-size: 14px;
+  }
+  
+  .upcoming-event-mode {
+    font-size: 14px;
+  }
+  
+  .upcoming-event-price {
+    font-size: 14px;
+  }
+  .upcoming-event-description {
+    font-size: 10px;
+  }
+
+  .completed-events-heading {
+    font-size: 20px;
+  }
+  .completed-events-container{
+    flex-direction: column;
+  }
+  .completed-event-block{
+    margin-bottom: 8%;
+  }
+  .completed-event-img{
+    width: 328px;
+    height: 150px;
+  }
+  .completed-event-name{
+    font-size: 16px;
+  }
+  .completed-event-date{
+    font-size: 12px;
+  }
+  .completed-event-location{
+    font-size: 12px;
+  }
+  .completed-event-description{
+    font-size: 12px;
+  }
+  .completed-event-summary{
+    font-size: 8px;
+  }
+}

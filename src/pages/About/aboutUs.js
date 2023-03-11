@@ -63,31 +63,33 @@ function AboutUs() {
                     If you are interested in joining our club or have any questions, please don't hesitate to get in touch with us. You can reach us at [Email Address] or [Social Media Handles]. We look forward to hearing from you!
                 </p>
             </div>
+                <h1 className="meet-team-heading">Meet the Team</h1>
             <div className="teams">
-                <h1>Meet the Team</h1>
                 {
                     team.map((data) => (
                         <div key={Math.random()} className="team">
-                            <div className="info" >
-                                <p className="photo"><b></b> <img src={data.photo} alt="" height="220px" width="350px" /> </p>
-                                <p className="name">{data.name}</p>
-                                <p className="desc">{data.description}</p>
-                                <p className="pos"><b></b>{data.position}</p>
-                                <a href="https://www.instagram.com/">
-                                    <i className=" insta icon fa-brands fa-instagram"></i>
-                                </a>
-                                <a href="https://www.facebook.com/">
-                                    <i className=" fb icon fa-brands fa-facebook"></i>
-                                </a>
-                                <a href="https://www.linkedin.com">
+                            <div className="team-member-info" >
+                                <p className="photo"><b></b> <img src={data.photo} alt="" className="team-member-img" /> </p>
+                                <p className="team-member-name">{data.name}</p>
+                                <p className="team-member-desc">{data.description}</p>
+                                <p className="team-member-pos"><b></b>{data.position}</p>
+                                <a href="https://www.linkedin.com" target="_blank">
                                     <i className=" linkedin icon fa-brands fa-linkedin"></i>
                                 </a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i className=" insta icon fa-brands fa-instagram"></i>
+                                </a>
+                                <a href="https://www.github.com/" target="_blank">
+                                    <i className=" github icon fa-brands fa-github"></i>
+                                </a>
+                                
                             </div>
                         </div>
                     ))
                 }
             </div>
             <Footer/>
+
         </div>
 
     )

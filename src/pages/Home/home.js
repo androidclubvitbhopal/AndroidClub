@@ -129,7 +129,7 @@ function Home() {
                                         <div className="upcoming-event-info">
                                             <div className="upcoming-event-name">{Events.name}</div> <br />
                                             <p className="upcoming-event-mode" >Mode : {Events.location}</p>
-                                            <p className="description">Details : {Events.description}</p>
+                                            <p className="upcoming-event-description">Details : {Events.description}</p>
                                             <p className="upcoming-event-time">Time : {Events.time}</p>
                                             <p className="upcomin-event-price">Price : ₹{Events.price}</p>
                                         </div>

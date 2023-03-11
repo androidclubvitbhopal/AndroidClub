@@ -80,11 +80,14 @@
     }
 
     .footer-top {
-        gap: 10%;
+        gap: 25%;
     }
 
     .footer-top p {
         font-size: 11px;
+    }
+    .socials-icon{
+        font-size: 20px;
     }
 
     .email p {
