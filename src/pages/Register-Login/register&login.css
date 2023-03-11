@@ -28,7 +28,6 @@
 .FormBox {
     position: absolute;
     left: 27.5%;
-    top: 17%;
     width: 40%;
     background-color: azure;
     padding: 3%;
@@ -38,6 +37,12 @@
     padding-bottom: 1%;
     transition: 0.5s ease;
     align-self: center;
+}
+.FormBox1{
+    top: 5%;
+}
+.FormBox2{
+    top:22%;
 }
 
 .FormBox:hover {

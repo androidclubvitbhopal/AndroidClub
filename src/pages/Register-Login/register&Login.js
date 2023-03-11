@@ -53,9 +53,9 @@ function Register(){
 
     }
     return(
-        <div className="Home">
+        <div className="registerr">
             <div className="Login">
-                <div className="FormBox">
+                <div className="FormBox FormBox1">
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="text" placeholder="Name" required></input>
                         <input type="email" placeholder="Email-ID" required></input>
@@ -91,9 +91,9 @@ function Login(){
 
     }
     return(
-        <div className="Home">
+        <div className="loginn">
             <div className="Login">
-                <div className="FormBox">
+                <div className="FormBox FormBox2">
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="email" placeholder="Email-ID" required></input>
                         <input type="password" placeholder="Password" required></input>
