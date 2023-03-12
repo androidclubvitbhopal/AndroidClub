@@ -129,7 +129,6 @@ function Home(){
         const querySnapShot = await getDocs(q)
         const temp = []
         try{
-
                 querySnapShot.forEach((doc)=>{
                     temp.push(doc.data())
                 })
@@ -159,7 +158,6 @@ function Home(){
     }
     return(
         <div className="Home">
-            {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
             {
                 !currentUser &&
                 <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
