@@ -160,17 +160,17 @@ function Home(){
     return(
         <div className="Home">
             {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
-            <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
-                    {
-                        !currentUser && 
+            {
+                !currentUser &&
+                <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
                         <div className="PopUpForm">
                             <p>Hey Learner!! <br></br>Login In or Register to Access all features.</p>
                             <Link id='New' to='login'>Login</Link>
                             <Link id='New' to='Register'>Register</Link>
                             <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='Close'></input>
                         </div>
-                    }
-            </div>
+                </div>
+            }
             <div className="PopUpWindow" onClick={()=>{setPVis("hidden")}} style={{visibility:`${payTabVis}`}}>
                 <div className="PopUpForm">
                     <form onSubmit={(e)=>HandlePaidRegister(e)} style={{height:'100%'}}>
@@ -190,7 +190,7 @@ function Home(){
                         if(Events.completion == false){
                             i=i+1
                             return(
-                                <div className="Event" style={{backgroundImage:`url(${Events.bannerURL})`}}>
+                                <div className="Event" style={{backgroundImage:`url(${Events.bannerURL})`}} onClick={()=>{setVis("visible")}}>
                                     <div className="moreInfo">
                                         <div className="EventName">{Events.name}</div>
                                         <p className="mode"><b>Location:  </b>{Events.location}</p>
@@ -204,7 +204,7 @@ function Home(){
                                     }
                                     {
                                         currentUser && Events.price!=0 &&
-                                        <button className="RegisterBtn" onClick={()=>{HandleInit(Events)}}><span type='text'>Register1</span></button>
+                                        <button className="RegisterBtn" onClick={()=>{HandleInit(Events)}}><span type='text'>Register</span></button>
 
                                     }
                                 </div>
