@@ -2,31 +2,25 @@ import Navbar from "../components/Navbar"
 import { useContext, useEffect, useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebaseconfig";
-import { collection, query, updateDoc, where } from "firebase/firestore";
+import { collection, query, updateDoc, where ,orderBy} from "firebase/firestore";
 import { db } from "../firebaseconfig";
 import { getDocs,doc } from "firebase/firestore";
-import { Link, Navigate ,useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { Authcontext } from "../contextProvider";
-import { ref, uploadBytesResumable } from "firebase/storage";
-import { storage } from "../firebaseconfig";
-import { getDownloadURL } from "firebase/storage";
-import ProfilePicIcon from "../images/user.png"
 
 function Home(){
-    // const {Evpayment,setEvPay} = useContext(Authcontext) 
     const navigate = useNavigate()
     const [Event,setEvent] = useState([])
     const [Ev,setEv] = useState({})
     const [vis,setVis] = useState("hidden")
-    const [payTabVis,setPVis] = useState("hidden")
     const {currentUser} = useContext(Authcontext)
     const [UserDetails,setDetails] = useState({})
     const [userEvents,setUserEvents]  =useState([])
     const [err,setErr] = useState(false)
-    let i=0;
-    let j=0;
+    const {Evpayment,setEvPay} = useContext(Authcontext)
+    let i=false;
+    let j=false;
     let k=0;
-    // const [RgSt,setSt] = useState(false)
 
     const eventsRef = collection(db, "events");
     const usersRef = collection(db, "users");
@@ -80,48 +74,9 @@ function Home(){
     },[UserDetails])
     
     const HandleInit=(Event)=>{
-        setPVis("visible")
+        setEvPay(Event)
         setEv(Event)
-    }
-    const  HandlePaidRegister=async(e)=>{
-        e.preventDefault()
-        setVis("visible")
-        const q = query(eventsRef,where("notificationGroup", "==", `${Ev.notificationGroup}`))
-        const querySnapShot = await getDocs(q)
-        const temp = []
-        const PaymentSS = e.target[0].files[0]
-        const storageid = new Date().getTime()
-        const storageRef = ref(storage,`${storageid}`)
-        querySnapShot.forEach((doc)=>{
-            temp.push(doc.data())
-        })
-        let RegEmails = temp[0]["Registered Emails"]
-        RegEmails = [...RegEmails,`${currentUser.email}`]
-        let RegInfo = temp[0]["Registered Users"]
-        let UserEvents = userEvents
-        UserEvents = [...UserEvents,temp[0]]
-        await uploadBytesResumable(storageRef,PaymentSS)
-            .then(()=>{
-                getDownloadURL(storageRef).then(async (downloadURL) => {
-                    try{
-                        let UD = UserDetails
-                        UD.paymentImgURL = `${downloadURL}`
-                        RegInfo = [...RegInfo,UD]
-                        await updateDoc(doc(db,"events",Ev.notificationGroup),{  
-                            "Registered Emails":RegEmails,
-                            "Registered Users":UD,
-                        }).then(async()=>{
-                            await updateDoc(doc(db,"users",currentUser.uid),{
-                                allRegisteredEvents:UserEvents
-                            })
-                        })
-                    }
-                    catch(err){
-                        setErr(true)
-                    }
-                navigate("/RegisteredEvents")
-            })
-        })
+        navigate("/Payments")
     }
     const HandleRegister= async (EventName)=>{
         setVis("visible")
@@ -129,7 +84,6 @@ function Home(){
         const querySnapShot = await getDocs(q)
         const temp = []
         try{
-
                 querySnapShot.forEach((doc)=>{
                     temp.push(doc.data())
                 })
@@ -141,7 +95,7 @@ function Home(){
                     RegInfo = [...RegInfo,UserDetails]
                     console.log(UserDetails)
                     let UserEvents = userEvents
-                    UserEvents = [...UserEvents,temp[0]]
+                    UserEvents = [...UserEvents,{name:temp[0].name,description:temp[0].description,time:temp[0].time,bannerURL:temp[0].bannerURL}]
                     await updateDoc(doc(db,"events",EventName),{
                         "Registered Emails":RegEmails,
                         "Registered Users":RegInfo,
@@ -156,41 +110,30 @@ function Home(){
             console.log(err)
         }
         navigate("/RegisteredEvents")
+        alert(`Registered for ${EventName}`)
     }
     return(
         <div className="Home">
-            {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
-            <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
-                    {
-                        !currentUser && 
+            {
+                !currentUser &&
+                <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
                         <div className="PopUpForm">
                             <p>Hey Learner!! <br></br>Login In or Register to Access all features.</p>
                             <Link id='New' to='login'>Login</Link>
                             <Link id='New' to='Register'>Register</Link>
                             <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='Close'></input>
                         </div>
-                    }
-            </div>
-            <div className="PopUpWindow" onClick={()=>{setPVis("hidden")}} style={{visibility:`${payTabVis}`}}>
-                <div className="PopUpForm">
-                    <form onSubmit={(e)=>HandlePaidRegister(e)} style={{height:'100%'}}>
-                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'80px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Submit screenshot of Payment</p></label>
-                        <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
-                        <input type="submit" id="S" value="Register" style={{padding:'2%',height:'20%',width:'25%'}}></input>
-                        {err && <span style={{alignSelf:'center'}}>Something has gone wrong, Try Again</span>}
-                    </form>
                 </div>
-            </div>
-
+            }
             <Navbar/>
             <p className='Heading1'>All Upcoming Events</p>
             <div className="Events">
                 {
                     Event.map((Events)=>{
                         if(Events.completion == false){
-                            i=i+1
+                            i=true;
                             return(
-                                <div className="Event" style={{backgroundImage:`url(${Events.bannerURL})`}}>
+                                <div className="Event" style={{backgroundImage:`url(${Events.bannerURL})`}} onClick={()=>{setVis("visible")}}>
                                     <div className="moreInfo">
                                         <div className="EventName">{Events.name}</div>
                                         <p className="mode"><b>Location:  </b>{Events.location}</p>
@@ -204,14 +147,14 @@ function Home(){
                                     }
                                     {
                                         currentUser && Events.price!=0 &&
-                                        <button className="RegisterBtn" onClick={()=>{HandleInit(Events)}}><span type='text'>Register1</span></button>
+                                        <button className="RegisterBtn" onClick={()=>{HandleInit(Events)}}><span type='text'>Register</span></button>
 
                                     }
                                 </div>
                             )
                         }
-                        else if(i==0 && j==0){
-                            j=j+1;
+                        else if(!i && !j){
+                            j=true;
                             return(
                                 <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
                                     <div className="NoInfo">
