@@ -2,32 +2,25 @@ import Navbar from "../components/Navbar"
 import { useContext, useEffect, useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebaseconfig";
-import { collection, query, updateDoc, where } from "firebase/firestore";
+import { collection, query, updateDoc, where ,orderBy} from "firebase/firestore";
 import { db } from "../firebaseconfig";
 import { getDocs,doc } from "firebase/firestore";
-import { Link, Navigate ,useNavigate } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { Authcontext } from "../contextProvider";
-import { ref, uploadBytesResumable } from "firebase/storage";
-import { storage } from "../firebaseconfig";
-import { getDownloadURL } from "firebase/storage";
-import ProfilePicIcon from "../images/user.png"
 
 function Home(){
-    // const {Evpayment,setEvPay} = useContext(Authcontext) 
     const navigate = useNavigate()
     const [Event,setEvent] = useState([])
     const [Ev,setEv] = useState({})
     const [vis,setVis] = useState("hidden")
-    const [payTabVis,setPVis] = useState("hidden")
     const {currentUser} = useContext(Authcontext)
     const [UserDetails,setDetails] = useState({})
     const [userEvents,setUserEvents]  =useState([])
     const [err,setErr] = useState(false)
-    // const {Evpayment,setEvPay} = useContext(Authcontext)
+    const {Evpayment,setEvPay} = useContext(Authcontext)
     let i=false;
     let j=false;
     let k=0;
-    // const [RgSt,setSt] = useState(false)
 
     const eventsRef = collection(db, "events");
     const usersRef = collection(db, "users");
@@ -81,49 +74,9 @@ function Home(){
     },[UserDetails])
     
     const HandleInit=(Event)=>{
-        setPVis("visible")
+        setEvPay(Event)
         setEv(Event)
-    }
-    const  HandlePaidRegister=async(e)=>{
-        e.preventDefault()
-        setVis("visible")
-        const q = query(eventsRef,where("notificationGroup", "==", `${Ev.notificationGroup}`))
-        const querySnapShot = await getDocs(q)
-        const temp = []
-        const PaymentSS = e.target[0].files[0]
-        const storageid = new Date().getTime()
-        const storageRef = ref(storage,`${storageid}`)
-        querySnapShot.forEach((doc)=>{
-            temp.push(doc.data())
-        })
-        let RegEmails = temp[0]["Registered Emails"]
-        RegEmails = [...RegEmails,`${currentUser.email}`]
-        let RegInfo = temp[0]["Registered Users"]
-        let UserEvents = userEvents
-        UserEvents = [...UserEvents,{name:temp[0].name,description:temp[0].description,time:temp[0].time,bannerURL:temp[0].bannerURL}]
-        await uploadBytesResumable(storageRef,PaymentSS)
-            .then(()=>{
-                getDownloadURL(storageRef).then(async (downloadURL) => {
-                    try{
-                        let UD = UserDetails
-                        UD.paymentImgURL = `${downloadURL}`
-                        RegInfo = [...RegInfo,UD]
-                        await updateDoc(doc(db,"events",Ev.notificationGroup),{  
-                            "Registered Emails":RegEmails,
-                            "Registered Users":UD,
-                        }).then(async()=>{
-                            await updateDoc(doc(db,"users",currentUser.uid),{
-                                allRegisteredEvents:UserEvents
-                            })
-                        })
-                    }
-                    catch(err){
-                        setErr(true)
-                    }
-            })
-        })
-        navigate("/RegisteredEvents")
-        alert(`Registered for ${Ev.name}`)
+        navigate("/Payments")
     }
     const HandleRegister= async (EventName)=>{
         setVis("visible")
@@ -172,17 +125,6 @@ function Home(){
                         </div>
                 </div>
             }
-            <div className="PopUpWindow" onClick={()=>{setPVis("hidden")}} style={{visibility:`${payTabVis}`}}>
-                <div className="PopUpForm">
-                    <form onSubmit={(e)=>HandlePaidRegister(e)} style={{height:'100%'}}>
-                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'80px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Submit screenshot of Payment</p></label>
-                        <input id="Fl" type="file" placeholder="file" style={{display:'none'}} required></input>
-                        <input type="submit" id="S" value="Register" style={{padding:'2%',height:'20%',width:'25%'}}></input>
-                        {err && <span style={{alignSelf:'center'}}>Something has gone wrong, Try Again</span>}
-                    </form>
-                </div>
-            </div>
-
             <Navbar/>
             <p className='Heading1'>All Upcoming Events</p>
             <div className="Events">
