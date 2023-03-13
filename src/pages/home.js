@@ -16,7 +16,6 @@ function Home(){
     const {currentUser} = useContext(Authcontext)
     const [UserDetails,setDetails] = useState({})
     const [userEvents,setUserEvents]  =useState([])
-    const [err,setErr] = useState(false)
     const {Evpayment,setEvPay} = useContext(Authcontext)
     let i=false;
     let j=false;
