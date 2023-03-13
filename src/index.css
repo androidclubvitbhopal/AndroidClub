@@ -244,7 +244,6 @@ body{
   height: 50%;
   overflow:auto;
   background-color: transparent;
-  width:90%;
   display:flex;
   top:25%; 
   position: relative;
@@ -260,8 +259,8 @@ body{
 }
 .Event{
   color:transparent;
-  /* width: 40%; */
   min-width: 40%;
+  max-width: 40%;
   border-radius: 30px;
   padding: 2%;
   margin-right: 5%;
