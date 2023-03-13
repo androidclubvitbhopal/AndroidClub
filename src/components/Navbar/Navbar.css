@@ -13,7 +13,7 @@
 }
 
 .nav-profile-name {
-    /* color: white; */
+    color: white;
     font-size: 10px;
     margin: 5px 0 0 10px;
     cursor: pointer;
@@ -23,9 +23,13 @@
     .nav-profile-img {
         display: none;
     }
+    .nav-logo-img{
+        margin-left: 0;
+    }
 
     .nav-profile-name {
         font-size: 15px;
-        margin-left: 0;
+        margin-left: 0%;
+        color: black;
     }
 }

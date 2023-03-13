@@ -11,10 +11,11 @@ import "./registeredEvents.css"
 function RegisteredEvents(){
     const {currentUser} = useContext(Authcontext)
     const [userDetails,setDetails] = useState([])
-    const [eventDetails,setEvDt] = useState([])
+    const [eventDetails,setEvDt] = useState({})
     const [vis,setVis] = useState("hidden")
     const [Evid,setId] = useState("")
     const userRef = collection(db,"users")
+    const eventRef  = collection(db,"events")
     // const eventRef = collection (db,"events")
     const UserEvents = async()=>{
         const q= query(userRef,where('email','==',currentUser.email))
@@ -29,36 +30,63 @@ function RegisteredEvents(){
             console.log(err)
         }
     }
-    // useEffect(()=>{
-    //     console.log(vis)
-    // },[vis])
+    useEffect(()=>{
+        console.log(eventDetails.YouTubeVidId)
+    },[eventDetails])
+    const HandleBack=()=>{
+        setVis("hidden")
+        setEvDt({})
+    }
+    const HandleClick = async (Event) =>{
+        setVis("visible")
+        const q= query(eventRef,where('notificationGroup','==',Event.notificationGroup))
+        const temp = []
+        const querySnapShot = await getDocs(q)
+        try{
+            querySnapShot.forEach((doc)=>{
+                temp.push(doc.data())
+            })
+            setEvDt(temp[0])
+        }catch(err){
+            console.log(err)
+        }
+    }
     useEffect(()=>{
         UserEvents()
     },[])
     return(
-        <div className="Home">
+        <div className="reg">
             <Navbar/>
-            <div className="RgEvents">
+            <div className="reg-events">
                 {
-                    userDetails.map((Event)=>(
-                        <div className="Event"  style={{backgroundImage:`url(${Event.bannerURL})`}}>
-                            <div className="moreInfo">
-                                <div className="EventName">{Event.name}</div>
-                                <p className="mode" style={{fontSize:'150%'}}><b>Location:  </b>{Event.location}</p>
-                                <p className="description">{Event.description}</p>
-                                <p className="time"><b>Time:  </b>{Event.time}</p>
-                                <p className="Price"><b>Price:  ₹</b>{Event.price}</p>
+                    userDetails.map((Event,i)=>(
+                        <div className="reg-event" style={{backgroundImage:`url(${Event.bannerURL})`}}>
+                            <div className="reg-event-moreInfo">
+                                <div className="reg-event-name">{Event.name}</div>
+                                <p className="reg-event-mode" >Mode :{Event.location}</p>
+                                <p className="reg-event-description">Details : {Event.description}</p>
+                                <p className="reg-event-time">Time :{Event.time}</p>
+                                <p className="reg-event-price">Price : ₹{Event.price}</p>
                             </div>
                             {
-                                Event.YouTubeVidId && 
-                                <button className="RegisterBtn">Register</button>
+                                !Event.YouTubeVidId && 
+                                <button className="live-now-btn" onClick={()=>{HandleClick(Event)}} style={{padding:'2%'}}>Live Now</button>
                             }
                         </div>
                     ))
                 }
                 {/* <Stream YtID='qVUv8PCRHCc' vis={`${vis}`}/> */}
             </div>
-
+            <div className="PopUpWindow" onClick={()=>HandleBack()} style={{visibility:`${vis}`}}>
+                <div className="LivePopUp">
+                    <div className="stream-page">
+                        <iframe id="ytplayer" type="text/html" 
+                        src={`https://www.youtube.com/embed/${eventDetails.YouTubeVidId}?autoplay=1&origin=http://example.com`}
+                        frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                        <iframe className="comments" width="185" height="315" src={`https://www.youtube.com/live_chat?v=${eventDetails.YouTubeVidId}&embed_domain=localhost:3001/LiveStream" frameborder="0`}></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
