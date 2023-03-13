@@ -10,14 +10,13 @@ import { Authcontext } from "../contextProvider";
 
 function Home(){
     const navigate = useNavigate()
-    const [Event,setEvent] = useState([])
-    const [Ev,setEv] = useState({})
+    const [UEvent,setUEvent] = useState([])
+    const [CEvent,setCEvent] = useState([])
     const [vis,setVis] = useState("hidden")
     const {currentUser} = useContext(Authcontext)
     const [UserDetails,setDetails] = useState({})
     const [userEvents,setUserEvents]  =useState([])
     const {Evpayment,setEvPay} = useContext(Authcontext)
-    let i=false;
     let j=false;
     let k=0;
 
@@ -26,14 +25,25 @@ function Home(){
 
 
     const FetchEvents = async ()=> {
-        const q = query(eventsRef)
-        const temp = []
-        const querySnapShot = await getDocs(q)
+        const q1 = query(eventsRef,where("completion","==",false))
+        const temp1 = []
+        const querySnapShot1 = await getDocs(q1)
         try{
-            querySnapShot.forEach((doc)=>{
-                temp.push(doc.data())
+            querySnapShot1.forEach((doc)=>{
+                temp1.push(doc.data())
             })
-            setEvent(temp)
+            setUEvent(temp1)
+        }catch(err){
+            console.log(err)
+        }
+        const q2 = query(eventsRef,where("completion","==",true))
+        const temp2 = []
+        const querySnapShot2 = await getDocs(q2)
+        try{
+            querySnapShot2.forEach((doc)=>{
+                temp2.push(doc.data())
+            })
+            setCEvent(temp2)
         }catch(err){
             console.log(err)
         }
@@ -67,14 +77,16 @@ function Home(){
     //     console.log(Ev)
     // },[Ev])
 
-
+    useEffect(()=>{
+        j=true;
+    },[UEvent])
     useEffect(()=>{
         k=k+1;
     },[UserDetails])
     
     const HandleInit=(Event)=>{
         setEvPay(Event)
-        setEv(Event)
+        // setEv(Event)
         navigate("/Payments")
     }
     const HandleRegister= async (EventName)=>{
@@ -86,7 +98,7 @@ function Home(){
                 querySnapShot.forEach((doc)=>{
                     temp.push(doc.data())
                 })
-                setEv(temp)
+                // setEv(temp)
                 let RegEmails = temp[0]["Registered Emails"]
                 RegEmails = [...RegEmails,`${currentUser.email}`]
                 if(k!=0){
@@ -128,9 +140,8 @@ function Home(){
             <p className='Heading1'>All Upcoming Events</p>
             <div className="Events">
                 {
-                    Event.map((Events)=>{
-                        if(Events.completion == false){
-                            i=true;
+                    UEvent.map((Events)=>{
+                        if(j){
                             return(
                                 <div className="Event" style={{backgroundImage:`url(${Events.bannerURL})`}} onClick={()=>{setVis("visible")}}>
                                     <div className="moreInfo">
@@ -152,8 +163,7 @@ function Home(){
                                 </div>
                             )
                         }
-                        else if(!i && !j){
-                            j=true;
+                        else if(!j){
                             return(
                                 <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
                                     <div className="NoInfo">
@@ -169,18 +179,14 @@ function Home(){
             <h3> Whether you're a seasoned pro or just looking to try something new, you're sure to find a community of like-minded individuals ready to welcome you with open arms. Check out our completed events section to see what our club has been up to, and join in on the fun!</h3>
             <div className="Events" style={{marginTop:'15%'}}>
                 {
-                    Event.map((Events)=>{
-                        if(Events.completion == true){
-                            return(
-                                <div className="Event" onClick={()=>{setVis("visible")}} style=         {{backgroundImage:`url(${Events.bannerURL})`}}>
-                                    <div className="moreInfo">
-                                        <div className="EventName">{Events.name}</div>
-                                        <p className="description">{Events.description}</p>
-                                    </div>
-                                </div>
-                            )
-                        }
-                    })
+                    CEvent.map((Events)=>(
+                        <div className="Event" onClick={()=>{setVis("visible")}} style={{backgroundImage:`url(${Events.bannerURL})`}}>
+                            <div className="moreInfo">
+                            <div className="EventName">{Events.name}</div>
+                                <p className="description">{Events.description}</p>
+                            </div>
+                        </div>
+                    ))
                 }
             </div>
         </div>
