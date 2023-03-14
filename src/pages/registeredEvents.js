@@ -13,6 +13,7 @@ function RegisteredEvents(){
     const [userDetails,setDetails] = useState([])
     const [eventDetails,setEvDt] = useState({})
     const [vis,setVis] = useState("hidden")
+    const [visN,setVisN] = useState("hidden")
     const [Evid,setId] = useState("")
     const userRef = collection(db,"users")
     const eventRef  = collection(db,"events")
@@ -35,18 +36,25 @@ function RegisteredEvents(){
     },[eventDetails])
     const HandleBack=()=>{
         setVis("hidden")
+        setVisN("hidden")
         setEvDt({})
     }
     const HandleClick = async (Event) =>{
-        setVis("visible")
-        const q= query(eventRef,where('notificationGroup','==',Event.notificationGroup))
+        const q= query(eventRef,where('description','==',Event.description))
         const temp = []
         const querySnapShot = await getDocs(q)
         try{
             querySnapShot.forEach((doc)=>{
                 temp.push(doc.data())
             })
-            setEvDt(temp[0])
+            console.log(temp)
+            if(temp[0].YouTubeVidId!=""){
+                setEvDt(temp[0])
+                setVis("visible")
+            }
+            else{
+                setVisN("visible")
+            }
         }catch(err){
             console.log(err)
         }
@@ -60,7 +68,7 @@ function RegisteredEvents(){
             <div className="RgEvents">
                 {
                     userDetails.map((Event,i)=>(
-                        <div className="Event" style={{backgroundImage:`url(${Event.bannerURL})`}}>
+                        <div className="Event" style={{backgroundImage:`url(${Event.bannerURL})`}} onClick={()=>{HandleClick(Event)}}>
                             <div className="moreInfo">
                                 <div className="EventName">{Event.name}</div>
                                 <p className="mode" style={{fontSize:'150%'}}><b>Location:  </b>{Event.location}</p>
@@ -68,10 +76,10 @@ function RegisteredEvents(){
                                 <p className="time"><b>Time:  </b>{Event.time}</p>
                                 <p className="Price"><b>Price:  ₹</b>{Event.price}</p>
                             </div>
-                            {
+                            {/* {
                                 !Event.YouTubeVidId && 
                                 <button className="RegisterBtn" onClick={()=>{HandleClick(Event)}} style={{padding:'2%'}}>Live Now</button>
-                            }
+                            } */}
                         </div>
                     ))
                 }
@@ -85,6 +93,12 @@ function RegisteredEvents(){
                         frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                         <iframe className="comments" width="185" height="315" src={`https://www.youtube.com/live_chat?v=${eventDetails.YouTubeVidId}&embed_domain=localhost:3001/LiveStream" frameborder="0`}></iframe>
                     </div>
+                </div>
+            </div>
+            <div className="PopUpWindow" onClick={()=>HandleBack()} style={{visibility:`${visN}`}}>
+                <div className="PopUpForm">
+                    <p>Hey Learner!! <br></br>This Event is not Available Now. Feel free to Register for new and fun events available right now.</p>
+                    <input className="CancelBtn" type='button' onClick={()=>{setVisN("hidden")}} value='Close'></input>
                 </div>
             </div>
         </div>

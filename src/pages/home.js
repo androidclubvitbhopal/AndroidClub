@@ -58,7 +58,7 @@ function Home(){
             querySnapShot.forEach((doc)=>{
                 temp.push(doc.data())
             })
-            setDetails({email:temp[0].email,name:`${temp[0].name}`,paymentVerified:"N",phone:`${temp[0].phone}`,regNo:`${temp[0].regNo}`,paymentImgURL:""})
+            setDetails({email:temp[0].email,name:`${temp[0].name}`,paymentVerified:"N",phone:`${temp[0].phone}`,regNo:`${temp[0].regNo}`,paymentImgURL:"",location:""})
             setUserEvents(temp[0].allRegisteredEvents)
         }catch(err){
             console.log(err)
@@ -86,7 +86,6 @@ function Home(){
     
     const HandleInit=(Event)=>{
         setEvPay(Event)
-        // setEv(Event)
         navigate("/Payments")
     }
     const HandleRegister= async (EventName)=>{
@@ -106,7 +105,7 @@ function Home(){
                     RegInfo = [...RegInfo,UserDetails]
                     console.log(UserDetails)
                     let UserEvents = userEvents
-                    UserEvents = [...UserEvents,{name:temp[0].name,description:temp[0].description,time:temp[0].time,bannerURL:temp[0].bannerURL}]
+                    UserEvents = [...UserEvents,{name:temp[0].name,description:temp[0].description,time:temp[0].time,bannerURL:temp[0].bannerURL,location:temp[0].location}]
                     await updateDoc(doc(db,"events",EventName),{
                         "Registered Emails":RegEmails,
                         "Registered Users":RegInfo,
