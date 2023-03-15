@@ -12,8 +12,11 @@ import { doc, setDoc } from "firebase/firestore";
 function Register(){
     const navigate = useNavigate()
     const [err,setErr] = useState(false)
+    const [Loading,setLoading] = useState(false)
     const HandleSubmit= async (e)=>{
         e.preventDefault();
+        setLoading(true)
+        setErr(false)
         const displayName = e.target[0].value
         const email = e.target[1].value
         const rgNo = e.target[2].value
@@ -48,7 +51,7 @@ function Register(){
                 navigate("/home")
             })
         })
-        
+        setLoading(false)
 
     }
     return(
@@ -63,7 +66,7 @@ function Register(){
                         <input type="password" placeholder="Password" required></input>
                         <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
                         <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
-                        <input type="submit" id="S" value="Register"></input>
+                        <input type="submit" id="S" value="Register" disabled={Loading}></input>
                         {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
                         <p style={{width:'26%',color:'black'}}>Have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></b></p>
                     </form>
@@ -76,7 +79,10 @@ function Register(){
 function Login(){
     const navigate = useNavigate()
     const [err,setErr] = useState(false)
+    const [Loading,setLoading] = useState(false)
     const HandleSubmit= async (e)=>{
+        setErr(false)
+        setLoading(true)
         e.preventDefault()
         const email = e.target[0].value
         const password = e.target[1].value
@@ -87,6 +93,7 @@ function Login(){
         catch(err){
             setErr(true)
         }
+        setLoading(false)
 
     }
     return(
@@ -96,7 +103,7 @@ function Login(){
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="email" placeholder="Email-ID" required></input>
                         <input type="password" placeholder="Password" required></input>
-                        <input type="submit" id="S" value="Register"></input>
+                        <input type="submit" id="S" value="Register" disabled={Loading}></input>
                         {err && <span style={{alignSelf:'center'}}>Email and Password combination wrong, Try Again</span>}
                         <p style={{width:'26%',color:'black'}}>Don't have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></b></p>
                     </form>
