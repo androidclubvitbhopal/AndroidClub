@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import "./EventStream.css"
 function Stream(props){
     const [vis,setVis] = useState(`${props.vis}`)
     const Vis =()=>{

@@ -1,14 +1,14 @@
 import './App.css';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import React, { useContext } from "react";
-import Home from './pages/home';
-import AboutUs from "./pages/aboutUs"
-import OurProjects from "./pages/OurProjects"
-import RegisteredEvents from "./pages/registeredEvents"
-import { Register,Login } from './pages/register&Login';
+import Home from './pages/Home/home';
+import AboutUs from "./pages/About/aboutUs"
+import OurProjects from "./pages/Projects/OurProjects"
+import RegisteredEvents from "./pages/Registered-Events/registeredEvents"
+import { Register,Login } from './pages/Register-Login/register&Login';
 import { Navigate } from 'react-router-dom';
 import { Authcontext } from './contextProvider';
-import Stream from './pages/EventStream';
+import Stream from './pages/Event-Stream/EventStream';
 import Payment from './pages/payment';
 
 function App() {
