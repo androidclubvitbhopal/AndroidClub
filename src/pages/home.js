@@ -162,7 +162,7 @@ function Home(){
                                 </div>
                             )
                         }
-                        else if(!j){
+                        {/* else if(!j){
                             return(
                                 <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
                                     <div className="NoInfo">
@@ -170,7 +170,7 @@ function Home(){
                                     </div>
                                 </div>
                             )
-                        }
+                        } */}
                     })
                 }
             </div>

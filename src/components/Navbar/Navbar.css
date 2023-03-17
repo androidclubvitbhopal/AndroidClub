@@ -1,22 +1,38 @@
+/* .navbar{
+    background-color: green;
+} */
 .nav-logo-img {
     height: 40px;
     border-radius: 50%;
     display: inline-block;
     margin: 0 10px;
 }
-
+#NvBr{
+    padding: 0.5%;
+}
+.nav-item{
+    margin-left: 2%;
+    width: fit-content;
+    /* background-color: aliceblue; */
+    display: flex;
+    max-width: max-content;
+}
 .nav-profile-img {
     cursor: pointer;
     border-radius: 50%;
-    height: 40px;
-    margin-left: 990px;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left:192%;
 }
 
 .nav-profile-name {
     color: white;
-    font-size: 10px;
+    font-size: 20px;
     margin: 5px 0 0 10px;
     cursor: pointer;
+    position: relative;
+    left:195%;
 }
 
 @media only screen and (max-width: 600px) {

@@ -11,18 +11,17 @@ import homeBg from "../../images/home-bg.png"
 import { Footer } from "../../components/Footer/Footer";
 import "./home.css";
 
-function Home(){
+function Home() {
     const navigate = useNavigate()
     const [UEvent,setUEvent] = useState([])
     const [CEvent,setCEvent] = useState([])
-    const [vis,setVis] = useState("hidden")
-    const {currentUser} = useContext(Authcontext)
-    const [UserDetails,setDetails] = useState({})
-    const [userEvents,setUserEvents]  =useState([])
+    const [vis, setVis] = useState("hidden")
+    const { currentUser } = useContext(Authcontext)
+    const [UserDetails, setDetails] = useState({})
+    const [userEvents, setUserEvents] = useState([])
     const {Evpayment,setEvPay} = useContext(Authcontext)
     let j=false;
     let k=0;
-
     const eventsRef = collection(db, "events");
     const usersRef = collection(db, "users");
 
@@ -72,21 +71,13 @@ function Home(){
         FetchUserDetails()
         
     },[])
-
-
-    // for testing use only 
-
-    // useEffect(()=>{
-    //     console.log(Ev)
-    // },[Ev])
-
     useEffect(()=>{
         j=true;
     },[UEvent])
     useEffect(()=>{
         k=k+1;
     },[UserDetails])
-    
+
     const HandleInit=(Event)=>{
         setEvPay(Event)
         navigate("/Payments")
@@ -125,47 +116,63 @@ function Home(){
         navigate("/RegisteredEvents")
         alert(`Registered for ${EventName}`)
     }
-    return(
+
+    // for testing use only 
+
+    // useEffect(() => {
+    //     console.log(Ev)
+    // }, [Ev])
+
+    return (
         <div className="Home">
+            {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
             {
                 !currentUser &&
-                <div className="PopUpWindow" onClick={()=>{setVis("hidden")}} style={{visibility:`${vis}`}}>
-                        <div className="PopUpForm">
-                            <p>Hey Learner!! <br></br>Login In or Register to Access all features.</p>
-                            <Link id='New' to='login'>Login</Link>
-                            <Link id='New' to='Register'>Register</Link>
-                            <input className="CancelBtn" type='button' onClick={()=>{setVis("hidden")}} value='Close'></input>
-                        </div>
+                <div className="PopUpWindow" onClick={() => { setVis("hidden") }} style={{ visibility: `${vis}` }}>
+                    <div className="PopUpForm">
+                        <p>Hey Learner!! <br></br>Login In or Register to Access all features.</p>
+                        <Link id='New' to='../login'>Login</Link>
+                        <Link id='New' to='../Register'>Register</Link>
+                        <input className="CancelBtn" type='button' onClick={() => { setVis("hidden") }} value='Close'></input>
+                    </div>
                 </div>
             }
-            <Navbar/>
-            <p className='Heading1'>All Upcoming Events</p>
-            <div className="Events">
+
+            <Navbar />
+            <div className="club-intro">
+            <h1 className="first-heading">Android club VIT Bhopal </h1> <br />
+                <p>We at Android Club are driven to achieve excellence and solve problems while at it. Dedicated to educating and creating awareness about modern Mobile App development, we host workshops, hackathons, webinars, and all possible events under the sun, that help us build an inclusive community of like-minded people who explore and learn together. So, wear your thinking caps, put on some creativity, and let's develop some amazing apps!</p>
+                <div className="home-bg-div">
+                </div>
+            </div>
+            <div className="upcoming-events">
+                <p className='upcoming-events-heading'>All Upcoming Events</p>
+                <div className="upcoming-events-container">
                 {
                     UEvent.map((Events)=>{
-                        if(j){
+                        if(Events){
                             return(
-                                <div className="Event" style={{backgroundImage:`url(${Events.bannerURL})`}} onClick={()=>{setVis("visible")}}>
-                                    <div className="moreInfo">
-                                        <div className="EventName">{Events.name}</div>
-                                        <p className="mode"><b>Location:  </b>{Events.location}</p>
-                                        <p className="description">{Events.description}</p>
-                                        <p className="time"><b>Time:  </b>{Events.time}</p>
-                                        <p className="Price"><b>Price:  ₹</b>{Events.price}</p>
-                                    </div>
-                                    {
-                                        currentUser && Events.price==0 &&
-                                        <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}><span type='text'>Register</span></button>
-                                    }
-                                    {
-                                        currentUser && Events.price!=0 &&
-                                        <button className="RegisterBtn" onClick={()=>{HandleInit(Events)}}><span type='text'>Register</span></button>
+                                <div key={Math.random()} className="upcoming-event-block" onClick={() => { setVis("visible") }} style={{ backgroundImage: `url(${Events.bannerURL})` }}>
+                                        <div className="upcoming-event-info">
+                                            <div className="upcoming-event-name">{Events.name}</div> <br />
+                                            <p className="upcoming-event-mode" >Mode : {Events.location}</p>
+                                            <p className="upcoming-event-description">Details : {Events.description}</p>
+                                            <p className="upcoming-event-time">Time : {Events.time}</p>
+                                            <p className="upcomin-event-price">Price : ₹{Events.price}</p>
+                                        </div>
+                                        {
+                                            currentUser && Events.price==0 &&
+                                            <button className="RegisterBtn" onClick={()=>{HandleRegister(Events.notificationGroup)}}><span type='text'>Register</span></button>
+                                        }
+                                        {
+                                            currentUser && Events.price!=0 &&
+                                            <button className="RegisterBtn" onClick={()=>{HandleInit(Events)}}><span type='text'>Register</span></button>
 
-                                    }
+                                        }
                                 </div>
                             )
                         }
-                        else if(!j){
+                        {/* else if(!j){
                             return(
                                 <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
                                     <div className="NoInfo">
@@ -173,24 +180,33 @@ function Home(){
                                     </div>
                                 </div>
                             )
-                        }
+                        } */}
                     })
                 }
+                </div>
             </div>
-            <p className='Heading2'>Completed Events</p>
-            <h3> Whether you're a seasoned pro or just looking to try something new, you're sure to find a community of like-minded individuals ready to welcome you with open arms. Check out our completed events section to see what our club has been up to, and join in on the fun!</h3>
-            <div className="Events" style={{marginTop:'15%'}}>
-                {
-                    CEvent.map((Events)=>(
-                        <div className="Event" onClick={()=>{setVis("visible")}} style={{backgroundImage:`url(${Events.bannerURL})`}}>
-                            <div className="moreInfo">
-                            <div className="EventName">{Events.name}</div>
-                                <p className="description">{Events.description}</p>
-                            </div>
-                        </div>
-                    ))
-                }
+            <div className="completed-events">
+                <p className='completed-events-heading'>Completed Events</p>
+                <div className="completed-events-container">
+                    {
+                        CEvent.map((Events) => (
+                                    <div key={Math.random()} className="completed-event-block" onClick={() => { setVis("visible") }}>
+                                        <div className="completed-event-info">
+                                            <img src={Events.bannerURL} className="completed-event-img" alt="" /> 
+                                            <div className="completed-events-details">
+                                            <div className="completed-event-name">{Events.name}</div>
+                                            <p className="completed-event-description">{Events.description}</p>
+                                            <p className="completed-event-summary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque perferendis sapiente vero veniam et hic voluptatibus quis quam voluptas blanditiis nulla, sequi ipsam a, enim voluptate, incidunt reiciendis dignissimos eius veritatis officiis sint repudiandae cum possimus. Ratione praesentium debitis similique laudantium ut vel, iure explicabo id, voluptas commodi eligendi dolorem.</p>
+                                            <p className="completed-event-date">{Events.date}</p>
+                                            <p className="completed-event-location"> Venue: {Events.location}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                        ))
+                    }
+                </div>
             </div>
+            <Footer/>
         </div>
     )
 }

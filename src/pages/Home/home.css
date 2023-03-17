@@ -9,7 +9,6 @@
 .Home::-webkit-scrollbar-thumb {
   background-color: green
 }
-
 /* intro  */
 .club-intro {
   margin: 0 6%;
@@ -55,6 +54,7 @@
 .upcoming-event-block {
   color: transparent;
   width: 50%;
+  max-width: 40%;
   min-width: 40%;
   padding: 2%;
   background-size: cover;
@@ -62,6 +62,7 @@
   border: 1px solid rgba(0, 0, 0, .125);
   box-shadow: 0 0 4px #5454552f;
   transition: 0.2s ease;
+  border-radius: 25px;
 }
 
 .upcoming-event-block:hover {
@@ -104,6 +105,7 @@
 /* completed events  */
 .completed-events {
   margin: 0 6%;
+  max-height: 35%;
 }
 
 .completed-events-heading {
@@ -124,10 +126,12 @@
 }
 
 .completed-event-block {
-  min-width: 30%;
+  min-width: 40%;
+  max-width: 40%;
   background-size: cover;
   border: 1px solid rgba(0, 0, 0, .125);
   box-shadow: 0 0 4px #5454552f;
+  border-radius: 25px;
 }
 
 .completed-event-summary {
@@ -140,6 +144,7 @@
 
 .completed-event-info {
   transition: 0.5s ease;
+  padding: 2%;
   /* overflow-y: scroll; */
 }
 
@@ -174,8 +179,11 @@
 }
 
 .completed-event-img {
-  height: 200px;
-  width: 410px;
+  width: 95%;
+  height: 300px;
+  margin-left: 2.5%;
+  margin-top: 2%;
+  border-radius: 20px;
   border-bottom: 3px solid black;
 }
 
@@ -271,6 +279,8 @@
   }
 
   .upcoming-events-container {
+    width: 95%;
+    border-color: #282c34;
     flex-direction: column;
   }
 

@@ -13,7 +13,7 @@ function Navbar() {
     const [vis, setVis] = useState("hidden")
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-success navbar-dark fixed-top">
+            <nav className="navbar navbar-expand-lg bg-success navbar-dark fixed-top" id="NvBr">
                 <div className="container-fluid">
                     <Link className="nav-link" to="#">
                         <img className="nav-logo-img" src={logo} alt="" />
@@ -38,7 +38,7 @@ function Navbar() {
                             {
                                 currentUser &&
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">RegisteredEvents</Link>
+                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">Registered Events</Link>
                                 </li>
                             }
                             {
