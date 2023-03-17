@@ -72,7 +72,10 @@ function Home() {
         
     },[])
     useEffect(()=>{
-        j=true;
+        if(UEvent[0]!=null){
+            j=true;
+        }
+        console.log(j)
     },[UEvent])
     useEffect(()=>{
         k=k+1;
@@ -125,7 +128,6 @@ function Home() {
 
     return (
         <div className="Home">
-            {/* <PopUpWindow style={{visibility:`${vis}`}}/> */}
             {
                 !currentUser &&
                 <div className="PopUpWindow" onClick={() => { setVis("hidden") }} style={{ visibility: `${vis}` }}>
@@ -148,10 +150,8 @@ function Home() {
             <div className="upcoming-events">
                 <p className='upcoming-events-heading'>All Upcoming Events</p>
                 <div className="upcoming-events-container">
-                {
-                    UEvent.map((Events)=>{
-                        if(Events){
-                            return(
+                {j &&
+                    UEvent.map((Events)=>(
                                 <div key={Math.random()} className="upcoming-event-block" onClick={() => { setVis("visible") }} style={{ backgroundImage: `url(${Events.bannerURL})` }}>
                                         <div className="upcoming-event-info">
                                             <div className="upcoming-event-name">{Events.name}</div> <br />
@@ -170,18 +170,14 @@ function Home() {
 
                                         }
                                 </div>
-                            )
-                        }
-                        {/* else if(!j){
-                            return(
-                                <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
-                                    <div className="NoInfo">
-                                        <p className="EventName">No Events Scheduled as of Now <br></br>Come back later!!</p>
-                                    </div>
-                                </div>
-                            )
-                        } */}
-                    })
+                    ))
+                }
+                {!j && 
+                    <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
+                        <div className="NoInfo">
+                            <p className="EventName">No Events Scheduled as of Now <br></br>Come back later!!</p>
+                        </div>
+                    </div>
                 }
                 </div>
             </div>

@@ -17,9 +17,6 @@ function Navbar() {
                 <div className="container-fluid">
                     <Link className="nav-link" to="#">
                         <img className="nav-logo-img" src={logo} alt="" />
-                        {/* <p style={{display:"inline-block",fontSize:"15px",marginLeft:"10px"}}>
-                        Android Club
-                        </p> */}
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
