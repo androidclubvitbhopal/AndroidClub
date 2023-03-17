@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -244,6 +242,7 @@ body{
   height: 50%;
   overflow:auto;
   background-color: transparent;
+  width:90%;
   display:flex;
   top:25%; 
   position: relative;
@@ -259,8 +258,8 @@ body{
 }
 .Event{
   color:transparent;
-  min-width: 40%;
   max-width: 40%;
+  min-width: 40%;
   border-radius: 30px;
   padding: 2%;
   margin-right: 5%;
@@ -269,23 +268,12 @@ body{
   box-shadow: rgba(104, 16, 120, 0.85) 0px 10px 18px;
   transition: 0.2s ease;
 }
+
 .Event:hover{
   transition: 0.2s;
   background-blend-mode: darken;
   color:aliceblue;
   box-shadow: rgba(16, 120, 35, 0.85) 5px 18px 25px;
-}
-.NoInfo{
-  height: 80%;
-  overflow: hidden;
-  width:80%;
-  color:transparent;
-  text-align: center;
-  justify-content: center;
-}
-.NoInfo p{
-  color:#000000;
-  font-size:350%;
 }
 .moreInfo{
   transition: 0.5s ease;
@@ -362,16 +350,13 @@ body{
 }
 
 @media (min-width: 768px) {
+
   .RegisterBtn {
     font-size: 24px;
     min-width: 196px;
   }
 }
 @media only screen and (max-width: 600px) {
-  .NoInfo p{
-    font-size: 150%;
-    text-align: center;
-  }
   .Events{
     top:18%;
     height: 40%;
@@ -616,5 +601,22 @@ body{
   }
 }
 /* Footer css */
-
+.NoInfo{
+  height: 80%;
+  overflow: hidden;
+  width:80%;
+  color:transparent;
+  text-align: center;
+  justify-content: center;
+}
+.NoInfo p{
+  color:#000000;
+  font-size:350%;
+}
+@media only screen and (max-width: 600px) {
+  .NoInfo p{
+    font-size: 150%;
+    text-align: center;
+  }
+}
 

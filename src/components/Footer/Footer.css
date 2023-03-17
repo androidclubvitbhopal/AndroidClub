@@ -1,0 +1,96 @@
+.footer {
+    background-color: #0c4329;
+    background-color: rgba(16, 120, 35, 0.85);
+    color: white;
+    padding: 1% 2%;
+}
+.footer a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.email {
+    display: flex;
+    gap: 1%;
+}
+
+.email p {
+    margin-top: -2%;
+    color: white;
+    cursor: pointer;
+}
+
+.email p:hover {
+    color: black;
+}
+
+.footer-top {
+    display: flex;
+    gap: 73%;
+}
+.socials{
+    display: flex;
+    gap: 15px;
+}
+.socials-icon {
+    margin-left: 10%;
+    font-size: 35px;
+    color: white;
+}
+.ln{
+    color: blue;
+}
+.insta{
+    color: pink;
+    font-size: 37px;
+}
+.github{
+    color: white;
+}
+.footer-nav {
+    display: flex;
+    gap: 2%;
+}
+
+.footer-nav a {
+    color: white;
+    cursor: pointer;
+}
+
+.footer-nav a:hover {
+    color: black;
+}
+
+.footer-heading {
+    text-align: center;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.copyrights {
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer-nav {
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+
+    .footer-top {
+        gap: 25%;
+    }
+
+    .footer-top p {
+        font-size: 11px;
+    }
+    .socials-icon{
+        font-size: 20px;
+    }
+
+    .email p {
+        margin-top: 0%;
+    }
+}
