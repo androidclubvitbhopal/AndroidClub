@@ -35,6 +35,25 @@
 }
 
 /* upcoming events  */
+.Event{
+  max-width: 40%;
+  min-width: 45%;
+  border-radius: 25px;
+  padding: 2%;
+  justify-content: center;
+  text-align: center;
+}
+
+.Event p{
+  height: 100%;
+  overflow: hidden;
+  width:100%;
+  color:transparent;
+  text-align: center;
+  justify-content: center;
+  color:#000000;
+  font-size:300%;
+}
 .upcoming-events-container {
   display: flex;
   gap: 5%;

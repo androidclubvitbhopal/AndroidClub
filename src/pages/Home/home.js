@@ -20,7 +20,7 @@ function Home() {
     const [UserDetails, setDetails] = useState({})
     const [userEvents, setUserEvents] = useState([])
     const {Evpayment,setEvPay} = useContext(Authcontext)
-    let j=false;
+    const [j,setj]=useState(null);
     let k=0;
     const eventsRef = collection(db, "events");
     const usersRef = collection(db, "users");
@@ -73,7 +73,7 @@ function Home() {
     },[])
     useEffect(()=>{
         if(UEvent[0]!=null){
-            j=true;
+            setj(true);
         }
         console.log(j)
     },[UEvent])
@@ -174,9 +174,7 @@ function Home() {
                 }
                 {!j && 
                     <div className="Event" onClick={()=>{setVis("visible")}} style={{background:'green'}}>
-                        <div className="NoInfo">
-                            <p className="EventName">No Events Scheduled as of Now <br></br>Come back later!!</p>
-                        </div>
+                        <p className="EventName">No Events Scheduled as of Now <br></br>Come back later!!</p>
                     </div>
                 }
                 </div>
