@@ -28,8 +28,8 @@
 .FormBox {
     position: absolute;
     left: 27.5%;
-    width: 40%;
-    background-color: azure;
+    width: 50%;
+    background-color: rgba(0, 128, 0, 0.219);
     padding: 3%;
     min-height: 30%;
     border-radius: 30px;
@@ -87,6 +87,7 @@
 
 .FormBox form p {
     align-self: center;
+    color: green;
 }
 
 .FormBox form input:focus {

@@ -356,3 +356,54 @@
     font-size: 8px;
   }
 }
+/* 
+Popup forms */
+.PopUpWindow .PopUpForm{
+  position: absolute;
+  width: 40%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  top:23%;
+  background-color:#282c34;
+  left:28%;
+  padding: 2%;
+  border-radius: 25px;
+
+}
+.PopUpWindow .PopUpForm p{
+  color:aliceblue;
+  font-size: 300%;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Golos Text', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+.PopUpWindow .PopUpForm #New{
+  width:10%;
+  font-size: 100%;
+  text-decoration: none;
+  color:#50f11f
+}
+.PopUpWindow .PopUpForm #New:hover{
+  color: #613587;
+}
+.PopUpWindow .PopUpForm input{
+  height: 10%;
+  margin-top: 3%;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 150%;
+  background-color: rgba(0, 0, 0, 0.737);
+  color:#50f11f;
+  
+}
+.PopUpWindow .PopUpForm input:hover{
+  color: #613587;
+}
+.CancelBtn{
+  height: 10%;
+  position: relative;
+  width: 30%;
+  bottom: 0%;
+}

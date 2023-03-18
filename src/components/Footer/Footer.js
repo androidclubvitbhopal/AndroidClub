@@ -9,7 +9,7 @@ export const Footer = () => {
     const { currentUser } = useContext(Authcontext)
 
     return (
-        <>
+        <div className='reg'>
             <div className="footer">
                 <footer>
                     <div className="footer-top">
@@ -61,6 +61,6 @@ export const Footer = () => {
                         <p className="copyrights">© 2017 Android Club VIT Bhopal. All Rights reserved.</p>
                 </footer>
             </div>
-        </>
+        </div>
     )
 }
