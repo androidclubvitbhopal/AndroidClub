@@ -56,7 +56,7 @@ function RegisteredEvents(){
         UserEvents()
     },[])
     return(
-        <div className="reg">
+        <div className="reg1">
             <Navbar/>
             <div className="reg-events">
                 {

@@ -9,16 +9,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
 
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-.LivePopUp{
-  width:85%;
-  height: 80%;
-  border-radius: 30px;
-  background-color:#282c34;
-  position: absolute;
-  top:10%;
-  left:7.5%;
+body::-webkit-scrollbar-thumb {
+  background-color: black
 }
 
 @media only screen and (max-width: 600px) {

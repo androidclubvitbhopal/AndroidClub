@@ -2,7 +2,6 @@
     top: 17%;
     left: 5%;
     width: 90%;
-    min-height: 60%;
     overflow: auto;
     background-color: transparent;
     width: 90%;
@@ -13,7 +12,11 @@
     padding-top: 2%;
     padding-bottom: 2%;
 }
-
+.reg1 .footer{
+    position: absolute;
+    top:90%;
+    width: 100%;
+}
 .reg-event {
     color: transparent;
     margin-right: 5%;

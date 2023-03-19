@@ -46,7 +46,7 @@ export const Footer = () => {
                             </Link>
                             {
                                 currentUser && 
-                                <Link to="/RegisteredEvents">RegisteredEvents</Link>
+                                <Link to="/RegisteredEvents">Registered Events</Link>
                             }
                             {
                                 !currentUser && 
@@ -56,7 +56,7 @@ export const Footer = () => {
                     </div>
                     <h3 className="footer-heading">ANDROID CLUB</h3>
                     <p className="footer-text">Enrich your life as a student || <Link style={{color: "white"}}
-                        to="#">Android club</Link></p>
+                        to="/AboutUs">Android club</Link></p>
                     <hr className="hr"/>
                         <p className="copyrights">© 2017 Android Club VIT Bhopal. All Rights reserved.</p>
                 </footer>
