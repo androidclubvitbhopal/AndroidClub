@@ -9,40 +9,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.UserPopUpForm{
-  height: fit-content;
-  padding: 1%;
-  background-color: #282c34;
-  width:15%;
-  border-radius: 25px;
-  position: relative;
-  left: 80%;
-  top:10%;
-  display: flex;
-  flex-direction: column;
-}
-.UserPopUpForm input{
-  padding: 4%;
-  margin-top: 3%;
-  font-size: 150%;
-  font-weight: 600;
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+body::-webkit-scrollbar {
+  width: 8px;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: red;
 }
-.UserPopUpForm input:hover{
-  color: rgb(78, 0, 0);
+
+body::-webkit-scrollbar-track {
+  background: transparent;
 }
-.LivePopUp{
-  width:85%;
-  height: 80%;
-  border-radius: 30px;
-  background-color:#282c34;
-  position: absolute;
-  top:10%;
-  left:7.5%;
+
+body::-webkit-scrollbar-thumb {
+  background-color: black
 }
 
 @media only screen and (max-width: 600px) {
@@ -63,60 +43,15 @@ code {
 }
 
 .PopUpWindow {
+  position: absolute;
+  top:0%;
   width: 100%;
-  height: 100%;
+  height: 120%;
   position: fixed;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.66);
 }
-.PopUpWindow .PopUpForm{
-  position: absolute;
-  width: 40%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  top:23%;
-  background-color:#282c34;
-  left:28%;
-  padding: 2%;
-  border-radius: 25px;
-
-}
-.PopUpWindow .PopUpForm p{
-  color:#50f11f;
-  font-size: 300%;
-  font-family: 'Dancing Script', cursive;
-  font-family: 'Dosis', sans-serif;
-  font-family: 'Golos Text', sans-serif;
-  font-family: 'Raleway', sans-serif;
-}
-.PopUpWindow .PopUpForm #New{
-  width:10%;
-  font-size: 200%;
-  text-decoration: none;
-  color:#50f11f
-}
-.PopUpWindow .PopUpForm #New:hover{
-  color: #613587;
-}
-.PopUpWindow .PopUpForm input{
-  height: 10%;
-  margin-top: 3%;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 150%;
-  background-color: rgba(0, 0, 0, 0.737);
-  color:#50f11f;
-  
-}
-.PopUpWindow .PopUpForm input:hover{
-  color: #613587;
-}
-.CancelBtn{
-  position: relative;
-  width: 30%;
-  bottom: 0%;
-}
+/* 
 .StreamPage {
   width:100%;
   height: 90%;
@@ -143,24 +78,4 @@ code {
   background-color: rgba(0, 0, 0, 0.737);
   color:#50f11f;
   
-}
-/* Footer css */
-/* .NoInfo{
-  height: 80%;
-  overflow: hidden;
-  width:80%;
-  color:transparent;
-  text-align: center;
-  justify-content: center;
-}
-.NoInfo p{
-  color:#000000;
-  font-size:350%;
-}
-@media only screen and (max-width: 600px) {
-  .NoInfo p{
-    font-size: 150%;
-    text-align: center;
-  }
 } */
-

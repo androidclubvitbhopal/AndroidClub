@@ -6,6 +6,7 @@ import { db } from "../../firebaseconfig"
 import { where,query } from "firebase/firestore"
 import { getDocs } from "firebase/firestore"
 import Stream from "../Event-Stream/EventStream"
+import { Footer } from "../../components/Footer/Footer";
 import "./registeredEvents.css"
 
 function RegisteredEvents(){
@@ -55,7 +56,7 @@ function RegisteredEvents(){
         UserEvents()
     },[])
     return(
-        <div className="reg">
+        <div className="reg1">
             <Navbar/>
             <div className="reg-events">
                 {
@@ -76,6 +77,7 @@ function RegisteredEvents(){
                 }
                 {/* <Stream YtID='qVUv8PCRHCc' vis={`${vis}`}/> */}
             </div>
+            <Footer/>
             <div className="PopUpWindow" onClick={()=>HandleBack()} style={{visibility:`${vis}`}}>
                 <div className="LivePopUp">
                     <div className="stream-page">
