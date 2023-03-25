@@ -51,7 +51,9 @@
 }
 
 .upcoming-events {
-  margin: 3% 6%;
+  margin-top: 5%;
+  padding: 3% 5%;
+  background-color: #1F8A70;
 }
 
 .upcoming-events-heading {
@@ -113,14 +115,17 @@
 
 /* completed events  */
 .completed-events {
-  margin: 0 6%;
+  width:100%;
   max-height: 35%;
+  background-color:#282c34;
+  padding: 2%;
 }
 
 .completed-events-heading {
+  color: aliceblue;
   font-size: 40px;
   display: inline;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid beige;
 }
 
 .completed-events-container {
@@ -143,6 +148,7 @@
   border-radius: 25px;
   min-height: 60%;
   max-height: 60%;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .completed-event-summary {
@@ -286,10 +292,11 @@
   }
 
   .upcoming-events-heading {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .upcoming-events-container {
+    margin-top: 6%;
     width: 95%;
     border-color: #282c34;
     flex-direction: column;
@@ -307,6 +314,11 @@
   .upcoming-event-time {
     font-size: 14px;
   }
+  .Event{
+    max-width: 1000px;
+    font-size: 10px;
+    margin-bottom: 8%;
+  }
   
   .upcoming-event-mode {
     font-size: 14px;
@@ -320,12 +332,14 @@
   }
 
   .completed-events-heading {
-    font-size: 20px;
+    font-size: 25px;
   }
   .completed-events-container{
+    margin-top: 6%;
     flex-direction: column;
   }
   .completed-event-block{
+    max-width:1000px;
     margin-bottom: 8%;
   }
   .completed-event-img{
@@ -346,6 +360,9 @@
   }
   .completed-event-summary{
     font-size: 8px;
+  }
+  .completed-event-img{
+    width: 90%;
   }
 }
 /* 

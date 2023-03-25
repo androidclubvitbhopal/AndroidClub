@@ -61,7 +61,7 @@ function Payment(){
                         RegInfo = [...RegInfo,UD]
                         await updateDoc(doc(db,"events",Evpayment.notificationGroup),{  
                             "Registered Emails":RegEmails,
-                            "Registered Users":UD,
+                            "Registered Users":RegInfo,
                         }).then(async()=>{
                             await updateDoc(doc(db,"users",currentUser.uid),{
                                 allRegisteredEvents:UserEvents
