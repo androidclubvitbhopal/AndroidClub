@@ -9,12 +9,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body{
+  background-color: #EDF1D6;
+}
 /* body::-webkit-scrollbar {
   display: none;
 } */
 body::-webkit-scrollbar {
   width: 8px;
-  background-color: transparent;
+  background-color: rgba(0, 128, 0, 0);
 }
 
 body::-webkit-scrollbar-track {

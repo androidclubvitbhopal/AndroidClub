@@ -52,6 +52,7 @@
     width: 100px;
     cursor: pointer;
     margin-top: 2%;
+    position: relative;
   }
   
   .live-now-btn:active,
@@ -102,7 +103,16 @@
 }
 
 @media only screen and (max-width:600px) {
+    .reg-event{
+        top:40%;
+        min-width: 95%;
+        max-width: 95%;
+        height: 350px;
+    }
     .reg-events {
+        top:150px;
+        display: flex;
+        flex-direction: column;
         left: 5%;
         width: 95%;
         height: 50%;
@@ -133,5 +143,8 @@
         background-color: rgba(0, 0, 0, 0.737);
         color: #50f11f;
 
+    }
+    .live-now-btn {
+        top:25%
     }
 }

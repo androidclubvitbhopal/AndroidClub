@@ -1,6 +1,4 @@
-/* .navbar{
-    background-color: green;
-} */
+
 .nav-logo-img {
     height: 40px;
     border-radius: 50%;
@@ -9,6 +7,7 @@
 }
 #NvBr{
     padding: 0.5%;
+    background-color: #16FF00;
 }
 .nav-item{
     margin-left: 2%;
