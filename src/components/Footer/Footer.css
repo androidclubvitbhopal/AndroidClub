@@ -74,6 +74,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .footer{
+        padding: 5%;
+    }
     .footer-nav {
         flex-direction: column;
         margin-bottom: 5%;
@@ -87,7 +90,7 @@
         font-size: 11px;
     }
     .socials-icon{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .email p {

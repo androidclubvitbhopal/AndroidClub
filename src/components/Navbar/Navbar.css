@@ -1,10 +1,21 @@
+
 .nav-logo-img {
     height: 40px;
     border-radius: 50%;
     display: inline-block;
     margin: 0 10px;
 }
-
+#NvBr{
+    padding: 0.5%;
+    background-color: #16FF00;
+}
+.nav-item{
+    margin-left: 2%;
+    width: fit-content;
+    /* background-color: aliceblue; */
+    display: flex;
+    max-width: max-content;
+}
 .nav-profile-img {
     cursor: pointer;
     border-radius: 50%;
@@ -14,9 +25,11 @@
 
 .nav-profile-name {
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     margin: 5px 0 0 10px;
     cursor: pointer;
+    position: relative;
+    left:195%;
 }
 li{
     margin-left: 23%;
@@ -37,3 +50,28 @@ li{
         color: black;
     }
 }
+.PopUpWindow .UserPopUpForm{
+    height: fit-content;
+    padding: 1%;
+    background-color: #282c34;
+    width:15%;
+    border-radius: 25px;
+    position: absolute;
+    left: 82%;
+    top:100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .UserPopUpForm input{
+    padding: 4%;
+    margin-top: 3%;
+    font-size: 150%;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+  }
+  .UserPopUpForm input:hover{
+    color: rgb(78, 0, 0);
+  }
