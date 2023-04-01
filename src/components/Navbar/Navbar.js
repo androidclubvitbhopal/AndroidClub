@@ -36,7 +36,7 @@ function Navbar() {
                             {
                                 currentUser &&
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">Registered Events</Link>
+                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">RegisteredEvents</Link>
                                 </li>
                             }
                             {

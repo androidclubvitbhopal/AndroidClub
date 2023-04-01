@@ -64,7 +64,7 @@ function RegisteredEvents(){
                         <div className="reg-event" style={{backgroundImage:`url(${Event.bannerURL})`}}>
                             <div className="reg-event-moreInfo">
                                 <div className="reg-event-name">{Event.name}</div>
-                                {/* <p className="reg-event-mode" >Mode :{Event.location}</p> */}
+                                <p className="reg-event-mode" >Mode :{Event.location}</p>
                                 <p className="reg-event-description">Details : {Event.description}</p>
                                 <p className="reg-event-time">Time :{Event.time}</p>
                             </div>

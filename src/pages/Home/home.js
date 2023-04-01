@@ -11,6 +11,7 @@ import homeBg from "../../images/home-bg.png"
 import { Footer } from "../../components/Footer/Footer";
 import "./home.css";
 import gif from "../../images/android_gif.gif";
+import gif2 from "../../images/gif2.webp";
 
 
 function Home() {
@@ -129,6 +130,7 @@ function Home() {
     // }, [Ev])
 
     return (
+
         <div className="Home">
             {
                 !currentUser &&
@@ -146,11 +148,11 @@ function Home() {
             <div className="club-intro">
                 <h1 className="first-heading"> <marquee behavior="scroll" direction="left" scrollamount="20"> Android club VIT Bhopal </marquee></h1> <br />
                 <div className="club-intro-div">
-                    <img src={gif} alt="gif" />
+                    <img src={gif2} className="club-intro-img"  alt="gif" />
                     <p className="club-intro-description">We at Android Club are driven to achieve excellence and solve problems while at it. Dedicated to educating and creating awareness about modern Mobile App development, we host workshops, hackathons, webinars, and all possible events under the sun, that help us build an inclusive community of like-minded people who explore and learn together. So, wear your thinking caps, put on some creativity, and let's develop some amazing apps!</p>
                 </div>
-                <div className="home-bg-div">
-                </div>
+                {/* <div className="home-bg-div">
+                </div> */}
             </div>
             <div className="upcoming-events">
                 <p className='upcoming-events-heading'>All Upcoming Events</p>

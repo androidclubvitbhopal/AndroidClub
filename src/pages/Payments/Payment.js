@@ -1,13 +1,14 @@
-import { Authcontext } from "../contextProvider";
+import { Authcontext } from "../../contextProvider";
 import { useContext, useEffect, useState } from "react";
 import { collection, query, updateDoc, where } from "firebase/firestore";
-import { db } from "../firebaseconfig";
+import { db } from "../../firebaseconfig";
 import { getDocs,doc } from "firebase/firestore";
 import { Link,useNavigate } from "react-router-dom";
-import { storage } from "../firebaseconfig";
+import { storage } from "../../firebaseconfig";
 import { getDownloadURL } from "firebase/storage";
-import ProfilePicIcon from "../images/user.png"
+import ProfilePicIcon from "../../images/user.png"
 import { ref, uploadBytesResumable } from "firebase/storage";
+import "./payments.css";
 
 function Payment(){
     const navigate = useNavigate()
@@ -78,15 +79,15 @@ function Payment(){
     }
 
     return(
-        <div className="Home">
+        <div className="Home payment-page">
         <div className="Login">
             <div className="FormBox">
                 <form onSubmit={(e)=>HandleSubmit(e)}>
-                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%'}}>Add Profile Photo</p></label>
+                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%',marginTop:"3%"}}>Add Profile Photo</p></label>
                         <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
                         <input type="submit" id="S" value="Register"></input>
                         {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
-                        <p style={{width:'26%',color:'black'}}>Have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/login">Login Now</Link></b></p>
+                        <p style={{width:'26%',color:'black'}}>Have an Account? <b><Link style={{textDecoration:'none'}} to="/login">Login Now</Link></b></p>
                 </form>
             </div>
         </div>

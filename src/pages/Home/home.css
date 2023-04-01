@@ -11,7 +11,10 @@
 
 
 .club-intro p {
-  margin: 5% 10%;
+  margin: 5%;
+}
+.club-intro-img{
+  height: 270px;
 }
 
 
@@ -290,6 +293,15 @@
     font-size: 12px;
     margin: 20% 2% 0 2%;
   }
+  .club-intro-img{
+    height: 150px;
+    width: 200px;
+    margin-left: 20%;
+    margin-bottom: 5%;
+  }
+  .club-intro-div{
+    flex-direction: column;
+  }
 
   .club-intro p {
     margin: 0 4%;
@@ -312,6 +324,8 @@
 
   .upcoming-event-block {
     width: 100%;
+    max-width: 100%;
+    margin-left: 2%;
     margin-bottom: 8%;
     /* background-size: contain; */
   }
@@ -351,7 +365,6 @@
     margin-bottom: 8%;
   }
   .completed-event-img{
-    width: 328px;
     height: 150px;
   }
   .completed-event-name{
@@ -370,7 +383,7 @@
     font-size: 8px;
   }
   .completed-event-img{
-    width: 90%;
+    width: 95%;
   }
 }
 /* 
