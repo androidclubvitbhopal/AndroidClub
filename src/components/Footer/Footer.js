@@ -33,7 +33,7 @@ export const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-mid">
-                        <h3>Explore</h3>
+                        <h5>Explore</h5>
                         <div className="footer-nav">
                             <Link to="/home">
                                 <li>Home</li>
@@ -46,7 +46,7 @@ export const Footer = () => {
                             </Link>
                             {
                                 currentUser && 
-                                <Link to="/RegisteredEvents">Registered Events</Link>
+                                <Link className='reg-event-footer-link' to="/RegisteredEvents">Registered Events</Link>
                             }
                             {
                                 !currentUser && 

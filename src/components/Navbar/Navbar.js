@@ -5,7 +5,8 @@ import { useContext } from "react"
 import { Authcontext } from "../../contextProvider"
 import { useState } from "react"
 import logo from "../../images/logo.jpg";
-import "./Navbar.css"
+import "./Navbar.css";
+import gif from "../../images/android_gif.gif"   
 
 
 function Navbar() {
@@ -35,7 +36,7 @@ function Navbar() {
                             {
                                 currentUser &&
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">Registered Events</Link>
+                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">RegisteredEvents</Link>
                                 </li>
                             }
                             {

@@ -108,3 +108,15 @@
     background-color: #000000;
     transition: 0.3s;
 }
+
+@media only screen and (max-width:600px) {
+.FormBox {
+    width: 90%;
+    left: 5%;
+}
+.UserPopUpForm{
+    margin-top: 35%;
+    font-size: 8px;
+    width: 50%;
+}
+}
