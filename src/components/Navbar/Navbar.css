@@ -9,14 +9,18 @@
     cursor: pointer;
     border-radius: 50%;
     height: 40px;
-    margin-left: 990px;
+    margin-left: 180px;
 }
 
 .nav-profile-name {
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     margin: 5px 0 0 10px;
     cursor: pointer;
+}
+li{
+    margin-left: 23%;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {

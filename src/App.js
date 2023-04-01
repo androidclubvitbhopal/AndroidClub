@@ -9,6 +9,7 @@ import { Register,Login } from './pages/Register-Login/register&Login';
 import { Navigate } from 'react-router-dom';
 import { Authcontext } from './contextProvider';
 import Stream from './pages/Event-Stream/EventStream';
+import Payment from './pages/payment';
 
 function App() {
   const currentUser = useContext(Authcontext)
@@ -29,12 +30,12 @@ function App() {
         <Routes>
           <Route exact path="/login" element={<Login/>}></Route>
           <Route exact path="/Register" element={<Register/>}></Route>
-          {/* <Route path='/' element={<Home2/>}></Route> */}
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/RegisteredEvents" element={<ProtectedRoute><RegisteredEvents/></ProtectedRoute>}></Route>
           <Route path="/AboutUs" element={<AboutUs/>}></Route>
           <Route path="/LiveStream" element={<Stream/>}></Route>
           <Route path="/OurProjects" element={<OurProjects/>}></Route>
+          <Route path="/Payments" element={<ProtectedRoute><Payment/></ProtectedRoute>}></Route>
         </Routes>
       </Router>
     </div>

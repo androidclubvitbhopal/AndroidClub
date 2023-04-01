@@ -5,7 +5,8 @@ import { useContext } from "react"
 import { Authcontext } from "../../contextProvider"
 import { useState } from "react"
 import logo from "../../images/logo.jpg";
-import "./Navbar.css"
+import "./Navbar.css";
+import gif from "../../images/android_gif.gif"   
 
 
 function Navbar() {
