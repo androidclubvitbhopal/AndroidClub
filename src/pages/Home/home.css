@@ -63,7 +63,6 @@
 .upcoming-events {
   margin-top: 5%;
   padding: 3% 5%;
-  background-color: rgb(224, 224, 224);
 }
 
 .upcoming-events-heading {
@@ -126,7 +125,6 @@
 .completed-events {
   width:100%;
   max-height: 35%;
-  /* background-color:#282c34; */
   padding: 2%;
 }
 
