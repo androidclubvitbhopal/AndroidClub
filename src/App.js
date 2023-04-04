@@ -9,7 +9,7 @@ import { Register,Login } from './pages/Register-Login/register&Login';
 import { Navigate } from 'react-router-dom';
 import { Authcontext } from './contextProvider';
 import Stream from './pages/Event-Stream/EventStream';
-import Payment from './pages/payment';
+import Payment from './pages/Payments/Payment';
 
 function App() {
   const currentUser = useContext(Authcontext)

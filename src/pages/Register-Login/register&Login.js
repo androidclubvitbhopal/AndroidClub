@@ -99,7 +99,7 @@ function Login(){
                         <input type="password" placeholder="Password" required></input>
                         <input type="submit" id="S" value="Login"></input>
                         {err && <span style={{alignSelf:'center'}}>Email and Password combination wrong, Try Again</span>}
-                        <p style={{width:'26%',color:'black'}}>Don't have an Account? <b><Link style={{marginLeft:'2%',textDecoration:'none'}} to="/Register">Register Now</Link></b></p>
+                        <p style={{color:'black'}}>Don't have an Account? <br /> <b><Link style={{textDecoration:'none'}} to="/Register">Register Now</Link></b></p>
                     </form>
                 </div>
             </div>

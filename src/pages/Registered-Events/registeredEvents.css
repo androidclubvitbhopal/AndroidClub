@@ -1,20 +1,14 @@
 .reg-events {
-    top: 17%;
-    left: 5%;
+    margin-top: 10%;
     width: 90%;
     overflow: auto;
     background-color: transparent;
     width: 90%;
     display: flex;
-    position: relative;
-    margin-top: 8%;
-    margin-bottom: 4%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    margin-bottom: 5%;
+    margin-left: 5%;
 }
 .reg1 .footer{
-    position: absolute;
-    top:90%;
     width: 100%;
 }
 .reg-event {
@@ -104,13 +98,11 @@
 
 @media only screen and (max-width:600px) {
     .reg-event{
-        top:40%;
         min-width: 95%;
         max-width: 95%;
-        height: 350px;
     }
     .reg-events {
-        top:150px;
+        margin-top: 17%;
         display: flex;
         flex-direction: column;
         left: 5%;

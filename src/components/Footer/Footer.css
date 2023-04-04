@@ -4,6 +4,7 @@
     color: white;
     padding: 1% 2%;
 }
+
 .footer a{
     text-decoration: none;
     list-style: none;
@@ -67,10 +68,12 @@
 
 .footer-text {
     text-align: center;
+    font-size: 13.5px;
 }
 
 .copyrights {
     text-align: left;
+    font-size: 13.5px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -92,7 +95,14 @@
     .socials-icon{
         font-size: 18px;
     }
-
+    li{
+        margin-left: 0;
+        font-size: 12px;
+    }
+    .reg-event-footer-link{
+        font-size: 12px;
+    }
+    
     .email p {
         margin-top: 0%;
     }
