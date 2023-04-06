@@ -28,8 +28,8 @@ function App() {
     <div>
       <Router>
         <Routes basename="/AndroidClub">
-          <Route exact path="/login" element={<Login/>}></Route>
-          <Route exact path="/Register" element={<Register/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/Register" element={<Register/>}></Route>
           <Route path="/AndroidClub" element={<Home/>}></Route>
           <Route path="/RegisteredEvents" element={<ProtectedRoute><RegisteredEvents/></ProtectedRoute>}></Route>
           <Route path="/AboutUs" element={<AboutUs/>}></Route>
