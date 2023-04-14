@@ -81,9 +81,10 @@ function Payment(){
     return(
         <div className="Home payment-page">
         <div className="Login">
-            <div className="FormBox">
+            <div className="FormBox" style={{top:'10%'}}>
                 <form onSubmit={(e)=>HandleSubmit(e)}>
-                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%',marginTop:"3%"}}>Add Profile Photo</p></label>
+                        <img src='https://firebasestorage.googleapis.com/v0/b/android-club-65a70.appspot.com/o/randomqrcode.jpeg?alt=media&token=38a7db21-144a-4684-8a9b-a9dbf6881f4d' width='30%' style={{alignSelf:'center'}}></img>
+                        <label htmlFor="Fl"><img src={ProfilePicIcon} style={{height:'50px',alignSelf:'center'}}></img><p style={{marginLeft:'5%',marginTop:"3%"}}>Add Payment Screenshot</p></label>
                         <input id="Fl" type="file" placeholder="file" style={{display:'none'}}></input>
                         <input type="submit" id="S" value="Register"></input>
                         {err && <span style={{alignSelf:'center'}}>Something went wrong, Try Again</span>}
