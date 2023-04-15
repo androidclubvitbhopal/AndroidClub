@@ -23,7 +23,7 @@ function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="ul-links">
                             <li className="nav-item">
                                 <Link className={`nav-link ${window.location.pathname === "/home" ? "active" : " "}`} aria-current="page" to="/AndroidClub">Home</Link>
                             </li>
@@ -36,19 +36,21 @@ function Navbar() {
                             {
                                 currentUser &&
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">RegisteredEvents</Link>
+                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">Registered Events</Link>
                                 </li>
                             }
-                            {
-                                currentUser &&
-                                <>
-                                    <img className="nav-profile-img" src={`${currentUser.photoURL}`} alt="profile"  onClick={() => setVis("visible")}></img>
-                                </>
-                            }
-                            {
-                                currentUser &&
-                                <div onClick={() => setVis("visible")}  className="nav-profile-name">{currentUser.displayName}</div>
-                            }
+                            <div className="profileInfo">
+                                {
+                                    currentUser &&
+                                    <>
+                                        <img className="nav-profile-img" src={`${currentUser.photoURL}`} alt="profile"  onClick={() => setVis("visible")}></img>
+                                    </>
+                                }
+                                {
+                                    currentUser &&
+                                    <div onClick={() => setVis("visible")}  className="nav-profile-name">{currentUser.displayName}</div>
+                                }
+                            </div>
                             {
                                 !currentUser &&
                                 <li className="nav-item">
