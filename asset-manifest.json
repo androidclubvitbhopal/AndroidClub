@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/androidclubvitbhopal/AndroidClub/static/css/main.18f7a905.css",
-    "main.js": "/androidclubvitbhopal/AndroidClub/static/js/main.1516333c.js",
+    "main.css": "/androidclubvitbhopal/AndroidClub/static/css/main.bd5f8538.css",
+    "main.js": "/androidclubvitbhopal/AndroidClub/static/js/main.9a5a9ef5.js",
+    "static/media/groupimg.jpg": "/androidclubvitbhopal/AndroidClub/static/media/groupimg.ec3a340f4c03f6184d3f.jpg",
     "static/media/gif2.webp": "/androidclubvitbhopal/AndroidClub/static/media/gif2.8c7a55bcf069049cc31f.webp",
     "static/media/home-bg.png": "/androidclubvitbhopal/AndroidClub/static/media/home-bg.502f1ecd24f2918ec82a.png",
     "static/media/user.png": "/androidclubvitbhopal/AndroidClub/static/media/user.38b097360cd1024e4462.png",
     "static/media/android_gif.gif": "/androidclubvitbhopal/AndroidClub/static/media/android_gif.6a7417c780ab563afbab.gif",
     "index.html": "/androidclubvitbhopal/AndroidClub/index.html",
-    "main.18f7a905.css.map": "/androidclubvitbhopal/AndroidClub/static/css/main.18f7a905.css.map",
-    "main.1516333c.js.map": "/androidclubvitbhopal/AndroidClub/static/js/main.1516333c.js.map"
+    "main.bd5f8538.css.map": "/androidclubvitbhopal/AndroidClub/static/css/main.bd5f8538.css.map",
+    "main.9a5a9ef5.js.map": "/androidclubvitbhopal/AndroidClub/static/js/main.9a5a9ef5.js.map"
   },
   "entrypoints": [
-    "static/css/main.18f7a905.css",
-    "static/js/main.1516333c.js"
+    "static/css/main.bd5f8538.css",
+    "static/js/main.9a5a9ef5.js"
   ]
 }
