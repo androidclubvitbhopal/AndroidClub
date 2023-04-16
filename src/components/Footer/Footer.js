@@ -46,7 +46,7 @@ export const Footer = () => {
                             </Link>
                             {
                                 currentUser && 
-                                <Link className='reg-event-footer-link' to="/RegisteredEvents">Registered Events</Link>
+                                <Link to="/RegisteredEvents" style={{fontSize:'20px',marginLeft:'2%'}}>Registered Events</Link>
                             }
                             {
                                 !currentUser && 

@@ -12,6 +12,7 @@ import { Footer } from "../../components/Footer/Footer";
 import "./home.css";
 import gif from "../../images/android_gif.gif";
 import gif2 from "../../images/gif2.webp";
+import groupimg from "../../images/groupimg.jpg"
 
 
 function Home() {
@@ -143,9 +144,9 @@ function Home() {
                     </div>
                 </div>
             }
-
+            {/* css - backgroundImage:`url(${groupimg})` */}
             <Navbar />
-            <div className="club-intro">
+            <div className="club-intro" style={{backgroundSize:'cover'}}>
                 <h1 className="first-heading"> <marquee behavior="scroll" direction="left" scrollamount="20"> Android club VIT Bhopal </marquee></h1> <br />
                 <div className="club-intro-div">
                     <img src={gif2} className="club-intro-img"  alt="gif" />
