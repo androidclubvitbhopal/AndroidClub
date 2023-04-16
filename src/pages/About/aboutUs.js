@@ -32,7 +32,7 @@ function AboutUs() {
         <div className="About">
             <Navbar className="navbar-about" />
             <div className="about-club">
-                <h1>Welcome to <br /> Android club VIT Bhopal </h1> <br />
+                <h1>Welcome to <br /> Android club VIT Bhopalll </h1> <br />
                 {/* <h1>Android club VIT Bhopal </h1> <br /> */}
                 <p>
                     Welcome to the Android club for students of Vit Bhopal. Our club is dedicated to promoting the learning and development of Android app development among our members. We provide a platform for students to learn about the latest trends and technologies in the Android world, share their knowledge and experiences, and collaborate on exciting projects. <br /> <br />
