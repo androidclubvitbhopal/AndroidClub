@@ -27,10 +27,10 @@ function App() {
   return (
     <div>
       <Router>
-        <Routes basename="/AndroidClub">
+        <Routes basename="androidclubvitbhopal/AndroidClub">
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/Register" element={<Register/>}></Route>
-          <Route path="/AndroidClub" element={<Home/>}></Route>
+          <Route path="androidclubvitbhopal/AndroidClub" element={<Home/>}></Route>
           <Route path="/RegisteredEvents" element={<ProtectedRoute><RegisteredEvents/></ProtectedRoute>}></Route>
           <Route path="/AboutUs" element={<AboutUs/>}></Route>
           <Route path="/LiveStream" element={<Stream/>}></Route>
