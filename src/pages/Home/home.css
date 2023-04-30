@@ -1,7 +1,7 @@
 
 /* intro  */
 .club-intro {
-  width: 100%;
+  width: 70%;
   height: 10%;
   padding: 1%;
   position: relative;
@@ -22,6 +22,51 @@
   height: 270px;
 }
 
+.heading{
+  margin-top:8%;
+  margin-left: 5%;
+  font-size: 60px;
+  color:aliceblue;
+  font-weight: 700;
+}
+.line2haeding{
+  display: flex;
+  color: #50f11f;
+  font-weight: 700;
+}
+.headingAnimation{
+  height:60px;
+  overflow: hidden;
+  width:fit-content;
+  color:aliceblue;
+  font-weight: 700;
+  margin-left: 2%;
+}
+.logo_2{
+  bottom: 0%;
+  position: fixed;
+  left:70%;
+  width: 30%;
+  z-index: 1;
+}
+.Explorebtn{
+  background-color: aliceblue;
+  width:25%;
+  padding: 1%;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  margin-left: 5%;
+  transition: 0.5s ease;
+  font-weight: 600;
+  font-size: 20px;
+}
+.Explorebtn:hover{
+  background-color: #50f11f;
+}
+.Home{
+  background-color: #282c34;
+}
 
 .home-bg-div {
   text-align: center;
@@ -47,6 +92,7 @@
   padding: 2%;
   justify-content: center;
   text-align: center;
+  z-index: 2;
 }
 
 .Event p{
@@ -63,17 +109,21 @@
   display: flex;
   gap: 5%;
   margin-top: 2%;
+  z-index: 2;
 }
 
 .upcoming-events {
-  margin-top: 5%;
+  margin-top: 10%;
   padding: 3% 5%;
+  z-index: 2;
 }
 
 .upcoming-events-heading {
+  color:#50f11f;
   font-size: 40px;
   display: inline;
-  border-bottom: 4px solid black;
+  /* border-bottom: 4px solid black; */
+  z-index: 2;
 }
 
 .upcoming-event-block {
@@ -87,6 +137,7 @@
   box-shadow: 0 0 4px #5454552f;
   transition: 0.2s ease;
   border-radius: 10px;
+  z-index: 2;
 }
 
 .upcoming-event-block:hover {
@@ -104,6 +155,7 @@
 .upcoming-event-name {
   font-size: 40px;
   font-weight: bold;
+  z-index: 2;
 }
 
 .upcoming-event-info::-webkit-scrollbar {
@@ -131,6 +183,7 @@
   width:100%;
   max-height: 35%;
   padding: 2%;
+  z-index: 2;
 }
 
 .completed-events-heading {
@@ -138,11 +191,13 @@
   font-size: 40px;
   margin-left: 2%;
   display: inline;
+  color: #50f11f;
   /* border-bottom: 4px solid beige; */
-  border-bottom: 4px solid black;
+  /* border-bottom: 4px solid black; */
 }
 
 .completed-events-container {
+  z-index: 2;
   overflow: auto;
   display: flex;
   gap: 2%;
@@ -162,8 +217,10 @@
   border-radius: 10px;
   min-height: 60%;
   max-height: 60%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
 }
+
 
 .completed-event-summary {
   font-size: 12px;
@@ -315,6 +372,7 @@
   }
 
   .upcoming-events-heading {
+    color:#50f11f;
     font-size: 25px;
   }
 
