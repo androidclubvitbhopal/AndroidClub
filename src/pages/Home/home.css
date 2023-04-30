@@ -113,15 +113,16 @@
 }
 
 .upcoming-events {
-  margin-top: 5%;
+  margin-top: 10%;
   padding: 3% 5%;
   z-index: 2;
 }
 
 .upcoming-events-heading {
+  color:#50f11f;
   font-size: 40px;
   display: inline;
-  border-bottom: 4px solid black;
+  /* border-bottom: 4px solid black; */
   z-index: 2;
 }
 
@@ -190,8 +191,9 @@
   font-size: 40px;
   margin-left: 2%;
   display: inline;
+  color: #50f11f;
   /* border-bottom: 4px solid beige; */
-  border-bottom: 4px solid black;
+  /* border-bottom: 4px solid black; */
 }
 
 .completed-events-container {
@@ -370,6 +372,7 @@
   }
 
   .upcoming-events-heading {
+    color:#50f11f;
     font-size: 25px;
   }
 
