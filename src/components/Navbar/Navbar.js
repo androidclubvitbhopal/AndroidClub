@@ -4,7 +4,7 @@ import { auth } from "../../firebaseconfig"
 import { useContext } from "react"
 import { Authcontext } from "../../contextProvider"
 import { useState } from "react"
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo_main.png";
 import "./Navbar.css";
 import gif from "../../images/android_gif.gif"   
 
@@ -14,7 +14,7 @@ function Navbar() {
     const [vis, setVis] = useState("hidden")
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-success navbar-dark fixed-top" id="NvBr">
+            <nav className="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent" id="NvBr">
                 <div className="container-fluid">
                     <Link className="nav-link" to="#">
                         <img className="nav-logo-img" src={logo} alt="" />

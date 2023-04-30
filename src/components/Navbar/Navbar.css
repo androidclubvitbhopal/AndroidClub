@@ -1,13 +1,11 @@
 
 .nav-logo-img {
-    height: 40px;
-    border-radius: 50%;
+    height: 60px;
     display: inline-block;
-    margin: 0 10px;
 }
 #NvBr{
     padding: 1%;
-    background-color: #16FF00;
+    background-color:transparent;
 }
 #ul-links{
     width:80%;

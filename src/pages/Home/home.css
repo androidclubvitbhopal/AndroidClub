@@ -1,7 +1,7 @@
 
 /* intro  */
 .club-intro {
-  width: 100%;
+  width: 70%;
   height: 10%;
   padding: 1%;
   position: relative;
@@ -22,6 +22,35 @@
   height: 270px;
 }
 
+.heading{
+  margin-top:8%;
+  margin-left: 5%;
+  font-size: 60px;
+  color:aliceblue;
+  font-weight: 700;
+}
+.line2haeding{
+  display: flex;
+  color: #50f11f;
+  font-weight: 700;
+}
+.headingAnimation{
+  height:60px;
+  overflow: hidden;
+  width:fit-content;
+  color:aliceblue;
+  font-weight: 700;
+  margin-left: 2%;
+}
+.logo_2{
+  bottom: 0%;
+  position: absolute;
+  left:70%;
+  width: 30%;
+}
+.Home{
+  background-color: #282c34;
+}
 
 .home-bg-div {
   text-align: center;

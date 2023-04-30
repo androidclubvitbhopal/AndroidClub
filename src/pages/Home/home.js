@@ -13,6 +13,8 @@ import "./home.css";
 import gif from "../../images/android_gif.gif";
 import gif2 from "../../images/gif2.webp";
 import groupimg from "../../images/groupimg.jpg"
+import logo2 from "../../images/logo_background.png"
+
 
 
 function Home() {
@@ -146,10 +148,12 @@ function Home() {
             }
             {/* css - backgroundImage:`url(${groupimg})` */}
             <Navbar />
+            <img src={logo2} className="logo_2"></img>
             <div className="club-intro" style={{backgroundSize:'cover'}}>
-                <h1 className="first-heading"> <marquee behavior="scroll" direction="left" scrollamount="20"> Android club VIT Bhopal </marquee></h1> <br />
+                {/* <h1 className="first-heading"> <marquee behavior="scroll" direction="left" scrollamount="20"> Android club VIT Bhopal </marquee></h1> <br /> */}
+                <h1 className="heading">Welcome to <br></br><div className="line2haeding"> Android Club. <marquee className='headingAnimation' behavior="scroll" direction="up" scrollamount='7'> Hackathons<br></br> Webinars<br></br> Events<br></br> Webinars<br></br> And much more!!</marquee></div></h1>
                 <div className="club-intro-div">
-                    <img src={gif2} className="club-intro-img"  alt="gif" />
+                    {/* <img src={gif2} className="club-intro-img"  alt="gif" /> */}
                     <p className="club-intro-description">We at Android Club are driven to achieve excellence and solve problems while at it. Dedicated to educating and creating awareness about modern Mobile App development, we host workshops, hackathons, webinars, and all possible events under the sun, that help us build an inclusive community of like-minded people who explore and learn together. So, wear your thinking caps, put on some creativity, and let's develop some amazing apps!</p>
                 </div>
                 {/* <div className="home-bg-div">
