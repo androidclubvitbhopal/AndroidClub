@@ -119,7 +119,7 @@ function Home() {
                     RegInfo = [...RegInfo, UserDetails]
                     console.log(UserDetails)
                     let UserEvents = userEvents
-                    UserEvents = [...UserEvents, { name: temp[0].name, description: temp[0].description, time: temp[0].time, bannerURL: temp[0].bannerURL, location: temp[0].location }]
+                    UserEvents = [...UserEvents, { name: temp[0].name, description: temp[0].description, time: temp[0].time, bannerURL: temp[0].bannerURL, location: temp[0].location,notificationGroup:temp[0].notificationGroup }]
                     await updateDoc(doc(db, "events", EventName), {
                         "Registered Emails": RegEmails,
                         "Registered Users": RegInfo,

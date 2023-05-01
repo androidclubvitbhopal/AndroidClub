@@ -63,7 +63,7 @@ function Payment(){
             RegEmails = [...RegEmails,`${currentUser.email}`]
             let RegInfo = temp[0]["Registered Users"]
             let UserEvents = userEvents
-            UserEvents = [...UserEvents,{name:temp[0].name,description:temp[0].description,time:temp[0].time,bannerURL:temp[0].bannerURL,location:temp[0].location}]
+            UserEvents = [...UserEvents,{name:temp[0].name,description:temp[0].description,time:temp[0].time,bannerURL:temp[0].bannerURL,location:temp[0].location,notificationGroup:temp[0].notificationGroup}]
             await uploadBytesResumable(storageRef,PaymentSS)
                 .then(()=>{
                     getDownloadURL(storageRef).then(async (downloadURL) => {
