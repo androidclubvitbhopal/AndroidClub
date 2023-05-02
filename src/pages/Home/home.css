@@ -107,6 +107,7 @@
 }
 .upcoming-events-container {
   display: flex;
+  overflow-x: scroll;
   gap: 5%;
   margin-top: 2%;
   z-index: 2;
@@ -125,11 +126,14 @@
   /* border-bottom: 4px solid black; */
   z-index: 2;
 }
-
+.upcoming-events-container::-webkit-scrollbar{
+  width: 1px;
+}
 .upcoming-event-block {
   color: transparent;
   width: 50%;
   max-width: 40%;
+  min-width:40%;
   padding: 2%;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.737);
@@ -381,6 +385,7 @@
     width: 95%;
     border-color: #282c34;
     flex-direction: column;
+    overflow-x: scroll;
   }
 
   .upcoming-event-block {
