@@ -3,6 +3,7 @@
     background-color: rgba(16, 120, 35, 0.85);
     color: white;
     padding: 1% 2%;
+    z-index: 2;
 }
 
 .footer a{

@@ -40,6 +40,7 @@ function RegisteredEvents(){
     }
     const HandleClick = async (Event) =>{
         setVis("visible")
+        console.log(Event)
         const q= query(eventRef,where('notificationGroup','==',Event.notificationGroup))
         const temp = []
         const querySnapShot = await getDocs(q)
@@ -47,6 +48,7 @@ function RegisteredEvents(){
             querySnapShot.forEach((doc)=>{
                 temp.push(doc.data())
             })
+            console.log(temp[0])
             setEvDt(temp[0])
         }catch(err){
             console.log(err)
@@ -68,10 +70,7 @@ function RegisteredEvents(){
                                 <p className="reg-event-description">Details : {Event.description}</p>
                                 <p className="reg-event-time">Time :{Event.time}</p>
                             </div>
-                            {
-                                !Event.YouTubeVidId && 
-                                <button className="live-now-btn" onClick={()=>{HandleClick(Event)}} style={{padding:'2%'}}>Live Now</button>
-                            }
+                            <button className="live-now-btn" onClick={()=>{HandleClick(Event)}} style={{padding:'2%'}}>View Event Status</button>
                         </div>
                     ))
                 }
@@ -80,12 +79,21 @@ function RegisteredEvents(){
             <Footer/>
             <div className="PopUpWindow" onClick={()=>HandleBack()} style={{visibility:`${vis}`}}>
                 <div className="LivePopUp">
-                    <div className="stream-page">
-                        <iframe id="ytplayer" type="text/html" 
-                        src={`https://www.youtube.com/embed/${eventDetails.YouTubeVidId}?autoplay=1&origin=http://example.com`}
-                        frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                        <iframe className="comments" width="185" height="315" src={`https://www.youtube.com/live_chat?v=${eventDetails.YouTubeVidId}&embed_domain=localhost:3001/LiveStream" frameborder="0`}></iframe>
-                    </div>
+                        {
+                            eventDetails.YouTubeVidId &&
+                                <div className="stream-page">
+                                <iframe id="ytplayer" type="text/html" 
+                                src={`https://www.youtube.com/embed/${eventDetails.YouTubeVidId}?autoplay=1&origin=http://example.com`}
+                                frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                                <iframe className="comments" width="185" height="315" src={`https://www.youtube.com/live_chat?v=${eventDetails.YouTubeVidId}&embed_domain=localhost" frameborder="0`}></iframe>
+                            </div>
+                        }
+                        {
+                            !eventDetails.YouTubeVidId &&
+                            <div className="NoVideo">
+                                <p>Hey user {eventDetails.name} has not started yet!! .</p>
+                            </div>
+                        }
                 </div>
             </div>
         </div>

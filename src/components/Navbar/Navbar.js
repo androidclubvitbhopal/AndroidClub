@@ -4,7 +4,7 @@ import { auth } from "../../firebaseconfig"
 import { useContext } from "react"
 import { Authcontext } from "../../contextProvider"
 import { useState } from "react"
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo_main.png";
 import "./Navbar.css";
 import gif from "../../images/android_gif.gif"   
 
@@ -14,7 +14,7 @@ function Navbar() {
     const [vis, setVis] = useState("hidden")
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-success navbar-dark fixed-top" id="NvBr">
+            <nav className="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent" id="NvBr">
                 <div className="container-fluid">
                     <Link className="nav-link" to="#">
                         <img className="nav-logo-img" src={logo} alt="" />
@@ -25,18 +25,18 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="ul-links">
                             <li className="nav-item">
-                                <Link className={`nav-link ${window.location.pathname === "/AndroidClub" ? "active" : " "}`} aria-current="page" to="/AndroidClub">Home</Link>
+                                <Link className={`nav-link ${window.location.pathname === "/AndroidClub" ? "active" : " "}`} aria-current="page" to="/androidclubvitbhopal/AndroidClub">HOME</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${window.location.pathname === "/AboutUs" ? "active" : " "}`} aria-current="page" to="/AboutUs">About</Link>
+                                <Link className={`nav-link ${window.location.pathname === "/AboutUs" ? "active" : " "}`} aria-current="page" to="/AboutUs">ABOUT</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${window.location.pathname === "/OurProjects" ? "active" : " "}`} aria-current="page" to="/OurProjects">Projects</Link>
+                                <Link className={`nav-link ${window.location.pathname === "/OurProjects" ? "active" : " "}`} aria-current="page" to="/OurProjects">PROJECTS</Link>
                             </li>
                             {
                                 currentUser &&
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">Registered Events</Link>
+                                    <Link className={`nav-link ${window.location.pathname === "/RegisteredEvents" ? "active" : " "}`} aria-current="page" to="/RegisteredEvents">REGISTERED EVENTS</Link>
                                 </li>
                             }
                             <div className="profileInfo">
