@@ -101,7 +101,20 @@
 .reg-event-name{
     font-size: 35px;
 }
-
+.NoVideo{
+    height: 100%;
+    width: 100%;
+}
+.NoVideo p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-items: center;
+    font-size: 25px;
+    color: #50f11f;
+    padding-top: 15%;
+    background-color:transparent;
+}
 @media only screen and (max-width:600px) {
     .reg-event{
         min-width: 95%;
