@@ -70,7 +70,7 @@ function RegisteredEvents(){
                                 <p className="reg-event-description">Details : {Event.description}</p>
                                 <p className="reg-event-time">Time :{Event.time}</p>
                             </div>
-                            <button className="live-now-btn" onClick={()=>{HandleClick(Event)}} style={{padding:'2%'}}>Live Now</button>
+                            <button className="live-now-btn" onClick={()=>{HandleClick(Event)}} style={{padding:'2%'}}>View Event Status</button>
                         </div>
                     ))
                 }

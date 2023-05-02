@@ -50,10 +50,9 @@
     color: #FFFFFF;
     padding: 2%;
     background-color: rgb(5, 6, 45);
-    width: 100px;
+    width: fit-content;
     cursor: pointer;
-    margin-top: 2%;
-    position: relative;
+    margin-top: 10%;
   }
   
   .live-now-btn:active,
@@ -144,6 +143,6 @@
 
     }
     .live-now-btn {
-        top:25%
+        margin-top: 0%;
     }
 }
