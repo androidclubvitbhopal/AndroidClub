@@ -27,7 +27,7 @@ function Home() {
     const [userEvents, setUserEvents] = useState([])
     const { Evpayment, setEvPay } = useContext(Authcontext)
     const [j, setj] = useState(null);
-    let k = 0;
+    let p = 0;
     const eventsRef = collection(db, "events");
     const usersRef = collection(db, "users");
 
@@ -75,7 +75,6 @@ function Home() {
     useEffect(()=>{
         FetchEvents()
         FetchUserDetails()
-
     }, [])
     useEffect(() => {
         if (UEvent[0] != null) {
@@ -84,7 +83,8 @@ function Home() {
         console.log(j)
     }, [UEvent])
     useEffect(() => {
-        k = k + 1;
+        p = p + 1;
+        console.log(p)
     }, [UserDetails])
 
     const HandleInit = (Event) => {
@@ -112,9 +112,8 @@ function Home() {
                 alert("You have Already Registered for this Event")
                 navigate("/RegisteredEvents")
             }
-            else{
+            else if(!k){
                 RegEmails = [...RegEmails, `${currentUser.email}`]
-                if (k != 0) {
                     let RegInfo = temp[0]["Registered Users"]
                     RegInfo = [...RegInfo, UserDetails]
                     console.log(UserDetails)
@@ -128,10 +127,8 @@ function Home() {
                             allRegisteredEvents: UserEvents
                         })
                     })
-                    k = 0;
                     navigate("/RegisteredEvents")
                     alert(`Registered for ${EventName}`)
-                }
             }
         } catch (err) {
             console.log(err)
