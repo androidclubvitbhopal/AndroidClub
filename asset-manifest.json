@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/androidclubvitbhopal/AndroidClub/static/css/main.e7cb70cd.css",
-    "main.js": "/androidclubvitbhopal/AndroidClub/static/js/main.7b54fc84.js",
-    "static/media/groupimg.jpg": "/androidclubvitbhopal/AndroidClub/static/media/groupimg.ec3a340f4c03f6184d3f.jpg",
-    "static/media/gif2.webp": "/androidclubvitbhopal/AndroidClub/static/media/gif2.8c7a55bcf069049cc31f.webp",
-    "static/media/home-bg.png": "/androidclubvitbhopal/AndroidClub/static/media/home-bg.502f1ecd24f2918ec82a.png",
-    "static/media/user.png": "/androidclubvitbhopal/AndroidClub/static/media/user.38b097360cd1024e4462.png",
-    "static/media/logo_main.png": "/androidclubvitbhopal/AndroidClub/static/media/logo_main.2d3d075fa20a5bd80b0e.png",
-    "static/media/logo_background.png": "/androidclubvitbhopal/AndroidClub/static/media/logo_background.7d6dda8283409bcc333a.png",
-    "static/media/android_gif.gif": "/androidclubvitbhopal/AndroidClub/static/media/android_gif.6a7417c780ab563afbab.gif",
-    "index.html": "/androidclubvitbhopal/AndroidClub/index.html",
-    "main.e7cb70cd.css.map": "/androidclubvitbhopal/AndroidClub/static/css/main.e7cb70cd.css.map",
-    "main.7b54fc84.js.map": "/androidclubvitbhopal/AndroidClub/static/js/main.7b54fc84.js.map"
+    "main.css": "/AndroidClub/static/css/main.e7cb70cd.css",
+    "main.js": "/AndroidClub/static/js/main.7b54fc84.js",
+    "static/media/groupimg.jpg": "/AndroidClub/static/media/groupimg.ec3a340f4c03f6184d3f.jpg",
+    "static/media/gif2.webp": "/AndroidClub/static/media/gif2.8c7a55bcf069049cc31f.webp",
+    "static/media/home-bg.png": "/AndroidClub/static/media/home-bg.502f1ecd24f2918ec82a.png",
+    "static/media/user.png": "/AndroidClub/static/media/user.38b097360cd1024e4462.png",
+    "static/media/logo_main.png": "/AndroidClub/static/media/logo_main.2d3d075fa20a5bd80b0e.png",
+    "static/media/logo_background.png": "/AndroidClub/static/media/logo_background.7d6dda8283409bcc333a.png",
+    "static/media/android_gif.gif": "/AndroidClub/static/media/android_gif.6a7417c780ab563afbab.gif",
+    "index.html": "/AndroidClub/index.html",
+    "main.e7cb70cd.css.map": "/AndroidClub/static/css/main.e7cb70cd.css.map",
+    "main.7b54fc84.js.map": "/AndroidClub/static/js/main.7b54fc84.js.map"
   },
   "entrypoints": [
     "static/css/main.e7cb70cd.css",
