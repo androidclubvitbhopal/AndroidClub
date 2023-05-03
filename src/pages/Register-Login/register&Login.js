@@ -46,7 +46,7 @@ function Register(){
                     catch(err){
                         setErr(true)
                     }
-                navigate("/home")
+                navigate("/AndroidClub")
             })
         })
         
@@ -83,7 +83,7 @@ function Login(){
         const password = e.target[1].value
         try{
             await signInWithEmailAndPassword(auth,email,password)
-            navigate("/home")
+            navigate("/AndroidClub")
         }
         catch(err){
             setErr(true)
