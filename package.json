@@ -1,6 +1,6 @@
 {
   "name": "androidclubwebsite",
-  "homepage":"https://github.com/androidclubvitbhopal/AndroidClub",
+  "homepage": "https://github.com/androidclubvitbhopal/AndroidClub",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
