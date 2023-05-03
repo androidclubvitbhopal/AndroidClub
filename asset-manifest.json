@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AndroidClub/static/css/main.e7cb70cd.css",
-    "main.js": "/AndroidClub/static/js/main.7b54fc84.js",
+    "main.js": "/AndroidClub/static/js/main.d1b1714c.js",
     "static/media/groupimg.jpg": "/AndroidClub/static/media/groupimg.ec3a340f4c03f6184d3f.jpg",
     "static/media/gif2.webp": "/AndroidClub/static/media/gif2.8c7a55bcf069049cc31f.webp",
     "static/media/home-bg.png": "/AndroidClub/static/media/home-bg.502f1ecd24f2918ec82a.png",
@@ -11,10 +11,10 @@
     "static/media/android_gif.gif": "/AndroidClub/static/media/android_gif.6a7417c780ab563afbab.gif",
     "index.html": "/AndroidClub/index.html",
     "main.e7cb70cd.css.map": "/AndroidClub/static/css/main.e7cb70cd.css.map",
-    "main.7b54fc84.js.map": "/AndroidClub/static/js/main.7b54fc84.js.map"
+    "main.d1b1714c.js.map": "/AndroidClub/static/js/main.d1b1714c.js.map"
   },
   "entrypoints": [
     "static/css/main.e7cb70cd.css",
-    "static/js/main.7b54fc84.js"
+    "static/js/main.d1b1714c.js"
   ]
 }
