@@ -25,7 +25,7 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="ul-links">
                             <li className="nav-item">
-                                <Link className={`nav-link ${window.location.pathname === "/AndroidClub" ? "active" : " "}`} aria-current="page" to="/androidclubvitbhopal/AndroidClub">HOME</Link>
+                                <Link className={`nav-link ${window.location.pathname === "/AndroidClub" ? "active" : " "}`} aria-current="page" to="/AndroidClub">HOME</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className={`nav-link ${window.location.pathname === "/AboutUs" ? "active" : " "}`} aria-current="page" to="/AboutUs">ABOUT</Link>
