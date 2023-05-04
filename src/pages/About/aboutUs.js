@@ -55,15 +55,15 @@ function AboutUs() {
 
                     <strong>Leadership:</strong><br />
                     Our club is led by a team of passionate and dedicated students who are committed to promoting the learning and development of Android app development among our members. Our leadership team includes: <br /> <br />
-
+{/* 
                     President: [Name] <br />
                     Vice-President: [Name] <br />
-                    Treasurer: [Name] <br /> <br />
+                    Treasurer: [Name] <br /> <br /> */}
                     <strong>Call to action:</strong> <br />
                     If you are interested in joining our club or have any questions, please don't hesitate to get in touch with us. You can reach us at [Email Address] or [Social Media Handles]. We look forward to hearing from you!
                 </p>
             </div>
-                <h1 className="meet-team-heading">Meet the Team</h1>
+                {/* <h1 className="meet-team-heading">Meet the Team</h1>
             <div className="teams">
                 {
                     team.map((data) => (
@@ -87,7 +87,7 @@ function AboutUs() {
                         </div>
                     ))
                 }
-            </div>
+            </div> */}
             <Footer/>
 
         </div>
