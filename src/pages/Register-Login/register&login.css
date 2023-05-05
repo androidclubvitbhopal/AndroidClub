@@ -1,3 +1,9 @@
+.backimg{
+    width:15%;
+    top:5%;
+    position: absolute;
+    left:5%;
+}
 .UserPopUpForm {
     height: fit-content;
     padding: 1%;
@@ -103,7 +109,10 @@
     font-weight: 450;
     transition: 0.3s ease;
 }
+form input{
+    border-radius: 10px;
 
+}
 .FormBox form #S:hover {
     background-color: #000000;
     transition: 0.3s;
