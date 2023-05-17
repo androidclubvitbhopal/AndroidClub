@@ -30,9 +30,9 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className={`nav-link ${window.location.pathname === "/AboutUs" ? "active" : " "}`} aria-current="page" to="/AboutUs">ABOUT</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className={`nav-link ${window.location.pathname === "/OurProjects" ? "active" : " "}`} aria-current="page" to="/OurProjects">PROJECTS</Link>
-                            </li>
+                            </li> */}
                             {
                                 currentUser &&
                                 <li className="nav-item">

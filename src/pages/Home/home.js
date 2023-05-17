@@ -14,6 +14,7 @@ import gif from "../../images/android_gif.gif";
 import gif2 from "../../images/gif2.webp";
 import groupimg from "../../images/groupimg.jpg"
 import logo2 from "../../images/logo_background.png"
+import logo1 from "../../images/logo_3.png"
 
 
 
@@ -118,7 +119,7 @@ function Home() {
                     RegInfo = [...RegInfo, UserDetails]
                     console.log(UserDetails)
                     let UserEvents = userEvents
-                    UserEvents = [...UserEvents, { name: temp[0].name, description: temp[0].description, time: temp[0].time, bannerURL: temp[0].bannerURL, location: temp[0].location,notificationGroup:temp[0].notificationGroup }]
+                    UserEvents = [...UserEvents, `${temp[0].notificationGroup}`]
                     await updateDoc(doc(db, "events", EventName), {
                         "Registered Emails": RegEmails,
                         "Registered Users": RegInfo,
@@ -155,14 +156,14 @@ function Home() {
                     <div className="PopUpForm">
                         <p>Hey Learner!! <br></br>Login In or Register to Access all features.</p>
                         <Link id='New' to='../login'>Login</Link>
-                        <Link id='New' to='../Register'>Register</Link>
+                        <Link id='New1' to='../Register'>Register</Link>
                         <input className="CancelBtn" type='button' onClick={() => { setVis("hidden") }} value='Close'></input>
                     </div>
                 </div>
             }
             {/* css - backgroundImage:`url(${groupimg})` */}
             <Navbar />
-            <img src={logo2} className="logo_2"></img>
+            <img src={logo1} className="logo_1"></img>
             <div className="club-intro" style={{backgroundSize:'cover'}}>
                 {/* <h1 className="first-heading"> <marquee behavior="scroll" direction="left" scrollamount="20"> Android club VIT Bhopal </marquee></h1> <br /> */}
                 <h1 className="heading">Welcome to <br></br><div className="line2haeding"> Android Club. <marquee className='headingAnimation' behavior="scroll" direction="up" scrollamount='7'> Hackathons<br></br> Events<br></br> Webinars<br></br> And much more!!</marquee></div></h1>

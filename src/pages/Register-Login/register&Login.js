@@ -8,6 +8,7 @@ import {Link, useNavigate } from "react-router-dom";
 import ProfilePicIcon from "../../images/user.png"
 import { db } from "../../firebaseconfig";
 import { doc, setDoc } from "firebase/firestore"; 
+import logo2 from "../../images/logo_3.png"
 import "./register&login.css";
 
 function Register(){
@@ -55,6 +56,7 @@ function Register(){
     return(
         <div className="registerr">
             <div className="Login">
+                <img src={logo2} className="backimg"></img>
                 <div className="FormBox FormBox1">
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="text" placeholder="Name" required></input>
@@ -93,6 +95,7 @@ function Login(){
     return(
         <div className="loginn">
             <div className="Login">
+            <img src={logo2} className="backimg"></img>
                 <div className="FormBox FormBox2">
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="email" placeholder="Email-ID" required></input>

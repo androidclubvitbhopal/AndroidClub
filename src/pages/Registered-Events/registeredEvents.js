@@ -20,13 +20,31 @@ function RegisteredEvents(){
     // const eventRef = collection (db,"events")
     const UserEvents = async()=>{
         const q= query(userRef,where('email','==',currentUser.email))
-        const temp = []
+        let temp = []
         const querySnapShot = await getDocs(q)
         try{
             querySnapShot.forEach((doc)=>{
                 temp.push(doc.data())
             })
-            setDetails(temp[0].allRegisteredEvents)
+            temp = temp[0].allRegisteredEvents
+            let temp2 = []
+            // setDetails(temp[0].allRegisteredEvents)
+            for(let i=0;i<temp.length;i++){
+                const q= query(eventRef,where('notificationGroup','==',`${temp[i]}`))
+                const temp1 = []
+                const querySnapShot = await getDocs(q)
+                try{
+                    querySnapShot.forEach((doc)=>{
+                        temp1.push(doc.data())
+                    })
+                    temp2 = [...temp2,temp1[0]];
+                    console.log(temp2)
+        
+                }catch(err){
+                    console.log(err)
+                }
+            }
+            setDetails(temp2)
         }catch(err){
             console.log(err)
         }
@@ -38,6 +56,9 @@ function RegisteredEvents(){
         setVis("hidden")
         setEvDt({})
     }
+    useEffect(()=>{
+
+    },[eventDetails])
     const HandleClick = async (Event) =>{
         setVis("visible")
         console.log(Event)
