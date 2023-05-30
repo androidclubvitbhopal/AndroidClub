@@ -22,20 +22,20 @@ export const Footer = () => {
                         <div className="socials">
                             {/* <p>www.avinashsingh.workset.in</p> */}
                             <Link to="https://www.linkedin.com/company/android-club-vit-bhopal/" target="_blank">
-                                <i className="fa-brands fa-linkedin socials-icon ln"></i>
+                                <i className="fa-brands fa-linkedin socials-icon ln" title="LinkedIn"></i>
                             </Link>
                             <Link to="https://www.instagram.com/androidclub.vitb/" target="_blank">
-                                <i className="fa-brands fa-instagram socials-icon insta"></i>
+                                <i className="fa-brands fa-instagram socials-icon insta " title="Instagram"></i>
                             </Link>
                             <Link to="https://github.com/androidclubvitbhopal" target="_blank">
-                                <i className="fa-brands fa-github socials-icon github"></i>
+                                <i className="fa-brands fa-github socials-icon github" title="GitHub"></i>
                             </Link>
                         </div>
                     </div>
                     <div className="footer-mid">
                         <h5>Explore</h5>
                         <div className="footer-nav">
-                            <Link to="/home">
+                            <Link to="/Home">
                                 <li>Home</li>
                             </Link>
                             <Link to="/AboutUs">
@@ -50,7 +50,7 @@ export const Footer = () => {
                             }
                             {
                                 !currentUser && 
-                                <Link to="/login">Login</Link>
+                                <Link to="/login" style={{fontSize:'20px', marginLeft:'1%'}}>Login</Link>
                             }
                         </div>
                     </div>
