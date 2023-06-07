@@ -159,6 +159,31 @@
   position: absolute;
   border-radius: 15px;
 }
+.home-rectangle69 {
+  top: 2px;
+  left: 2px;
+  width: 253px;
+  height: 45px;
+  position: absolute;
+  object-fit: fill;
+  border-radius: 15px;
+}
+.home-text007 {
+  top: 7px;
+  left: -5px;
+  color: rgba(255, 255, 255, 1);
+  width: 253px;
+  height: auto;
+  position: absolute;
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 30px;
+  font-stretch: normal;
+  text-decoration: none;
+}
 .home-text04 {
   top: 160.5295715332031px;
   left: 85.23046875px;
@@ -179,7 +204,7 @@
   top: -7px;
   left: -6px;
   color: rgba(0, 0, 0, 1);
-  width: 450px;
+  width: 455px;
   height: 42px;
   position: absolute;
   font-size: 20px;
