@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable } from "firebase/storage";
+import Navbar from "../../components/Navbar/Navbar"
 import { useState } from "react";
 import { auth } from '../../firebaseconfig';
 import { storage } from "../../firebaseconfig";
@@ -286,11 +287,13 @@ function Login(){
               />
             </div>
           </div>
-          <img
-            src={aclogo337}
-            alt="AClogo337"
-            className="home--clogo"
-          />
+          <a href="/AndroidClub">
+            <img
+              src={aclogo337}
+              alt="AClogo337"
+              className="home--clogo"
+            />
+          </a>
           <div className="home-group241">
             <span className="home-text20 button" onClick="redirectToHome()">
               <button>
