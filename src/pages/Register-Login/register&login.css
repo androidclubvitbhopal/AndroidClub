@@ -437,9 +437,9 @@
 }
 .home-text22 {
   top: 0px;
-  left: -120px;
+  left: -110px;
   color: rgba(255, 255, 255, 1);
-  width: 120px;
+  width: 100px;
   height: auto;
   position: absolute;
   font-size: 20px;
@@ -453,7 +453,7 @@
   background-color: #fafafa;
 }
 .home-text24 {
-  left: 20px;
+  left: 15px;
   color: rgba(255, 255, 255, 1);
   width: 14-px;
   height: auto;
@@ -469,7 +469,7 @@
   background-color: #fbf8f8;
 }
 .home-text26 {
-  left: 180px;
+  left: 140px;
   color: rgb(255, 255, 255);
   width: auto;
   height: auto;

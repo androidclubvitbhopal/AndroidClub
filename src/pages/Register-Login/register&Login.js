@@ -27,6 +27,7 @@ import rectangle44318 from "../../images/rectangle44318-c177-200h.png"
 import rectangle45319 from "../../images/rectangle45319-6zq9-200h.png"
 
 function Register(){
+  const navigate = useNavigate();
     const redirectToGoogle = () => {
         window.location.href = "google-page.html";
       };
@@ -39,21 +40,7 @@ function Register(){
         window.location.href = "github-page.html";
       };
       
-      const redirectToHome = () => {
-        window.location.href = "home-page.html";
-      };
       
-      const redirectToEvents = () => {
-        window.location.href = "events-page.html";
-      };
-      
-      const redirectToContact = () => {
-        window.location.href = "contact-page.html";
-      };
-      
-      const redirectToAboutUs = () => {
-        window.location.href = "about-us-page.html";
-      };
       const handleForgotPassword = () => {
         console.log("Forgot Password clicked");
       };
@@ -65,7 +52,7 @@ function Register(){
       const handleSignUp = () => {
         console.log("Sign Up clicked");
       };
-    const navigate = useNavigate()
+    
     const [err,setErr] = useState(false)
     const HandleSubmit= async (e)=>{
         e.preventDefault();
@@ -139,6 +126,21 @@ function Login(){
 
     const handleLogin = () => {
         console.log("Login clicked");
+    };
+    const redirectToHome = () => {
+      navigate("/AndroidClub"); // Replace "/home" with the desired path to your home page
+    };
+    
+    const redirectToEvents = () => {
+      navigate("/RegisteredEvents");
+    };
+    
+    const redirectToContact = () => {
+      window.location.href = "/ContactUs";
+    };
+    
+    const redirectToAboutUs = () => {
+      window.location.href = "/AboutUs";
     };
     const HandleSubmit= async (e)=>{
         e.preventDefault()
@@ -272,6 +274,7 @@ function Login(){
                 src={rectangle42332}
                 alt="Rectangle42332"
                 className="home-rectangle42"
+                
               />
             </div>
             <div className="home-group21 button" onClick="redirectToGitHub()">
@@ -295,22 +298,23 @@ function Login(){
             />
           </a>
           <div className="home-group241">
-            <span className="home-text20 button" onClick="redirectToHome()">
+            <span className="home-text20 button" onClick={() => redirectToHome()}>
               <button>
                 <span>HOME</span>
               </button>
             </span>
-            <span className="home-text22 button" onClick="redirectToEvents()">
+            <span className="home-text22 button" onClick={() => redirectToEvents()}>
               <button>
                 <span>EVENTS</span>
               </button>
             </span>
-            <span className="home-text24 button" onClick="redirectToContact()">
+            
+            <span className="home-text24 button" onClick={() => redirectToContact()}>
               <button>
                 <span>CONTACT</span>
               </button>
             </span>
-            <span className="home-text26 button" onClick="redirectToAboutUs()">
+            <span className="home-text26 button" onClick={() => redirectToAboutUs()}>
               <button>
                 <span>ABOUT US</span>
               </button>
