@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Anybody&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+:root {
+  --primary-accent: #4af79d;
+  --primary-dark: #252525;
+  --primary-light: #ffffff;
+}
+
 .App {
   text-align: center;
 }
