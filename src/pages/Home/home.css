@@ -26,7 +26,7 @@
 }
 
 .heading {
-  margin-top: 8%;
+  margin-top: 5%;
   margin-left: 5%;
   font-size: 60px;
   font-weight: 800;
@@ -180,7 +180,7 @@
 @media only screen and (max-width: 600px) {
   .club-intro {
     font-size: 12px;
-    margin: 20% 2% 0 2%;
+    margin: 25% 2% 0 2%;
   }
   .club-intro-img {
     height: 150px;
@@ -190,15 +190,28 @@
   }
   .club-intro-div {
     flex-direction: column;
+    margin-top: 20px;
   }
 
   .club-intro p {
     margin: 0 4%;
   }
+  .club-intro{
+    width: 90%;
+  }
   .heading {
-    font-size: 24px;
+    font-size: 19px;
   }
   .first-heading {
     font-size: 30px;
+  }
+  .line2heading{
+    font-size: 19px;
+  }
+  .headingAnimation{
+    height: 19px;
+  }
+  .Explorebtn{
+    margin-top: 30px;
   }
 }

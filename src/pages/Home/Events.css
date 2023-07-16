@@ -1,9 +1,17 @@
 .events-box{
-    margin: 8% 0% 0% 0%;
+    margin: 8% 0 0 0;
     display: flex;
     flex-direction: row-reverse;
     background-image: url("../../images/home-background.svg");
     background-repeat: none;
     background-size: cover;
-    padding: 2% 0%;
+    padding: 2% 0;
+}
+
+@media only screen and (max-width: 600px){
+    .events-box{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
 }
