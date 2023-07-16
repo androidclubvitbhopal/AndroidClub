@@ -5,10 +5,7 @@
     margin-left: 0;
 }
 .footer {
-    background-color: #0c4329;
-    /* background-color: rgba(16, 120, 35, 0.85); */
-    background-color: var(--primary-accent);
-    /* color: white; */
+    background-color: white;
     padding: 1% 2%;
     z-index: 3;
     font-weight: 700;

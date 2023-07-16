@@ -38,8 +38,23 @@
 
 .upcoming-events-details {
     font-weight: 600;
-    font-size: 18px;
     padding: 3%;
+    height: 120px;
+    overflow-y: auto;
+    text-align: center;
+}
+.upcoming-events-details::-webkit-scrollbar {
+    display: none;
+}
+.RegisterBtn{
+    width: 185px;
+    /* margin-left: 20%; */
+    margin-bottom: 5%;
+    border-radius: 20px;
+    /* text-align: center; */
+    background-color: #3FCF84;
+    border: none;
+    height: 50px;
 }
 
 .upcoming-event-name {

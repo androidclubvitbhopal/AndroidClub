@@ -147,24 +147,24 @@ const UpcomingEvents = () => {
                         UEvent.map((Events) => (
                             <div key={Math.random()} className="upcoming-event-block">
                                 <div className="upcoming-event-info">
-                                            <img src={Events.bannerURL} className="upcoming-event-img" alt="eventImg" /> <br />
-                                            <div className="upcoming-event-name">{Events.name}</div>
-                                            <div className="upcoming-events-details">
-                                                <p className="upcoming-event-date">{Events.date}</p>
-                                                <p className="upcoming-event-time">{Events.time}</p>
-                                                <p className="upcoming-event-location"> Venue: {Events.location}</p>
-                                                {/* <p className="upcoming-event-description">{Events.description}</p> */}
-                                            </div>
-                                        </div>
-                                {
-                                    currentUser && Events.price == 0 &&
-                                    <button className="RegisterBtn" onClick={() => { HandleRegister(Events.notificationGroup) }}><span type='text'>Register</span></button>
-                                }
-                                {
-                                    currentUser && Events.price != 0 &&
-                                    <button className="RegisterBtn" onClick={() => { HandleInit(Events) }}><span type='text'>Register</span></button>
+                                    <img src={Events.bannerURL} className="upcoming-event-img" alt="eventImg" /> <br />
+                                    <div className="upcoming-event-name">{Events.name}</div>
+                                    <div className="upcoming-events-details">
+                                        {
+                                            currentUser && Events.price == 0 &&
+                                            <button className="RegisterBtn" onClick={() => { HandleRegister(Events.notificationGroup) }}><span type='text'>Register</span></button>
+                                        }
+                                        {
+                                            currentUser && Events.price != 0 &&
+                                            <button className="RegisterBtn" onClick={() => { HandleInit(Events) }}><span type='text'>Register</span></button>
+                                        }
+                                        <p className="upcoming-event-date">{Events.date} -- {Events.time}</p>
+                                        {/* <p className="upcoming-event-time">{Events.time}</p> */}
+                                        {/* <p className="upcoming-event-location"> Venue: {Events.location}</p> */}
+                                        {/* <p className="upcoming-event-description">{Events.description}</p> */}
+                                    </div>
+                                </div>
 
-                                }
                             </div>
                         ))
                     }
