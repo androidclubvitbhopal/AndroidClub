@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar"
 import { Footer } from "../../components/Footer/Footer";
-import logo1 from "../../images/logo_3.png"
+// import logo1 from "../../images/logo_3.png"
 import "./home.css";
-// import UpcomingEvents from "./UpcomingEvents";
 import { useContext, useState } from "react";
 import { Authcontext } from "../../contextProvider";
 import Events from "./Events";
@@ -16,12 +15,12 @@ function Home() {
     const [vis, setVis] = useState("hidden");
     const { currentUser } = useContext(Authcontext);
 
-    const explore = () => {
-        window.scrollTo({
-            top: 730,
-            behavior: 'smooth',
-        });
-    }
+    // const explore = () => {
+    //     window.scrollTo({
+    //         top: 730,
+    //         behavior: 'smooth',
+    //     });
+    // }
     
     return (
 
@@ -56,9 +55,7 @@ function Home() {
             </div>
           </div>
         )}
-        {/* css - backgroundImage:`url(${groupimg})` */}
         <Navbar />
-        {/* <img src={logo1} className="logo_1"></img> */}
         <svg
           className="logo_1"
           width="587"
@@ -74,7 +71,6 @@ function Home() {
         </svg>
   
         <div className="club-intro" style={{ backgroundSize: "cover" }}>
-          {/* <h1 className="first-heading"> <marquee behavior="scroll" direction="left" scrollamount="20"> Android club VIT Bhopal </marquee></h1> <br /> */}
           <h1 className="heading">
             Welcome to <br></br>
             <div className="line2heading">
@@ -93,7 +89,6 @@ function Home() {
             </div>
           </h1>
           <div className="club-intro-div">
-            {/* <img src={gif2} className="club-intro-img"  alt="gif" /> */}
             <p className="club-intro-description">
               Android club VIT Bhopal is dedicated to educating and creating
               awareness about modern Mobile App development. We are driven to
@@ -110,22 +105,6 @@ function Home() {
             >
               Explore
             </button>
-            {/* <div
-              className="mouse_scroll"
-              onClick={() => {
-                var elmntToView = document.getElementById("upcoming-events");
-                elmntToView.scrollIntoView();
-              }}
-            >
-              <div className="mouse">
-                <div className="wheel"></div>
-              </div>
-              <div>
-                <span className="m_scroll_arrows unu"></span>
-                <span className="m_scroll_arrows doi"></span>
-                <span className="m_scroll_arrows trei"></span>
-              </div>
-            </div> */}
           </div>
         </div>
             <Events/>
@@ -133,4 +112,4 @@ function Home() {
         </div>
     )
 }
-export default Home
+export default Home;

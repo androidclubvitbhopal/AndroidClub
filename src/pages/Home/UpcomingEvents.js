@@ -1,17 +1,17 @@
 import React from 'react';
 import { useContext, useEffect, useState } from "react";
-import { signOut } from "firebase/auth";
-import { auth } from "../../firebaseconfig";
+// import { signOut } from "firebase/auth";
+// import { auth } from "../../firebaseconfig";
 import { collection, query, updateDoc, where } from "firebase/firestore";
 import { db } from "../../firebaseconfig";
 import { getDocs, doc } from "firebase/firestore";
 import { Authcontext } from "../../contextProvider";
-import gif from "../../images/android_gif.gif";
-import gif2 from "../../images/gif2.webp";
-import groupimg from "../../images/groupimg.jpg"
-import logo2 from "../../images/logo_background.png"
-import homeBg from "../../images/home-bg.png"
-import { Link, useNavigate } from "react-router-dom";
+// import gif from "../../images/android_gif.gif";
+// import gif2 from "../../images/gif2.webp";
+// import groupimg from "../../images/groupimg.jpg"
+// import logo2 from "../../images/logo_background.png"
+// import homeBg from "../../images/home-bg.png"
+import { useNavigate } from "react-router-dom";
 import "./UpcomingEvents.css";
 
 
@@ -48,6 +48,7 @@ const UpcomingEvents = () => {
     useEffect(() => {
         FetchEvents()
         FetchUserDetails()
+        // eslint-disable-next-line 
     }, [])
 
     useEffect(() => {
@@ -55,8 +56,9 @@ const UpcomingEvents = () => {
             setj(true);
         }
         console.log(j)
+        // eslint-disable-next-line 
     }, [UEvent])
-
+    
     useEffect(() => {
         p = p + 1;
         console.log(p)
@@ -80,7 +82,7 @@ const UpcomingEvents = () => {
             // setEv(temp)
             let RegEmails = temp[0]["Registered Emails"]
             for (let i = 0; i < RegEmails.length; i++) {
-                if (RegEmails[i] == `${currentUser.email}`) {
+                if (RegEmails[i] === `${currentUser.email}`) {
                     k = true;
                 }
             }
@@ -151,11 +153,11 @@ const UpcomingEvents = () => {
                                     <div className="upcoming-event-name">{Events.name}</div>
                                     <div className="upcoming-events-details">
                                         {
-                                            currentUser && Events.price == 0 &&
+                                            currentUser && Events.price === 0 &&
                                             <button className="RegisterBtn" onClick={() => { HandleRegister(Events.notificationGroup) }}><span type='text'>Register</span></button>
                                         }
                                         {
-                                            currentUser && Events.price != 0 &&
+                                            currentUser && Events.price !== 0 &&
                                             <button className="RegisterBtn" onClick={() => { HandleInit(Events) }}><span type='text'>Register</span></button>
                                         }
                                         <p className="upcoming-event-date">{Events.date} -- {Events.time}</p>

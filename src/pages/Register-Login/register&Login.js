@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword,signInWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable } from "firebase/storage";
 import { useState } from "react";
 import { auth } from '../../firebaseconfig';
@@ -56,7 +56,7 @@ function Register(){
     return(
         <div className="registerr">
             <div className="Login">
-                <img src={logo2} className="backimg"></img>
+                <img src={logo2} className="backimg" alt="logo2"></img>
                 <div className="FormBox FormBox1">
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="text" placeholder="Name" required></input>
@@ -95,7 +95,7 @@ function Login(){
     return(
         <div className="loginn">
             <div className="Login">
-            <img src={logo2} className="backimg"></img>
+            <img src={logo2} className="backimg" alt="backimg"></img>
                 <div className="FormBox FormBox2">
                     <form onSubmit={(e)=>HandleSubmit(e)}>
                         <input type="email" placeholder="Email-ID" required></input>

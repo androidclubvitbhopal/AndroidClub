@@ -6,7 +6,7 @@ import { Authcontext } from "../../contextProvider";
 import { useState } from "react";
 import logo from "../../images/logo_main.png";
 import "./Navbar.css";
-import gif from "../../images/android_gif.gif";
+// import gif from "../../images/android_gif.gif";
 
 function Navbar() {
   const { currentUser } = useContext(Authcontext);
