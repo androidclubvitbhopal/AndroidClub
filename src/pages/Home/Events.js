@@ -6,8 +6,8 @@ import "./Events.css";
 const Events = () => {
   return (
     <div className='events-box'>
-        <UpcomingEvents/>
         <CompletedEvents/>
+        <UpcomingEvents/>
     </div>
   )
 }

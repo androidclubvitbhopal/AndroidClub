@@ -1,6 +1,7 @@
 .events-box{
     margin: 8% 0% 0% 0%;
     display: flex;
+    flex-direction: row-reverse;
     background-image: url("../../images/home-background.svg");
     background-repeat: none;
     background-size: cover;

@@ -24,6 +24,9 @@
   font-family: "Anybody";
   font-weight: 900;
 }
+.nav-regEvent{
+  width: 240px;
+}
 .profileInfo {
   width: 10%;
   display: flex;

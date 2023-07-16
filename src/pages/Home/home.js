@@ -7,10 +7,6 @@ import { useContext, useState } from "react";
 import { Authcontext } from "../../contextProvider";
 import Events from "./Events";
 
-
-
-
-
 function Home() {
     const [vis, setVis] = useState("hidden");
     const { currentUser } = useContext(Authcontext);

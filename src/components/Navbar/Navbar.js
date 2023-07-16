@@ -62,7 +62,7 @@ function Navbar() {
               {currentUser && (
                 <li className="nav-item">
                   <Link
-                    className={`nav-link ${
+                    className={`nav-link nav-regEvent ${
                       window.location.pathname === "/RegisteredEvents"
                         ? "active"
                         : " "
