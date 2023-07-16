@@ -1,6 +1,6 @@
 .nav-logo-img {
   width: 300px;
-  margin-top: -7%;
+  /*margin-top: -7%;*/
 }
 
 .nav-link {
@@ -61,7 +61,12 @@ li {
     display: none;
   }
   .nav-logo-img {
-    margin-left: 0;
+    margin-right: 10px;
+    width: 80%;
+  }
+
+  .nav-link{
+    display: block;
   }
 
   .nav-profile-name {
