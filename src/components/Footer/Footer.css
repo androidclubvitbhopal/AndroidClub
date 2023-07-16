@@ -2,8 +2,11 @@
     z-index: 3;
 }
 .footer {
-    background-color: #0d4e8b;
-    background-color: rgba(46, 14, 159, 0.85);
+    /* background-color: #0d4e8b; */
+    /* background-color: #4af79d; */
+    /* background-color: #4f4e52; */
+    /* background-color: rgba(46, 14, 159, 0.85); */
+    background-color: black;
     color: white;
     padding: 1% 2%;
     z-index: 3;
