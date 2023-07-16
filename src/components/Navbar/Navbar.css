@@ -1,6 +1,6 @@
 .nav-logo-img {
   width: 300px;
-  padding-bottom: 10px;
+  margin-top: -7%;
 }
 
 .nav-link {
@@ -12,7 +12,6 @@
   margin-left: 0%;
 }
 #NvBr {
-  padding: 1%;
   background-color: var(--primary-dark);
 }
 #ul-links {

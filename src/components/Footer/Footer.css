@@ -1,12 +1,17 @@
 .reg{
     z-index: 3;
 }
+.li{
+    margin-left: 0;
+}
 .footer {
     background-color: #0c4329;
-    background-color: rgba(16, 120, 35, 0.85);
-    color: white;
+    /* background-color: rgba(16, 120, 35, 0.85); */
+    background-color: var(--primary-accent);
+    /* color: white; */
     padding: 1% 2%;
     z-index: 3;
+    font-weight: 700;
 }
 
 .footer a{
@@ -21,7 +26,7 @@
 
 .email p {
     margin-top: -2%;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -40,7 +45,7 @@
 .socials-icon {
     margin-left: 10%;
     font-size: 35px;
-    color: white;
+    color: black;
 }
 .ln{
     color: blue;
@@ -58,7 +63,7 @@
 }
 
 .footer-nav a {
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -68,6 +73,7 @@
 
 .footer-heading {
     text-align: center;
+    font-weight: 900;
 }
 
 .footer-text {

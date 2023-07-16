@@ -3,13 +3,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 
 :root {
-  --primary-accent: #4af79d;
-  --primary-dark: #252525;
-  --primary-light: #ffffff;
+  /* --primary-accent: #4af79d; */
+  --primary-accent: #3FCF84;
+  /* --primary-dark: #252525; */
+  --primary-dark: white;
+  /* --primary-light: #ffffff; */
+  --primary-light: black;
 }
 
 .App {
   text-align: center;
+}
+::selection {
+  background: #aceecc;
 }
 
 .App-logo {

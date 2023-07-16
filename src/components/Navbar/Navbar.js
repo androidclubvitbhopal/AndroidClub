@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent"
+        className="navbar navbar-expand-lg navbar-light fixed-top navbar-transparent"
         id="NvBr"
       >
         <div className="container-fluid">
@@ -103,7 +103,7 @@ function Navbar() {
                     aria-current="page"
                     to="/login"
                   >
-                    Login
+                    LOGIN
                   </Link>
                 </li>
               )}

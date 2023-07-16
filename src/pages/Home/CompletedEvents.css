@@ -1,6 +1,6 @@
 .completed-event-parent {
-    margin-top: 3%;
-    margin-left:20%;
+    /* margin-top: 3%; */
+    margin-left:8%;
     margin-right: 3%;
     display: flex;
     overflow-x: auto;
@@ -9,7 +9,13 @@
 .eventsOuterDiv{
     display: flex;
     overflow-y: hidden;
+    /* overflow-x: hidden; */
+    /* margin-top: 5%; */
+}
+.completed-event-out{
     margin-top: 5%;
+    overflow-x: hidden;
+    margin-left: 5%;
 }
 
 .completed-event-parent::-webkit-scrollbar {
@@ -23,7 +29,7 @@
 }
 
 .completed-event-heading {
-    margin-top: 10%;
+    margin-left: 9%;
     color: #3FCF84;
     font-weight: 900;
     font-size: 60px;
@@ -31,7 +37,8 @@
 
 .completed-events-container {
     z-index: 2;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
+    overflow-x: hidden;
     display: flex;
     padding: 2%;
 }
@@ -48,18 +55,27 @@
     height: 520px;
     padding: 3%;
     border-radius: 50px;
-    background-color: white;
+    /* background-color: white; */
+    /* background-color: #252525; */
+    background-color: rgb(238, 239, 240);
+    color: black;
 }
 
 .completed-event-img {
-    height: 330px;
+    height: 320px;
+    margin-bottom: 5%;
     width: 330px;
     border-radius: 50px;
 }
 
 .completed-events-details {
     font-weight: 600;
-    padding: 1%;
+    padding:2% 5%;
+    height: 120px;
+    overflow-y: scroll;
+}
+.completed-events-details::-webkit-scrollbar {
+    -webkit-appearance: none;
 }
 
 .completed-event-name {

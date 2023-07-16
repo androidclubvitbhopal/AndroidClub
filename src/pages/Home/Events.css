@@ -1,4 +1,8 @@
 .events-box{
-    margin: 8% 0%;
+    margin: 8% 0% 0% 0%;
     display: flex;
+    background-image: url("../../images/home-background.svg");
+    background-repeat: none;
+    background-size: cover;
+    padding: 2% 0%;
 }

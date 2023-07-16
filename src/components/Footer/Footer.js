@@ -33,7 +33,7 @@ export const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-mid">
-                        <h5>Explore</h5>
+                        {/* <h5>Explore</h5> */}
                         <div className="footer-nav">
                             <Link to="/home">
                                 <li>Home</li>
@@ -50,15 +50,15 @@ export const Footer = () => {
                             }
                             {
                                 !currentUser && 
-                                <Link to="/login">Login</Link>
+                                <Link style={{fontSize:'20px',marginLeft:'0%'}} to="/login">Login</Link>
                             }
                         </div>
                     </div>
                     <h3 className="footer-heading">ANDROID CLUB</h3>
-                    <p className="footer-text">Enrich your life as a student || <Link style={{color: "white"}}
+                    <p className="footer-text">Enrich your life as a student || <Link style={{color: "black"}}
                         to="/AboutUs">Android club</Link></p>
                     <hr className="hr"/>
-                        <p className="copyrights">© 2017 Android Club VIT Bhopal. All Rights reserved.</p>
+                        <p className="copyrights">© 2023 Android Club VIT Bhopal. All Rights reserved.</p>
                 </footer>
             </div>
         </div>

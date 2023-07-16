@@ -140,31 +140,34 @@ const CompletedEvents = () => {
 
     return (
         <>
-            {/* <h1 className='completed-event-heading'>Past Events</h1> */}
-            <div className="eventsOuterDiv">
-                <div className='completed-event-parent'>
-                    {
-                        CEvent.map((Events) => (
-                            <div className="completed-events">
-                                <div className="completed-events-container">
-                                    <div key={Math.random()} className="completed-event-block" onClick={() => { setVis("visible") }}>
-                                        <div className="completed-event-info">
-                                            <img src={Events.bannerURL} className="completed-event-img" alt="eventImg" /> <br />
-                                            <div className="completed-event-name">{Events.name}</div>
-                                            <div className="completed-events-details">
-                                                <p className="completed-event-date">{Events.date}</p>
-                                                <p className="completed-event-location"> Venue: {Events.location}</p>
-                                                <p className="completed-event-description">{Events.description}</p>
+            <div className="completed-event-out">
+                <h1 className='completed-event-heading'>Past Events</h1>
+                <div className="eventsOuterDiv">
+                    <div className='completed-event-parent'>
+                        {
+                            CEvent.map((Events) => (
+                                <div className="completed-events">
+                                    <div className="completed-events-container">
+                                        <div key={Math.random()} className="completed-event-block" onClick={() => { setVis("visible") }}>
+                                            <div className="completed-event-info">
+                                                <img src={Events.bannerURL} className="completed-event-img" alt="eventImg" /> <br />
+                                                <div className="completed-event-name">{Events.name}</div>
+                                                <div className="completed-events-details">
+                                                    <p className="completed-event-date">{Events.date}</p>
+                                                    <p className="completed-event-location"> Venue: {Events.location}</p>
+                                                    <p className="completed-event-description">{Events.description}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))
-                    }
+                            ))
+                        }
+                    </div>
+                    {/* <i class='fas fa-angle-double-right right-arrow'></i> */}
                 </div>
-                {/* <i class='fas fa-angle-double-right right-arrow'></i> */}
             </div>
+
         </>
 
 
