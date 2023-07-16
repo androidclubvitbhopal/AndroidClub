@@ -46,11 +46,11 @@ export const Footer = () => {
                             </Link>
                             {
                                 currentUser && 
-                                <Link to="/RegisteredEvents" style={{fontSize:'20px',marginLeft:'2%'}}>Registered Events</Link>
+                                <Link to="/RegisteredEvents" className={"footer-optional"}>Registered Events</Link>
                             }
                             {
                                 !currentUser && 
-                                <Link style={{fontSize:'20px',marginLeft:'0%'}} to="/login">Login</Link>
+                                <Link className={"footer-optional"} to="/login">Login</Link>
                             }
                         </div>
                     </div>
