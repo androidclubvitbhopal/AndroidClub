@@ -193,7 +193,7 @@ function Login(){
           <div className="home-group24">
             <div className="home-group"></div>
             <span className="home-text">
-              <span>user login</span>
+              <span>USER LOGIN</span>
             </span>
             <span className="home-text02">
               <span>Hey, Enter your details and dive into the Android Club</span>
@@ -220,7 +220,7 @@ function Login(){
             >
               
               <img className="home-rectangle69" src={rectangle45319}  />
-              <span className= "home-text007">Login</span>
+              <span className= "home-text007">LOGIN</span>
             </button>
             
             <span className="home-text04">
@@ -308,15 +308,14 @@ function Login(){
                 <span>EVENTS</span>
               </button>
             </span>
-            
-            <span className="home-text24 button" onClick={() => redirectToContact()}>
-              <button>
-                <span>CONTACT</span>
-              </button>
-            </span>
-            <span className="home-text26 button" onClick={() => redirectToAboutUs()}>
+            <span className="home-text24 button" onClick={() => redirectToAboutUs()}>
               <button>
                 <span>ABOUT US</span>
+              </button>
+            </span>
+            <span className="home-text26 button" onClick={() => redirectToContact()}>
+              <button>
+                <span>CONTACT</span>
               </button>
             </span>
           </div>
