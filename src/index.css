@@ -1,24 +1,23 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-body{
-  background-color: #282c34;
-
+body {
+  background-color: var(--primary-dark);
 }
 /* body::-webkit-scrollbar {
   display: none;
 } */
 body::-webkit-scrollbar {
   width: 8px;
-  background-color: rgba(0, 128, 0, 0);
+  background-color: rgb(56, 56, 56);
 }
 
 body::-webkit-scrollbar-track {
@@ -26,29 +25,29 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: black
+  background-color: rgb(125, 125, 125);
 }
 
 @media only screen and (max-width: 600px) {
-  .UserPopUpForm{
+  .UserPopUpForm {
     left: 65%;
     height: fit-content;
     padding: 4%;
     background-color: #282c34;
-    width:25%;
-    top:8%;
+    width: 25%;
+    top: 8%;
   }
-  .UserPopUpForm input{
+  .UserPopUpForm input {
     font-size: 100%;
   }
-  .UserPopUpForm input:hover{
+  .UserPopUpForm input:hover {
     color: rgb(78, 0, 0);
   }
 }
 
 .PopUpWindow {
   position: absolute;
-  top:0%;
+  top: 0%;
   width: 100%;
   height: 120%;
   position: fixed;
