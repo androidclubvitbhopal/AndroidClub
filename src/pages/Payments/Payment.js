@@ -187,7 +187,7 @@ function Payment(){
         <div className="payments" style={{backgroundImage:`url(${Evpayment.bannerURL})`,backdropFilter: 'blur(8px)', webkitBackdropFilter: 'blur(8px)'}}>
         {!details[0] && Evpayment.noOfMembers>1 && 
             <div className="FormBox">
-                <p style={{textAlign:'center'}}>For more details <a href=''>view word file</a></p>
+                <p style={{textAlign:'center'}}>For more details <a href='https://docs.google.com/document/d/e/2PACX-1vQ0hLVvMiFMI33m06IRPJMRfEpvhA_-UmGTEJH7dIU3jOF95xfGuzop9I8yjI8JzIEcqvHB09ayGhr1/pub'>view file</a></p>
                 <form onSubmit={(e)=>HandleDetailsSubmit(e)}>
                     <label style={{color:'#282c34'}}>Team Name</label>
                     <input type='text' placeholder="Team-Name"></input>
