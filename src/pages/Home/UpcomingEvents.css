@@ -158,7 +158,9 @@
 
 @media only screen and (max-width: 600px) {
     .upcoming-events {
-        width: 90%;
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
         height: 550px;
     }
 
@@ -167,7 +169,8 @@
     }
 
     .upcoming-event-block {
-        width: 90%;
+        margin-left: 10%;
+        width: 80%;
         height: 400px;
     }
 

@@ -12,62 +12,59 @@ function Navbar() {
   const { currentUser } = useContext(Authcontext);
   const [vis, setVis] = useState("hidden");
   return (
-      <>
-        <nav
-            className="navbar navbar-expand-lg navbar-light fixed-top navbar-transparent"
-            id="NvBr"
-        >
-          <div className="container-fluid">
-            <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            {/*<Link className="nav-link" to="#">*/}
-            <img className="nav-logo-img" src={logo} alt="" />
-            {/*</Link>*/}
+    <>
+      <nav
+        className="navbar navbar-expand-lg navbar-light fixed-top navbar-transparent"
+        id="NvBr"
+      >
+        <div className="container-fluid">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          {/*<Link className="nav-link" to="#">*/}
+          <img className="nav-logo-img" src={logo} alt="" />
+          {/*</Link>*/}
 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="ul-links">
-                <li className="nav-item">
-                  <Link
-                      className={`nav-link ${
-                          window.location.pathname === "/AndroidClub" ? "active" : " "
-                      }`}
-                      aria-current="page"
-                      to="/AndroidClub"
-                  >
-                    HOME
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                      className={`nav-link ${
-                          window.location.pathname === "/AboutUs" ? "active" : " "
-                      }`}
-                      aria-current="page"
-                      to="/AboutUs"
-                  >
-                    ABOUT
-                  </Link>
-                </li>
-                {/* <li className="nav-item">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="ul-links">
+              <li className="nav-item">
+                <Link
+                  className={`nav-link ${window.location.pathname === "/AndroidClub" ? "active" : " "
+                    }`}
+                  aria-current="page"
+                  to="/AndroidClub"
+                >
+                  HOME
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className={`nav-link ${window.location.pathname === "/AboutUs" ? "active" : " "
+                    }`}
+                  aria-current="page"
+                  to="/AboutUs"
+                >
+                  ABOUT
+                </Link>
+              </li>
+              {/* <li className="nav-item">
                                 <Link className={`nav-link ${window.location.pathname === "/OurProjects" ? "active" : " "}`} aria-current="page" to="/OurProjects">PROJECTS</Link>
                             </li> */}
               {currentUser && (
                 <li className="nav-item">
                   <Link
-                    className={`nav-link nav-regEvent ${
-                      window.location.pathname === "/RegisteredEvents"
-                        ? "active"
-                        : " "
-                    }`}
+                    className={`nav-link nav-regEvent ${window.location.pathname === "/RegisteredEvents"
+                      ? "active"
+                      : " "
+                      }`}
                     aria-current="page"
                     to="/RegisteredEvents"
                   >
@@ -98,9 +95,8 @@ function Navbar() {
               {!currentUser && (
                 <li className="nav-item">
                   <Link
-                    className={`nav-link ${
-                      window.location.pathname === "/login" ? "active" : " "
-                    }`}
+                    className={`nav-link ${window.location.pathname === "/login" ? "active" : " "
+                      }`}
                     aria-current="page"
                     to="/login"
                   >
