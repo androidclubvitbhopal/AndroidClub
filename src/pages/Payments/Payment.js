@@ -184,18 +184,19 @@ function Payment(){
 
     return(
         <div className="Home payment-page">
-        <div className="Login">
+        <div className="payments" style={{backgroundImage:`url(${Evpayment.bannerURL})`,backdropFilter: 'blur(8px)', webkitBackdropFilter: 'blur(8px)'}}>
         {!details[0] && Evpayment.noOfMembers>1 && 
             <div className="FormBox">
+                <p style={{textAlign:'center'}}>For more details <a href=''>view word file</a></p>
                 <form onSubmit={(e)=>HandleDetailsSubmit(e)}>
-                    <label>Team Name</label>
+                    <label style={{color:'#282c34'}}>Team Name</label>
                     <input type='text' placeholder="Team-Name"></input>
-                    <label>Mention the culture that you'll be working with. (Read Instructions before choosing!!.) </label>
+                    <label style={{color:'#282c34'}}>Mention the culture that you'll be working with. (Read Instructions before choosing!!.) </label>
                     <input type='text' placeholder='Culture -'></input>
                     <div className="detailsSet">
                         <label>Details of Team leader member</label>
-                        <input type='text' placeholder="name"></input>
-                        <input type='number' placeholder="phone-number of Team leader"></input>
+                        <input type='text' placeholder="name" required></input>
+                        <input type='number' placeholder="phone-number of Team leader" required></input>
                         <input type='text' placeholder="Registration Number of Team leader" required></input>
                         <input type='email' placeholder="College Email of Team leader" required></input>
                     </div>
@@ -217,7 +218,7 @@ function Payment(){
                         <input type='text' placeholder="Registration Number of 4th member"></input>
                         <input type='email' placeholder="College Email of 4th member"></input>
                     </div>
-                    <input type='submit' value='Next'></input>
+                    <input type='submit' value='Next' className="submit" style={{backgroundColor:'#282c34',borderRadius:'15px',color:'greenyellow'}}></input>
 
                 </form>
             </div>

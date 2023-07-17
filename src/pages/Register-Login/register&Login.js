@@ -26,7 +26,7 @@ function Register() {
         const User = await createUserWithEmailAndPassword(auth, email, password)
         // await User.user.sendEmailVerification()
         console.log(User)
-        const storageRef = ref(storage, `${storageid}`)
+        const storageRef = ref(storage, `users/${storageid}`)
         await uploadBytesResumable(storageRef, DP)
             .then(() => {
                 getDownloadURL(storageRef).then(async (downloadURL) => {
