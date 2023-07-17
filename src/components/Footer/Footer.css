@@ -1,9 +1,11 @@
-.reg{
+.reg {
     z-index: 3;
 }
-.li{
+
+.li {
     margin-left: 0;
 }
+
 .footer {
     background-color: white;
     padding: 1% 2%;
@@ -11,7 +13,7 @@
     font-weight: 700;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     list-style: none;
 }
@@ -35,25 +37,31 @@
     display: flex;
     gap: 73%;
 }
-.socials{
+
+.socials {
     display: flex;
     gap: 15px;
 }
+
 .socials-icon {
     margin-left: 10%;
     font-size: 35px;
     color: black;
 }
-.ln{
+
+.ln {
     color: blue;
 }
-.insta{
+
+.insta {
     color: pink;
     font-size: 37px;
 }
-.github{
+
+.github {
     color: white;
 }
+
 .footer-nav {
     display: flex;
     gap: 2%;
@@ -83,13 +91,20 @@
     font-size: 13.5px;
 }
 
+.footer-optional {
+    font-size: 20px;
+    margin-left: 2.5%
+}
+
 @media only screen and (max-width: 600px) {
-    .footer{
+    .footer {
         padding: 5%;
     }
+
     .footer-nav {
         flex-direction: column;
         margin-bottom: 5%;
+        font-size: 10px;
     }
 
     .footer-top {
@@ -99,18 +114,27 @@
     .footer-top p {
         font-size: 11px;
     }
-    .socials-icon{
+
+    .socials-icon {
         font-size: 18px;
     }
-    li{
+
+    li {
         margin-left: 0;
         font-size: 12px;
     }
-    .reg-event-footer-link{
+
+    .reg-event-footer-link {
         font-size: 12px;
     }
-    
+
     .email p {
         margin-top: 0%;
+    }
+
+    .footer-optional {
+        font-size: 12px;
+        margin-left: 0;
+        /*margin-left: 2%*/
     }
 }

@@ -56,9 +56,21 @@ li {
   font-size: 20px;
 }
 
+/*.d-none {*/
+/*  display: none!important;*/
+/*}*/
+
+/*.d-lg-none {*/
+/*  display: none!important;*/
+/*}*/
+
 @media only screen and (max-width: 600px) {
   .nav-profile-img {
-    display: none;
+    height: 30px!important;
+    width: 30px!important;
+    margin-top: 12px;
+    margin-left: -310%;
+    /*display: none;*/
   }
   .nav-logo-img {
     margin-right: 10px;
@@ -71,8 +83,17 @@ li {
 
   .nav-profile-name {
     font-size: 15px;
-    margin-left: 0%;
+    /*margin-right: 10px!important;*/
+    /*margin-left: -200%!important;*/
+    margin-top: 12px;
+    /*margin-right: 20%!important;*/
     color: black;
+  }
+  .d-lg-none {
+    display: none!important;
+  }
+  .d-none.d-lg-block {
+    display: block!important;
   }
 }
 .PopUpWindow .UserPopUpForm {

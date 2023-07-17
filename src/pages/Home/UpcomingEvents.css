@@ -206,4 +206,10 @@
         height: 250px;
         aspect-ratio: 1/1;
     }
+    .upcoming-event-name-popup{
+        font-size:25px;
+    }
+    .upcoming-events-details-popup-inside{
+        font-size: 15px;
+    }
 }
