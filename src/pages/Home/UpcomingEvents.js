@@ -150,7 +150,7 @@ const UpcomingEvents = () => {
 
   return (
     <>
-      <div className="upcoming-events">
+      <div className="upcoming-events" id="upcoming-events">
         <p className="upcoming-events-heading">
           Upcoming <br /> Events
         </p>
@@ -205,7 +205,7 @@ const UpcomingEvents = () => {
                   <div
                     className="upcoming-event-details-popup-block"
 
-                    // style={{ visibility: `${detailsVis}` }}
+                  // style={{ visibility: `${detailsVis}` }}
                   >
                     <div className="upcoming-event-details-popup">
                       <button
@@ -252,8 +252,7 @@ const UpcomingEvents = () => {
                           <h1 className="upcoming-event-name-popup">
                             {Events.name}
                           </h1>
-                          <p className="upcoming-event-date">{Events.date}</p>
-                          <p className="upcoming-event-time">{Events.time}</p>
+                          <p className="upcoming-event-date">{Events.date} -- {Events.time}</p>
                           <p className="upcoming-event-location">
                             {" "}
                             Venue: {Events.location}

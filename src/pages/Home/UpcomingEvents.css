@@ -94,10 +94,14 @@
 
 .upcoming-event-block {
     width: 23rem;
+    overflow-y: scroll;
     height: 520px;
     padding: 3%;
     border-radius: 50px;
     background-color: white;
+}
+.upcoming-event-block::-webkit-scrollbar{
+    display: none;
 }
 
 .upcoming-event-img {
@@ -130,7 +134,7 @@
 }
 
 .upcoming-event-name {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     font-weight: 900;
 }
@@ -163,6 +167,9 @@
         text-align: center;
         height: 550px;
     }
+.RegisterBtn-popup {
+    width: 90%;
+}
 
     .upcoming-events-heading {
         font-size: 30px;
@@ -182,7 +189,7 @@
 
     .upcoming-event-name {
         margin-top: 5px;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .upcoming-events-details {
@@ -207,7 +214,6 @@
         border-radius: 10px;
         width: 250px;
         height: 250px;
-        aspect-ratio: 1/1;
     }
     .upcoming-event-name-popup{
         font-size:25px;

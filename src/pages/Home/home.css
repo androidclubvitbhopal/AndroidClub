@@ -7,11 +7,16 @@
   margin-top: 6%;
   font-size: 18px;
   color: var(--primary-light);
+
   /* background-color: #000000; */
 }
 .club-intro-description {
-  width: 60%;
-  font-weight: 400;
+  width: 85%;
+  /* background-color: #c3fdbe; */
+  background-color: rgb(232, 232, 232);
+  padding: 5%;
+  border-radius: 25px ;
+  font-weight: 600;
   line-height: normal;
 }
 .club-intro-div {
@@ -55,8 +60,9 @@
 
 .main-btn {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  margin-left: 5%;
 }
 *,
 *:before,
@@ -140,11 +146,11 @@
   width: 400px;
   height: 70px;
   padding: 1%;
-  border-radius: 12px;
+  border-radius: 18px;
   border: none;
   text-align: center;
   margin-right: 30%;
-  margin-top: 3%;
+  /* margin-top: 3%; */
   transition: 0.5s ease;
   font-weight: 600;
   font-size: 20px;
@@ -189,31 +195,51 @@
   }
   .club-intro-div {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 30px;
+  }
+  .club-intro-description{
+    line-height:22px;
+  }
+  .left-section {
+    text-align: center;
+  }
+  .upcoming-event-img-popup {
+    width: 200px;
+    height: 100px;
   }
 
   .club-intro p {
     margin: 0 4%;
   }
   .club-intro{
-    width: 90%;
+    
+    width: 100%;
   }
   .heading {
-    font-size: 19px;
+    font-size: 25px;
   }
   .first-heading {
     font-size: 30px;
   }
   .line2heading{
-    font-size: 19px;
+    font-size: 25px;
   }
   .headingAnimation{
     height: 19px;
   }
   .Explorebtn{
     margin-top: 30px;
+    width: 200px;
+    height: 55px;
+    margin-right: 0;
+  }
+  .main-btn{
+    text-align: center;
+    justify-content: center;
+    margin-right: 10%;
   }
   .logo_1 {
     display: none;
   }
+
 }
