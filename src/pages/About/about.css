@@ -1,5 +1,5 @@
 .About{
-    color:aliceblue;
+    color:rgb(21, 134, 233);
 }
 .about-club {
     padding: 3% 0%;
@@ -19,17 +19,87 @@
 }
 
 .meet-team-heading {
-    margin-left: 10%;
+    margin-left: 35%;
     text-align: center;
     font-size: 40px;
     font-weight: 500;
     border-bottom: 3px solid black;
     width: 300px;
+    color: lightgreen;
 }
 
 .teams {
     padding: 0% 10%;
     
+}
+.blue-container1 {
+    background-color: rgb(26, 134, 228);
+    padding: 3% 0%;
+    margin: 0 40%;
+    width: 700px;
+    height: 250px;
+    margin-bottom: 5%;
+    border-radius: 999px 0 0 999px;
+}
+
+.blue-container2 {
+    background-color: rgb(26, 134, 228);
+    padding: 3% 0%;
+    margin: 0 10%;
+    width: 700px;
+    height: 250px;
+    margin-bottom: 5%;
+    border-radius: 0 999px 999px 0;
+}
+
+.blue-container3 {
+    background-color: rgb(26, 134, 228);
+    padding: 3% 0%;
+    margin: 0 40%;
+    width: 700px;
+    height: 250px;
+    margin-bottom: 5%;
+    border-radius: 999px 0 0 999px;
+}
+
+.blue-container4 {
+    background-color: rgb(26, 134, 228);
+    padding: 3% 0%;
+    margin: 0 10%;
+    width: 700px;
+    height: 250px;
+    margin-bottom: 5%;
+    border-radius: 0 999px 999px 0;
+}
+
+.blue-container5 {
+    background-color: rgb(26, 134, 228);
+    padding: 3% 0%;
+    margin: 0 40%;
+    width: 700px;
+    height: 250px;
+    margin-bottom: 5%;
+    border-radius: 999px 0 0 999px;
+}
+
+.blue-container6 {
+    background-color: rgb(26, 134, 228);
+    padding: 3% 0%;
+    margin: 0 10%;
+    width: 700px;
+    height: 250px;
+    margin-bottom: 5%;
+    border-radius: 0 999px 999px 0;
+}
+
+.blue-container7 {
+    background-color: rgb(26, 134, 228);
+    padding: 3% 0%;
+    margin: 0 40%;
+    width: 700px;
+    height: 250px;
+    margin-bottom: 5%;
+    border-radius: 999px 0 0 999px;
 }
 
 .team {
