@@ -1,7 +1,8 @@
 .About{
-    color:rgb(21, 134, 233);
+    height: auto;
 }
 .about-club {
+    color:rgb(21, 134, 233);
     padding: 3% 0%;
     margin: 0 10%;
 }
@@ -32,6 +33,17 @@
     padding: 0% 10%;
     
 }
+
+.team-member-descr {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-right: 4%;
+    width: 28.8%;
+    box-shadow: 2px 2px 10px 0px grey;
+    display: inline-block;
+}
+
 .blue-container1 {
     background-color: rgb(26, 134, 228);
     padding: 3% 0%;
@@ -103,12 +115,7 @@
 }
 
 .team {
-    text-align: center;
-    margin-bottom: 10%;
-    margin-right: 4%;
-    width: 28.8%;
-    box-shadow: 2px 2px 10px 0px grey;
-    display: inline-block;
+    border-radius: 50%;
 }
 
 .icon {
@@ -128,8 +135,50 @@
     color: blue;
 }
 .team-member-img{
-    height: 220px;
-    width: 350px;
+    border-radius: 50%;
+    height: 40%;
+    width: 30%;
+}
+.team-member-name {
+    bottom: 270px;
+    left: 30%;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.team-member-pos{
+    bottom: 270px;
+    left: 30%;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+}
+.role0{
+    bottom: 30px;
+    left: 40%;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    position: relative;
+}
+.name0{
+    bottom: 20px;
+    left: 40%;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+}
+.dep0 {
+    top: 30px;
+    left: 23%;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 @media only screen and (max-width: 600px) {
