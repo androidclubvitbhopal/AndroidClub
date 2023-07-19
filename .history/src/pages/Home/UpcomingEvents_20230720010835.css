@@ -1,0 +1,224 @@
+.upcoming-events {
+    /* background-color: #4af79d; */
+    background: #3fcf84;
+    max-height: 35%;
+    padding: 3% 5%;
+    width: 35%;
+    border-radius: 0px 100px 100px 0px;
+    z-index: 2;
+}
+
+.close-button {
+    margin-bottom: 40px;
+}
+
+.upcoming-event-name-popup {
+    padding-bottom: 10px;
+    font-size: 40px;
+    text-align: left;
+    font-weight: 900;
+}
+
+.RegisterBtn {
+    width: 185px;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    background-color: #3fcf84;
+    border: none;
+    font-weight: 600;
+    height: 50px;
+}
+
+.upcoming-events-heading {
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.upcoming-event-details-popup-block {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.upcoming-event-details-popup {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 3%;
+    background-color: rgb(242, 242, 242);
+    align-items: center;
+    text-align: center;
+    border-radius: 40px;
+    padding: 40px;
+    position: fixed;
+    /* top: 15%; */
+    right: 15%;
+    left: 15%;
+    bottom: 15%;
+    overflow-y: scroll;
+    z-index: 1;
+    display: grid;
+    /* justify-content: center; */
+    /* bottom: 0; */
+}
+
+.upcoming-event-details-popup::-webkit-scrollbar {
+    display: none;
+}
+
+.upcoming-events-details-popup-inside {
+    margin-left: 4%;
+}
+
+.upcoming-event-info-popup {
+    display: flex;
+    text-align: left;
+}
+
+.upcoming-event-img-popup {
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1/1;
+}
+
+.upcoming-events-container {
+    z-index: 2;
+    display: flex;
+    padding: 2%;
+}
+
+.upcoming-event-block {
+    width: 23rem;
+    overflow-y: scroll;
+    height: 520px;
+    padding: 3%;
+    border-radius: 50px;
+    background-color: white;
+}
+.upcoming-event-block::-webkit-scrollbar{
+    display: none;
+}
+
+.upcoming-event-img {
+    height: 330px;
+    width: 330px;
+    border-radius: 50px;
+}
+
+.upcoming-events-details {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 3%;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.upcoming-events-details::-webkit-scrollbar {
+    display: none;
+}
+
+.upcoming-event-area {
+    cursor: pointer;
+}
+
+.register-block {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.upcoming-event-name {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 900;
+}
+
+/* .eventsOuterDiv{
+    display: flex;
+} */
+.right-arrow {
+    font-size: 30px;
+    position: relative;
+    left: 90rem;
+    bottom: 19rem;
+}
+
+.RegisterBtn-popup {
+    width: 100%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: #3fcf84;
+    border: none;
+    font-weight: 600;
+    height: 50px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .upcoming-events {
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+        height: 550px;
+    }
+.RegisterBtn-popup {
+    width: 90%;
+}
+
+    .upcoming-events-heading {
+        font-size: 30px;
+    }
+
+    .upcoming-event-block {
+        margin-left: 10%;
+        width: 80%;
+        height: 400px;
+    }
+
+    .upcoming-event-img {
+        height: 230px;
+        width: 230px;
+        border-radius: 50px;
+    }
+
+    .upcoming-event-name {
+        margin-top: 5px;
+        font-size: 17px;
+    }
+
+    .upcoming-events-details {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .upcoming-event-info-popup {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .upcoming-event-details-popup {
+        bottom: 50px;
+        top: 150px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .upcoming-event-img-popup {
+        border-radius: 10px;
+        width: 250px;
+        height: 250px;
+    }
+    .upcoming-event-name-popup{
+        font-size:25px;
+    }
+    .upcoming-events-details-popup-inside{
+        font-size: 15px;
+    }
+}

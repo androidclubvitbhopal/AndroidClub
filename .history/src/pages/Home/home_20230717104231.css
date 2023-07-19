@@ -1,0 +1,230 @@
+/* intro  */
+.club-intro {
+  width: 70%;
+  height: 10%;
+  padding: 1%;
+  position: relative;
+  margin-top: 6%;
+  font-size: 18px;
+  color: var(--primary-light);
+  /* background-color: #000000; */
+}
+.club-intro-description {
+  width: 60%;
+  font-weight: 400;
+  line-height: normal;
+}
+.club-intro-div {
+  display: flex;
+}
+
+.club-intro p {
+  margin: 5%;
+}
+.club-intro-img {
+  height: 270px;
+}
+
+.heading {
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--primary-light);
+}
+.line2heading {
+  display: flex;
+  color: var(--primary-accent);
+  font-weight: 900;
+}
+.headingAnimation {
+  height: 60px;
+  overflow: hidden;
+  width: fit-content;
+  color: black;
+  font-weight: 700;
+  margin-left: 2%;
+}
+.logo_1 {
+  position: absolute;
+  left: 70%;
+  bottom: 0%;
+  width: 30%;
+  z-index: 0;
+}
+
+.main-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mouse_scroll {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  height: 100px;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.m_scroll_arrows {
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 0 0 3px 4px;
+
+  width: 16px;
+  height: 16px;
+}
+
+.unu {
+  margin-top: 1px;
+}
+
+.unu,
+.doi,
+.trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
+}
+
+.unu {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-direction: alternate;
+
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.doi {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+
+  margin-top: -6px;
+}
+
+.trei {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-direction: alternate;
+
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+
+  margin-top: -6px;
+}
+
+.Explorebtn {
+  background-color: var(--primary-light);
+  width: 400px;
+  height: 70px;
+  padding: 1%;
+  border-radius: 12px;
+  border: none;
+  text-align: center;
+  margin-right: 30%;
+  margin-top: 3%;
+  transition: 0.5s ease;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary-dark);
+}
+
+.Explorebtn:hover {
+  background-color: var(--primary-accent);
+}
+.Home {
+  background-color: var(--primary-dark);
+}
+
+.home-bg-div {
+  text-align: center;
+}
+
+.home-bg-img {
+  height: 500px;
+}
+
+.first-heading {
+  text-align: center;
+  /* font-weight: bold; */
+  color: black;
+  font-size: 60px;
+  margin-top: 10%;
+}
+.logo_2 {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .club-intro {
+    font-size: 12px;
+    margin: 30% 2% 0 2%;
+  }
+  .club-intro-img {
+    height: 150px;
+    width: 200px;
+    margin-left: 20%;
+    margin-bottom: 5%;
+  }
+  .logo_2 {
+    display: inline-flex;
+    width: 25%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .club-intro-div {
+    flex-direction: column;
+
+    margin-top: 5%;
+  }
+  .club-intro-description {
+    width: 100%;
+  }
+  .club-intro p {
+    margin: 0 4%;
+  }
+  .club-intro {
+    width: 90%;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .first-heading {
+    font-size: 30px;
+  }
+  .line2heading {
+    font-size: 20px;
+  }
+  .headingAnimation {
+    height: 20px;
+  }
+  .Explorebtn {
+    margin-top: 30px;
+    height: 50px;
+    width: 180px;
+  }
+  .logo_1 {
+    display: none;
+  }
+}

@@ -1,0 +1,133 @@
+.backimg {
+  width: 15%;
+  top: 5%;
+  position: absolute;
+  left: 5%;
+}
+.UserPopUpForm {
+  height: fit-content;
+  padding: 1%;
+  background-color: #282c34;
+  width: 15%;
+  border-radius: 25px;
+  position: relative;
+  left: 80%;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.UserPopUpForm input {
+  padding: 4%;
+  margin-top: 3%;
+  font-size: 150%;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+.UserPopUpForm input:hover {
+  color: rgb(78, 0, 0);
+}
+.FormBox {
+  position: absolute;
+  left: 27.5%;
+  width: 50%;
+  background-color: rgba(0, 128, 0, 0.219);
+  padding: 3%;
+  min-height: 30%;
+  border-radius: 30px;
+  /* height: fit-content; */
+  padding-bottom: 1%;
+  margin-bottom: 40%;
+  transition: 0.5s ease;
+  align-self: center;
+}
+.FormBox1 {
+  top: 5%;
+}
+.FormBox2 {
+  top: 22%;
+}
+
+.FormBox:hover {
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 54px 55px,
+    rgba(0, 0, 0, 0.3) 0px -12px 30px, rgba(0, 0, 0, 0.28) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.FormBox form {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormBox form input {
+  margin: 3%;
+  padding: 1%;
+  width: 75%;
+  align-self: center;
+  height: 20%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 110%;
+}
+
+.FormBox form label {
+  margin: 3%;
+  padding: 1%;
+  width: 75%;
+  align-self: center;
+  height: 20%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 110%;
+  display: flex;
+  font-size: 150%;
+  cursor: pointer;
+  color: #000000;
+}
+
+.FormBox form p {
+  align-self: center;
+  color: green;
+}
+
+.FormBox form input:focus {
+  outline: none;
+}
+
+.FormBox form #S {
+  width: 35%;
+  padding: 2.5%;
+  background-color: #282c34;
+  color: aliceblue;
+  border-radius: 25px;
+  font-weight: 450;
+  transition: 0.3s ease;
+}
+form input {
+  border-radius: 10px;
+}
+.FormBox form #S:hover {
+  background-color: #000000;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .FormBox {
+    width: 90%;
+    left: 5%;
+  }
+  .UserPopUpForm {
+    margin-top: 35%;
+    font-size: 8px;
+    width: 50%;
+  }
+}
