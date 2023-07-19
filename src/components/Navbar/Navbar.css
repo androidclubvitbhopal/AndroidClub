@@ -21,6 +21,7 @@
   font-size: 1.4rem;
   margin-left: 7%;
   width: 15%;
+  margin-bottom: 10px;
   font-family: "Anybody";
   font-weight: 900;
 }
@@ -29,6 +30,7 @@
 }
 .profileInfo {
   width: 10%;
+  margin-right: 6px;
   display: flex;
   position: absolute;
   right: 2%;
@@ -55,7 +57,31 @@ li {
   margin-left: 23%;
   font-size: 20px;
 }
-
+.PopUpWindow .UserPopUpForm {
+  height: fit-content;
+  padding: 1%;
+  background-color: #282c34;
+  width: 15%;
+  border-radius: 25px;
+  position: absolute;
+  left: 82%;
+  top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.UserPopUpForm input {
+  padding: 4%;
+  margin-top: 3%;
+  font-size: 150%;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+.UserPopUpForm input:hover {
+  color: rgb(78, 0, 0);
+}
 /*.d-none {*/
 /*  display: none!important;*/
 /*}*/
@@ -95,29 +121,4 @@ li {
   .d-none.d-lg-block {
     display: block !important;
   }
-}
-.PopUpWindow .UserPopUpForm {
-  height: fit-content;
-  padding: 1%;
-  background-color: #282c34;
-  width: 15%;
-  border-radius: 25px;
-  position: absolute;
-  left: 82%;
-  top: 200px;
-  display: flex;
-  flex-direction: column;
-}
-.UserPopUpForm input {
-  padding: 4%;
-  margin-top: 3%;
-  font-size: 150%;
-  font-weight: 600;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: red;
-}
-.UserPopUpForm input:hover {
-  color: rgb(78, 0, 0);
 }

@@ -13,6 +13,23 @@ function Navbar() {
   const [vis, setVis] = useState("hidden");
   return (
     <>
+      <div
+        className="PopUpWindow"
+        onClick={() => {
+          setVis("hidden");
+        }}
+        style={{ visibility: `${vis}` }}
+      >
+        <div className="UserPopUpForm">
+          <input
+            type="button"
+            onClick={() => {
+              signOut(auth);
+            }}
+            value="Logout"
+          ></input>
+        </div>
+      </div>
       <nav
         className="navbar navbar-expand-lg navbar-light fixed-top navbar-transparent"
         id="NvBr"
@@ -37,8 +54,9 @@ function Navbar() {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="ul-links">
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${window.location.pathname === "/AndroidClub" ? "active" : " "
-                    }`}
+                  className={`nav-link ${
+                    window.location.pathname === "/AndroidClub" ? "active" : " "
+                  }`}
                   aria-current="page"
                   to="/AndroidClub"
                 >
@@ -47,8 +65,9 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <Link
-                  className={`nav-link ${window.location.pathname === "/AboutUs" ? "active" : " "
-                    }`}
+                  className={`nav-link ${
+                    window.location.pathname === "/AboutUs" ? "active" : " "
+                  }`}
                   aria-current="page"
                   to="/AboutUs"
                 >
@@ -61,10 +80,11 @@ function Navbar() {
               {currentUser && (
                 <li className="nav-item">
                   <Link
-                    className={`nav-link nav-regEvent ${window.location.pathname === "/RegisteredEvents"
-                      ? "active"
-                      : " "
-                      }`}
+                    className={`nav-link nav-regEvent ${
+                      window.location.pathname === "/RegisteredEvents"
+                        ? "active"
+                        : " "
+                    }`}
                     aria-current="page"
                     to="/RegisteredEvents"
                   >
@@ -95,8 +115,9 @@ function Navbar() {
               {!currentUser && (
                 <li className="nav-item">
                   <Link
-                    className={`nav-link ${window.location.pathname === "/login" ? "active" : " "
-                      }`}
+                    className={`nav-link ${
+                      window.location.pathname === "/login" ? "active" : " "
+                    }`}
                     aria-current="page"
                     to="/login"
                   >
@@ -108,23 +129,6 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <div
-        className="PopUpWindow"
-        onClick={() => {
-          setVis("hidden");
-        }}
-        style={{ visibility: `${vis}` }}
-      >
-        <div className="UserPopUpForm">
-          <input
-            type="button"
-            onClick={() => {
-              signOut(auth);
-            }}
-            value="Logout"
-          ></input>
-        </div>
-      </div>
     </>
   );
 }
