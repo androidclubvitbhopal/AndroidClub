@@ -24,7 +24,7 @@
   font-family: "Anybody";
   font-weight: 900;
 }
-.nav-regEvent{
+.nav-regEvent {
   width: 240px;
 }
 .profileInfo {
@@ -66,8 +66,8 @@ li {
 
 @media only screen and (max-width: 600px) {
   .nav-profile-img {
-    height: 30px!important;
-    width: 30px!important;
+    height: 30px !important;
+    width: 30px !important;
     margin-top: 12px;
     margin-left: -310%;
     /*display: none;*/
@@ -77,7 +77,7 @@ li {
     width: 80%;
   }
 
-  .nav-link{
+  .nav-link {
     display: block;
   }
 
@@ -90,10 +90,10 @@ li {
     color: black;
   }
   .d-lg-none {
-    display: none!important;
+    display: none !important;
   }
   .d-none.d-lg-block {
-    display: block!important;
+    display: block !important;
   }
 }
 .PopUpWindow .UserPopUpForm {
@@ -104,7 +104,7 @@ li {
   border-radius: 25px;
   position: absolute;
   left: 82%;
-  top: 100px;
+  top: 200px;
   display: flex;
   flex-direction: column;
 }
