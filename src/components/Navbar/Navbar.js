@@ -63,7 +63,7 @@ function Navbar() {
                   HOME
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className={`nav-link ${
                     window.location.pathname === "/AboutUs" ? "active" : " "
@@ -73,7 +73,7 @@ function Navbar() {
                 >
                   ABOUT
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="nav-item">
                                 <Link className={`nav-link ${window.location.pathname === "/OurProjects" ? "active" : " "}`} aria-current="page" to="/OurProjects">PROJECTS</Link>
                             </li> */}

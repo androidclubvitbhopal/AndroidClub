@@ -57,10 +57,16 @@ li {
   margin-left: 23%;
   font-size: 20px;
 }
+.PopUpWindow{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+}
 .PopUpWindow .UserPopUpForm {
   height: fit-content;
   padding: 1%;
-  background-color: #282c34;
+  background-color:aliceblue;
   width: 15%;
   border-radius: 25px;
   position: absolute;
@@ -68,6 +74,7 @@ li {
   top: 10rem;
   display: flex;
   flex-direction: column;
+  z-index: 4;
 }
 .UserPopUpForm input {
   padding: 4%;

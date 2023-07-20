@@ -68,7 +68,7 @@ function AboutUs() {
                     If you are interested in joining our club or have any questions, please don't hesitate to get in touch with us. You can reach us at [Email Address] or [Social Media Handles]. We look forward to hearing from you!
                 </p>
             </div>
-                <h1 className="meet-team-heading">Meet the Team</h1>
+                {/* <h1 className="meet-team-heading">Meet the Team</h1>
                 <br />
             
             <div className="blue-container1">
@@ -143,7 +143,7 @@ function AboutUs() {
                     <strong className="dep5">{teamData[5].department}</strong> 
                 </div>
                 )}
-            </div>
+            </div> */}
 
 
             <Footer/>
