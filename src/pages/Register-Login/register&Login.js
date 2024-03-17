@@ -94,28 +94,12 @@ function Register() {
 
   }
   return (
-    // <div className="register">
-    //   <div className="Login">
-    //     <img src={logo2} className="backimg"></img>
-    //     <div className="FormBox FormBox1">
-    //       <form onSubmit={(e) => HandleSubmit(e)}>
-    //         <input type="text" placeholder="Name" required></input>
-    //         <input type="email" placeholder="Email-ID" required></input>
-    //         <input type="text" placeholder="Registration Number" required></input>
-    //         <input type='number' placeholder="Phone Number" required></input>
-    //         <input type="password" placeholder="Password" required></input>
-    //         <label htmlFor="Fl"><img alt="profilePic" src={ProfilePicIcon} style={{ height: '50px', alignSelf: 'center' }}></img><p style={{ marginLeft: '5%' }}>Add Profile Photo</p></label>
-    //         <input id="Fl" type="file" placeholder="file" style={{ display: 'none' }}></input>
-    //         <input type="submit" id="S" value="Register"></input>
-    //         {err && <span style={{ alignSelf: 'center' }}>Something went wrong, Try Again</span>}
-    //         <p style={{ width: '26%', color: 'black' }}>Have an Account? <b><Link style={{ marginLeft: '2%', textDecoration: 'none' }} to="/login">Login Now</Link></b></p>
-    //       </form>
-    //     </div>
-    //   </div>
-    // </div>
+
     <div className="register">
       <div className="login">
-        <img src={logo2} alt="Club Logo" className="back-img" />
+        <div className="logo-container">
+          <img src={logo2} alt="Club Logo" className="logo" />
+        </div>
         <div className="form-box form-box1">
           <form onSubmit={(e) => HandleSubmit(e)}>
             <input type="text" placeholder="Name" required />
