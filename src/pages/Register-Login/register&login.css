@@ -5,10 +5,11 @@
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 .home-pro1619 {
-  width: 100%;
-  height: 750px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -136,54 +137,69 @@
   text-decoration: none;
 }
 .home-rectangle43 {
-  top: 140.0411376953125px;
+  /* top: 140.0411376953125px;
   left: 53.23046875px;
   width: 503px;
   height: 69px;
   position: absolute;
-  border-radius: 15px;
+  border-radius: 15px; */
 }
 .home-rectangle44 {
-  top: 225.02313232421875px;
+  /* top: 225.02313232421875px;
   left: 53.23046875px;
   width: 503px;
   height: 69px;
   position: absolute;
-  border-radius: 15px;
+  border-radius: 15px; */
 }
-.home-rectangle45 {
-  top: 350.4935607910156px;
-  left: 147.23046875px;
-  width: 258px;
-  height: 50px;
+
+.button-group{
+  display: flex;
   position: absolute;
-  border-radius: 15px;
+  top:361px;
+  left: 190px;
+  background-color: white;
+  /* height: 100px;
+  width: 100px; */
+  gap: 30px;
+  justify-content:space-evenly;
+  /* align-items: center; */
+  
+
 }
-.home-rectangle69 {
-  top: 2px;
-  left: 2px;
-  width: 253px;
-  height: 45px;
-  position: absolute;
-  object-fit: fill;
-  border-radius: 15px;
-}
-.home-text007 {
-  top: 7px;
-  left: -5px;
-  color: rgba(255, 255, 255, 1);
-  width: 253px;
-  height: auto;
-  position: absolute;
-  font-size: 25px;
-  font-style: italic;
+
+.button-group button{
+  /* background-color: green; */
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #fafafa;
+  cursor: pointer;
+  display: inline-block;
+  font-family:monospace;
+  font-weight: 800;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
   text-align: center;
-  font-family: Poppins;
-  font-weight: 400;
-  line-height: 30px;
-  font-stretch: normal;
-  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+
 }
+
+
+
 .home-text04 {
   top: 160.5295715332031px;
   left: 85.23046875px;
@@ -284,8 +300,8 @@
   text-decoration: none;
 }
 .home-text12 {
-  top: 300.8740234375px;
-  left: 404.23046875px;
+  top: 310.8740234375px;
+  left:210px;
   color: rgba(0, 0, 0, 1);
   width: auto;
   height: auto;
@@ -293,7 +309,7 @@
   font-size: 16px;
   font-style: Bold;
   text-align: left;
-  font-family: Inter;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
   line-height: normal;
   font-stretch: normal;
@@ -308,7 +324,7 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: rgba(255, 248, 214, 1);
+  /* background-color: rgba(255, 248, 214, 1); */
 }
 .home-text14 {
   top: 13.886675834655762px;
@@ -342,7 +358,7 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: rgba(255, 248, 214, 1);
+  /* background-color: rgba(255, 248, 214, 1); */
 }
 .home-text16 {
   top: 13.334257125854492px;
@@ -376,7 +392,7 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: rgba(255, 248, 214, 1);
+  /* background-color: rgba(255, 248, 214, 1); */
 }
 .home-text18 {
   top: 14.359963417053223px;
@@ -409,14 +425,48 @@
   position: absolute;
 }
 .home-group241 {
-  top: 94px;
-  left: 1090px;
-  width: 534px;
-  height: 21px;
   display: flex;
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
+  top: 94px;
+  left:800px;
+  /* width: 534px; */
+  /* height: 21px; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 76px;
+  
+}
+.home-group241 button{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.home-group241 button{
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+
 }
 .home-text20 {
   
@@ -484,3 +534,4 @@
   text-decoration: none;
   background-color: #fcfafa;
 }
+

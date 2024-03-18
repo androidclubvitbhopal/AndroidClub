@@ -193,7 +193,6 @@ function Login(){
           <div className="home-group24">
             <div className="home-group"></div>
             <span className="home-text">
-              <span>user login</span>
             </span>
             <span className="home-text02">
               <span>Hey, Enter your details and dive into the Android Club</span>
@@ -213,15 +212,16 @@ function Login(){
               alt="Rectangle44318"
               className="home-rectangle44 input"
             />
-  
-            <button
-              className="home-rectangle45 button"
-              onClick={handleLogin}
-            >
+            <div className="button-group">
               
-              <img className="home-rectangle69" src={rectangle45319}  />
-              <span className= "home-text007">Login</span>
-            </button>
+            <button onClick={handleLogin}
+            >Login</button>
+            <button >Register</button>
+
+
+
+            
+            </div>
             
             <span className="home-text04">
   
@@ -240,7 +240,7 @@ function Login(){
               
             </span>
             <span className="home-text08">
-              <span>LOGIN</span>
+              {/* <span>LOGIN</span> */}
             </span>
             <span className="home-text10">
               <span>-Or Sign up with-</span>
@@ -254,9 +254,7 @@ function Login(){
             </button>
             <div className="home-group20 button" onClick="redirectToGoogle()">
               <span className="home-text14">
-                <button>
-                  <span>Google</span>
-                </button>
+                <button>Google</button>
               </span>
               <img
                 src={image4328}
@@ -298,27 +296,27 @@ function Login(){
             />
           </a>
           <div className="home-group241">
-            <span className="home-text20 button" onClick={() => redirectToHome()}>
+            <div  onClick={() => redirectToHome()}>
               <button>
-                <span>HOME</span>
+                Home
               </button>
-            </span>
-            <span className="home-text22 button" onClick={() => redirectToEvents()}>
+            </div>
+            <div  onClick={() => redirectToEvents()}>
               <button>
-                <span>EVENTS</span>
+                Events
               </button>
-            </span>
+            </div>
             
-            <span className="home-text24 button" onClick={() => redirectToContact()}>
+            <div  onClick={() => redirectToContact()}>
               <button>
-                <span>CONTACT</span>
+                Contact
               </button>
-            </span>
-            <span className="home-text26 button" onClick={() => redirectToAboutUs()}>
+            </div>
+            <div  onClick={() => redirectToAboutUs()}>
               <button>
-                <span>ABOUT US</span>
+                About Us
               </button>
-            </span>
+            </div>
           </div>
   
         </div>
