@@ -619,6 +619,12 @@
 
 .profile-text {
   margin: 0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
 }
 
 .error-msg {
@@ -650,4 +656,37 @@ a {
 .submit-btn:hover {
   background-color: #45a049;
   /* Darker green background on hover */
+}
+
+/* Social Media Buttons */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.google-btn,
+.github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-btn {
+  background-color: #DB4437;
+  color: white;
+}
+
+.github-btn {
+  background-color: #333;
+  color: white;
+}
+
+.google-btn:hover,
+.github-btn:hover {
+  opacity: 0.8;
 }

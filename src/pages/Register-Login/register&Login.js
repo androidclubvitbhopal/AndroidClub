@@ -1,4 +1,5 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import { ref, uploadBytesResumable } from "firebase/storage";
 import Navbar from "../../components/Navbar/Navbar"
 import { useState } from "react";
@@ -26,8 +27,38 @@ import rectangle43317 from "../../images/rectangle43317-vty-200h.png"
 import rectangle44318 from "../../images/rectangle44318-c177-200h.png"
 import rectangle45319 from "../../images/rectangle45319-6zq9-200h.png"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle, faGithub } from "@fortawesome/fontawesome-free";
+
 function Register() {
+  const [err, setErr] = useState(false)
   const navigate = useNavigate();
+
+
+
+
+  const handleGoogleSignIn = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      setErr(error.message);
+    }
+  };
+
+  const handleGithubSignIn = async () => {
+    try {
+      const provider = new GithubAuthProvider();
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      setErr(error.message);
+    }
+  };
+
+
+
+
+
   const redirectToGoogle = () => {
     window.location.href = "google-page.html";
   };
@@ -53,7 +84,6 @@ function Register() {
     console.log("Sign Up clicked");
   };
 
-  const [err, setErr] = useState(false)
   const HandleSubmit = async (e) => {
     e.preventDefault();
     const displayName = e.target[0].value
@@ -98,7 +128,7 @@ function Register() {
     <div className="register">
       <div className="login">
         <div className="logo-container">
-          <img src={logo2} alt="Club Logo" className="logo" />
+          <img src={ProfilePicIcon} alt="Club Logo" className="logo" />
         </div>
         <div className="form-box form-box1">
           <form onSubmit={(e) => HandleSubmit(e)}>
@@ -108,7 +138,7 @@ function Register() {
             <input type="number" placeholder="Phone Number" required />
             <input type="password" placeholder="Password" required />
             <label htmlFor="profilePic" className="profile-label">
-              <img src={ProfilePicIcon} alt="Profile Icon" className="profile-icon" />
+              {/* <img src={ProfilePicIcon} alt="Profile Icon" className="profile-icon" /> */}
               <p className="profile-text">Add Profile Photo</p>
             </label>
             <input id="profilePic" type="file" style={{ display: 'none' }} />
@@ -117,6 +147,18 @@ function Register() {
             <p>Have an Account? <b><Link to="/login">Login Now</Link></b></p>
           </form>
         </div>
+        <br />
+        <div className="social-buttons">
+          <button className="google-btn" onClick={handleGoogleSignIn}>
+
+            Sign in with Google
+          </button>
+          <button className="github-btn" onClick={handleGithubSignIn}>
+
+            Sign in with GitHub
+          </button>
+        </div>
+
       </div>
     </div>
   )
@@ -154,6 +196,8 @@ function Login() {
     const password = e.target[1].value
     try {
       await signInWithEmailAndPassword(auth, email, password)
+        .then((value) => console.log("signin successfully"))
+        .catch((error) => console.log("Error in signIn : ", error))
       navigate("/AndroidClub")
     }
     catch (err) {
